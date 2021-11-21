@@ -158,7 +158,7 @@ Main Components
 }
 
 .top-info img {
-    height: 177px;
+    max-height: 177px;
 }
 
 .cd-products-table.scrolling .features::after {
