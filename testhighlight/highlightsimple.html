@@ -1,0 +1,70 @@
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<link rel="stylesheet" href="css/style.css">
+<style>
+.mismatch { color: red; }
+</style>
+
+
+
+		
+				
+
+<ul class="cd-features-list">
+							<li>45</li>
+<li>Warship</li>
+<li>Mastercraft</li>
+<li>Huge</li>
+<li>NO / PV / FT / BC / CT</li>
+
+<li>&nbsp;</li>
+
+<li>141</li>
+<li>74,3</li>
+<li>0</li>
+<li>240</li>
+<li>17</li>
+<li>3</li>
+<li>29422</li>
+
+
+
+						</ul>
+
+<ul class="cd-features-list">
+							<li>44</li>
+<li>Warship</li>
+<li>Mastercraft</li>
+<li>Huge</li>
+<li>NO / PV / FT / BC / CT</li>
+
+<li>&nbsp;</li>
+
+<li>140</li>
+<li>74,3</li>
+<li>0</li>
+<li>140</li>
+<li>17</li>
+<li>3</li>
+<li>29422</li>
+
+						</ul>
+						
+
+
+<script>
+var master = [];
+
+// Identify the master values.
+$('ul').first().find('li').each(function(index,value) {
+    master.push($(this).text());
+});
+
+$('ul:not(:first)').each(function(ulIndex) {
+    $(this).find('li').each(function(index) {
+        if(master[index] != $(this).text()) {
+            $(this).addClass('mismatch');        
+        }  
+    });
+});
+</script>
