@@ -40,13 +40,19 @@ h1 {
   }
 }
 
-
+.mismatch { color: red; }
 
 /* -------------------------------- 
 
 Main Components 
 
 -------------------------------- */
+.cd-features-list {
+    list-style-type: none;
+}
+li.product {
+    list-style-type: none;
+}
 .cd-products-comparison-table {
   margin-bottom: 6em;
 }
@@ -136,7 +142,6 @@ Main Components
   border-bottom-width: 1px;
   background-color: #fafafa;
   opacity: .95;
-  padding-left: 5px;
 }
 .cd-products-table .features::after {
   /* color gradient on the right of .features -  visible while scrolling inside the .cd-products-table */
@@ -158,7 +163,7 @@ Main Components
 }
 
 .top-info img {
-    max-height: 177px;
+    height: 177px;
 }
 
 .cd-products-table.scrolling .features::after {
@@ -274,7 +279,7 @@ Main Components
 }
 
 .top-info img {
-    max-height: 177px;
+    height: 177px;
 }
 
 
@@ -293,7 +298,7 @@ Main Components
   overflow: hidden;
 }
 
-.cd-products-table .top-info {
+.cd-products-table .top-info{
   position: relative;
   height: 177px;
   width: 150px;
