@@ -16,11 +16,6 @@ body {
   font-family: "Source Sans Pro", sans-serif;
   color: #404042;
   background-color: #ffffff;
-  margin-left: 25px;
-  margin-right: 25px;
-  background: url(../img/potbs_bg.gif) repeat no-repeat top center;
-  background-color: black;
-  background-attachment: fixed;
 }
 
 a {
@@ -47,17 +42,13 @@ h1 {
 
 .mismatch { color: red; }
 
-.match { color: green; }
+.mismatch { color: green; }
 
 /* -------------------------------- 
 
 Main Components 
 
 -------------------------------- */
-#feature-category {
-	font-family: -webkit-pictograph;
-	background-color: tan;
-}
 .cd-features-list {
     list-style-type: none;
 }
@@ -186,7 +177,7 @@ li.product {
   /* this fixes the buggy scrolling on webkit browsers - mobile devices only - when overflow property is applied */
   -webkit-overflow-scrolling: touch;
   border-style: solid;
-  border-color: transparent;
+  border-color: #e6e6e6;
   border-top-width: 1px;
   border-bottom-width: 1px;
 }
@@ -195,7 +186,6 @@ li.product {
   /* products list wrapper */
   width: max-content;
   margin-left: 120px;
-  background-color: papayawhip;
 }
 .cd-products-columns::after {
   clear: both;
@@ -299,8 +289,8 @@ li.product {
   .top-info img {
     height: auto;
 }
+  
 }
-
 
 
 .features .cd-features-list li {
@@ -323,7 +313,7 @@ li.product {
   -moz-transition: height 0.3s;
   transition: height 0.3s;
   cursor: pointer;
-  background: tan;
+  background: #ffffff;
 }
 .cd-products-table .top-info::after {
   /* color gradient below .top-info -  visible when .top-info is fixed */
