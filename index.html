@@ -9,12 +9,14 @@
 	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
 	<script src="js/modernizr.js"></script> <!-- Modernizr -->
 	<title>PotBS Comparison Table</title>
+	
+	
 </head>
 <body>
 	<section class="cd-intro">
 		<h1>PotBS Ship Stats Comparison Table</h1>
 	</section> <!-- .cd-intro -->
-
+<div class="comparison-table-wrapper">
 	<section class="cd-products-comparison-table">
 		<header>
 			<h2>Compare Models</h2>
@@ -26,6 +28,8 @@
 		</header>
 
 		<div class="cd-products-table">
+		
+		
 			<div class="features">
 				<div class="top-info">Ships</div>
 				<div class="cd-features-list">
@@ -35,8 +39,9 @@
 <li>Size:</li>
 <li>Classes:</li>
 
-<li id="feature-category">General Information</li>
+<li id="feature-category"><label for="catcollapse0" class="category-button" id="feature-category"><input type="checkbox" name="catcollapse0" id="catcollapse0" value="Y" class="checkbox" />General Information</label></li>
 
+<ul id="cl0">
 <li>Cargo Capacity</li>
 <li>OS Visibility</li>
 <li>OS Spotting</li>
@@ -44,20 +49,23 @@
 <li>Target Tracking</li>
 <li>Base Durability</li>
 <li>Insurance Value</li>
+</ul>
 
-<li id="feature-category">Open Sea Manoevering</li>
+<li id="feature-category"><label for="catcollapse1" class="category-button" id="feature-category"><input type="checkbox" name="catcollapse1" id="catcollapse1" value="Y" class="checkbox-1" />Open Sea Manoevering</label></li>
 
-<li>Best Sailing Point</li>
-<li>Max Speed (Open Sea)</li>
-<li>&nbsp;</li>
-<li>Upwind Speed</li>
-<li>Luffing Speed</li>
+<div id="cl1">
+<li>Best Sailing Point</li><li>Max Speed (Open Sea)</li>
+<li  id="feature-category-divider">&nbsp;</li>
+<li>Upwind Speed</li><li>Luffing Speed</li>
 <li>Close Haul Speed</li>
 <li>Beam Reach Speed</li>
 <li>Broad Reach Speed</li>
 <li>Running Speed</li>
+</div>
 
-<li id="feature-category">Battle Manoevering</li>
+<li id="feature-category"><label for="catcollapse2" class="category-button" id="feature-category"><input type="checkbox" name="catcollapse2" id="catcollapse2" value="Y" class="checkbox-2" />Battle Manoevering</label></li>
+
+<div id="cl2">
 <li>Best Sailing Point</li>
 <li>Max Speed (Battle)</li>
 <li>Acceleration</li>
@@ -66,60 +74,65 @@
 <li>Turning, Slow</li>
 <li>Turning, Accelerating</li>
 <li>Turning, Decelerating</li>
-<li>&nbsp;</li>
+<li id="feature-category-divider">&nbsp;</li>
 <li>Upwind Speed</li>
 <li>Luffing Speed</li>
 <li>Close Haul Speed</li>
 <li>Beam Reach Speed</li>
 <li>Broad Reach Speed</li>
 <li>Running Speed</li>
+</div>
 
-<li id="feature-category">Armour/Damage Resist</li>
+<li id="feature-category"><label for="catcollapse3" class="category-button" id="feature-category"><input type="checkbox" name="catcollapse3" id="catcollapse3" value="Y" class="checkbox-3" />Armour/Damage Resist</label></li>
 
+<div id="cl3">
 <li>Structure Integrity</li>
 <li>Port Armour</li>
 <li>Startboard Armour</li>
 <li>Bow Armour</li>
 <li>Stern Armour</li>
 <li>Mast Integrity</li>
-<li>&nbsp;</li>
+<li id="feature-category-divider">&nbsp;</li>
 <li>Structure DR</li>
 <li>Port DR</li>
 <li>Startboard DR</li>
 <li>Bow DR</li>
 <li>Stern DR</li>
 <li>Mast DR</li>
+</div>
 
-<li id="feature-category">Modifiers</li>
+<li id="feature-category"><label for="catcollapse4" class="category-button" id="feature-category"><input type="checkbox" name="catcollapse4" id="catcollapse4" value="Y" class="checkbox-4" />Modifiers</label></li>
 
+<div id="cl4">
 <li>Mast, Offence</li>
 <li>Mast, Defence</li>
 <li>Mast, Resist</li>
-<li>&nbsp;</li>
+<li id="feature-category-divider">&nbsp;</li>
 <li>Crew, Offence</li>
 <li>Crew, Defence</li>
 <li>Crew, Resist</li>
-<li>&nbsp;</li>
+<li id="feature-category-divider">&nbsp;</li>
 <li>Bow, Offence</li>
 <li>Bow, Defence</li>
 <li>Bow, Resist</li>
-<li>&nbsp;</li>
+<li id="feature-category-divider">&nbsp;</li>
 <li>Stern, Offence</li>
 <li>Stern, Defence</li>
 <li>Stern, Resist</li>
-<li>&nbsp;</li>
+<li id="feature-category-divider">&nbsp;</li>
 <li>Sides, Offence</li>
 <li>Sides, Defence</li>
 <li>Sides, Resist</li>
-<li>&nbsp;</li>
+<li id="feature-category-divider">&nbsp;</li>
 <li>Grappling, Offence</li>
 <li>Grappling, Defence</li>
 <li>Grappling, Resist</li>
-
+</div>
 <li id="feature-category">Armament</li>
 
-<li>Full Broadside</li>
+<li id="feature-category"><label for="catcollapse5" class="category-button" id="feature-category"><input type="checkbox" name="catcollapse5" id="catcollapse5" value="Y" class="checkbox-5" />Full Broadside</label></li>
 
+<div id="cl5">
 <li>Total Guns</li>
 <li>Broadside Weight</li>
 <li>Max Range</li>
@@ -128,9 +141,11 @@
 <li>DPS, 200yds</li>
 <li>Damage, 400yds</li>
 <li>DPS, 400yds</li>
+</div>
 
-<li id="feature-category">Top Deck</li>
+<li id="feature-category"><label for="catcollapse6" class="category-button" id="feature-category"><input type="checkbox" name="catcollapse6" id="catcollapse6" value="Y" class="checkbox-6" />Top Deck</label></li>
 
+<div id="cl6">
 <li>Guns per side</li>
 <li>Broadside Weight</li>
 <li>Range</li>
@@ -143,9 +158,11 @@
 <li>Accuracy, 400yds</li>
 <li>Damage, 400yds</li>
 <li>DPS, 400yds</li>
+</div>
 
-<li id="feature-category">Upper Deck</li>
+<li id="feature-category"><label for="catcollapse7" class="category-button" id="feature-category"><input type="checkbox" name="catcollapse7" id="catcollapse7" value="Y" class="checkbox-7" />Upper Deck</label></li>
 
+<div id="cl7">
 <li>Guns per side</li>
 <li>Broadside Weight</li>
 <li>Range</li>
@@ -158,9 +175,11 @@
 <li>Accuracy, 400yds</li>
 <li>Damage, 400yds</li>
 <li>DPS, 400yds</li>
+</div>
 
-<li id="feature-category">Middle Deck</li>
+<li id="feature-category"><label for="catcollapse8" class="category-button" id="feature-category"><input type="checkbox" name="catcollapse8" id="catcollapse8" value="Y" class="checkbox-8" />Middle Deck</label></li>
 
+<div id="cl8">
 <li>Guns per side</li>
 <li>Broadside Weight</li>
 <li>Range</li>
@@ -173,9 +192,11 @@
 <li>Accuracy, 400yds</li>
 <li>Damage, 400yds</li>
 <li>DPS, 400yds</li>
+</div>
 
-<li id="feature-category">Gun Deck</li>
+<li id="feature-category"><label for="catcollapse9" class="category-button" id="feature-category"><input type="checkbox" name="catcollapse9" id="catcollapse9" value="Y" class="checkbox-9" />Gun Deck</label></li>
 
+<div id="cl9">
 <li>Guns per side</li>
 <li>Broadside Weight</li>
 <li>Range</li>
@@ -188,9 +209,11 @@
 <li>Accuracy, 400yds</li>
 <li>Damage, 400yds</li>
 <li>DPS, 400yds</li>
+</div>
 
-<li id="feature-category">Bow Chasers</li>
+<li id="feature-category"><label for="catcollapse10" class="category-button" id="feature-category"><input type="checkbox" name="catcollapse10" id="catcollapse10" value="Y" class="checkbox-10" />Bow Chasers</label></li>
 
+<div id="cl10">
 <li>Guns per side</li>
 <li>Broadside Weight</li>
 <li>Range</li>
@@ -203,9 +226,11 @@
 <li>Accuracy, 400yds</li>
 <li>Damage, 400yds</li>
 <li>DPS, 400yds</li>
+</div>
 
-<li id="feature-category">Stern Chasers</li>
+<li id="feature-category"><label for="catcollapse11" class="category-button" id="feature-category"><input type="checkbox" name="catcollapse5" id="catcollapse11" value="Y" class="checkbox-11" />Stern Chasers</label></li>
 
+<div id="cl11">
 <li>Guns per side</li>
 <li>Broadside Weight</li>
 <li>Range</li>
@@ -218,9 +243,11 @@
 <li>Accuracy, 400yds</li>
 <li>Damage, 400yds</li>
 <li>DPS, 400yds</li>
+</div>
 
-<li id="feature-category">Swivel Guns</li>
+<li id="feature-category"><label for="catcollapse12" class="category-button" id="feature-category"><input type="checkbox" name="catcollapse5" id="catcollapse12" value="Y" class="checkbox-12" />Swivel Guns</label></li>
 
+<div id="cl12">
 <li>Guns per side</li>
 <li>Broadside Weight</li>
 <li>Range</li>
@@ -233,7 +260,7 @@
 <li>Accuracy, 400yds</li>
 <li>Damage, 400yds</li>
 <li>DPS, 400yds</li>
-
+</div>
 
 				</div>
 			</div> <!-- .features -->
@@ -245,262 +272,41 @@
 				
 				
 <li class="product">
-						<div class="top-info">
-							<div class="check"></div>
-							<img src="https://wiki.burningsea.com/ships/thumbs/san_mateo_abby_refit_galleon_lvl_50_330px.jpg" alt="Abaddons Will Refit Galleon">
-							<h3>Example</h3>
-						</div> <!-- .top-info -->
-
-						<ul class="cd-features-list">
-<li>44</li>
-<li>Warship</li>
-<li>Mastercraft</li>
-<li>Huge</li>
-<li>NO / PV / FT / BC / CT</li>
-
-<li id="feature-category">&nbsp;</li>
-
-<li>140</li>
-<li>74,3</li>
-<li>0</li>
-<li>240</li>
-<li>17</li>
-<li>3</li>
-<li>29422</li>
-
-<li id="feature-category">&nbsp;</li>
-
-<li>30</li>
-<li>61</li>
-<li id="feature-category-divider">&nbsp;</li>
-<li>27,45</li>
-<li>27,45</li>
-<li>61</li>
-<li>57,95</li>
-<li>50,94</li>
-<li>48,8</li>
-
-<li id="feature-category">&nbsp;</li>
-<li>30</li>
-<li>18</li>
-<li>1,73</li>
-<li>2,63</li>
-<li>8,55</li>
-<li>4,78</li>
-<li>6,84</li>
-<li>8,45</li>
-<li id="feature-category-divider">&nbsp;</li>
-<li>8,1</li>
-<li>8,1</li>
-<li>18</li>
-<li>17,1</li>
-<li>15,03</li>
-<li>14,4</li>
-
-<li id="feature-category">&nbsp;</li>
-
-<li>1400</li>
-<li>870</li>
-<li>870</li>
-<li>410</li>
-<li>190</li>
-<li>2750</li>
-<li id="feature-category-divider">&nbsp;</li>
-<li>0</li>
-<li>5</li>
-<li>5</li>
-<li>4</li>
-<li>3</li>
-<li>3</li>
-
-<li id="feature-category">&nbsp;</li>
-
-<li>0</li>
-<li>16</li>
-<li>0</li>
-<li id="feature-category-divider">&nbsp;</li>
-<li>0</li>
-<li>16</li>
-<li>0</li>
-<li id="feature-category-divider">&nbsp;</li>
-<li>0</li>
-<li>17</li>
-<li>0</li>
-<li id="feature-category-divider">&nbsp;</li>
-<li>0</li>
-<li>17</li>
-<li>0</li>
-<li id="feature-category-divider">&nbsp;</li>
-<li>0</li>
-<li>17</li>
-<li>0</li>
-<li id="feature-category-divider">&nbsp;</li>
-<li>0</li>
-<li>0</li>
-<li>0</li>
-
-<li id="feature-category">&nbsp;</li>
-
-<li id="feature-sub-category">&nbsp;</li>
-
-<li>26</li>
-<li>144</li>
-<li>750</li>
-<li>415</li>
-<li>415</li>
-<li>16,7</li>
-<li>415</li>
-<li>16,7</li>
-
-<li id="feature-category">&nbsp;</li>
-
-<li>2 x 6.0 </li>
-<li>12</li>
-<li>750</li>
-<li>26</li>
-<li>13,5</li>
-<li>52</li>
-<li>148</li>
-<li>52</li>
-<li>3,85</li>
-<li>156</li>
-<li>52</li>
-<li>3,85</li>
-
-<li id="feature-category">&nbsp;</li>
-
-<li>0 x 0.0 </li>
-<li>0</li>
-<li>0</li>
-<li>0</li>
-<li>0</li>
-<li>0</li>
-<li>0</li>
-<li>0</li>
-<li>0</li>
-<li>0</li>
-<li>0</li>
-<li>0</li>
-
-<li id="feature-category">&nbsp;</li>
-
-<li>0 x 0.0 </li>
-<li>0</li>
-<li>0</li>
-<li>0</li>
-<li>0</li>
-<li>0</li>
-<li>0</li>
-<li>0</li>
-<li>0</li>
-<li>0</li>
-<li>0</li>
-<li>0</li>
-
-<li id="feature-category">&nbsp;</li>
-
-<li>11 x 12.0 </li>
-<li>132</li>
-<li>750</li>
-<li>33</li>
-<li>28,3</li>
-<li>363</li>
-<li>148</li>
-<li>363</li>
-<li>12,83</li>
-<li>156</li>
-<li>363</li>
-<li>12,83</li>
-
-<li id="feature-category">&nbsp;</li>
-
-<li>1 x 4.0 </li>
-<li>4</li>
-<li>750</li>
-<li>24</li>
-<li>9,6</li>
-<li>24</li>
-<li>148</li>
-<li>24</li>
-<li>2,5</li>
-<li>156</li>
-<li>24</li>
-<li>2,5</li>
-
-<li id="feature-category">&nbsp;</li>
-
-<li>1 x 9.0 </li>
-<li>9</li>
-<li>750</li>
-<li>30</li>
-<li>21,3</li>
-<li>30</li>
-<li>148</li>
-<li>30</li>
-<li>1,41</li>
-<li>156</li>
-<li>30</li>
-<li>1,41</li>
-
-<li id="feature-category">&nbsp;</li>
-
-<li>3 x 0.5 </li>
-<li>1,5</li>
-<li>125</li>
-<li>8</li>
-<li>4,8</li>
-<li>24</li>
-<li>0</li>
-<li>0</li>
-<li>0</li>
-<li>0</li>
-<li>0</li>
-<li>0</li>
-
-							
-					</ul>
-					</li> <!-- .product -->		
-				
-				
-				
-<li class="product">
-						<div class="top-info">
-							<div class="check"></div>
-							<img src="https://wiki.burningsea.com/ships/thumbs/san_mateo_abby_refit_galleon_lvl_50_330px.jpg" alt="Abaddons Will Refit Galleon">
-							<h3>Abaddons Will Refit Galleon</h3>
-						</div> <!-- .top-info -->
-
-						<ul class="cd-features-list">
-						<li>50</li>
+<div class="top-info">
+<div class="check"></div>
+<img src="https://wiki.burningsea.com/ships/thumbs/san_mateo_abby_refit_galleon_lvl_50_330px.jpg" alt="Abaddons Will Refit Galleon">
+<h3>Abaddons Will Refit Galleon</h3></div>
+<ul class="cd-features-list">
+<li>50</li>
 <li>Merchant</li>
 <li>Refit</li>
 <li>Colossal</li>
 <li>BC / CT</li>
 
-<li>&nbsp;</li>
+<li id="feature-category">&nbsp;</li>
 
-<li>300</li>
+<ul id="cl0"><li>300</li>
 <li>82,1</li>
 <li>0</li>
 <li>700</li>
 <li>14</li>
 <li>3</li>
-<li>0</li>
+<li>0</li></ul>
 
-<li>&nbsp;</li>
+<li id="feature-category">&nbsp;</li>
 
-<li>135</li>
+<ul id="cl1"><li>135</li>
 <li>53</li>
-<li>&nbsp;</li>
+<li id="feature-category-divider">&nbsp;</li>
 <li>13,25</li>
 <li>18,55</li>
 <li>34,45</li>
 <li>43,73</li>
 <li>53</li>
-<li>45,05</li>
+<li>45,05</li></ul>
 
-<li>&nbsp;</li>
-<li>135</li>
+<li id="feature-category">&nbsp;</li>
+<ul id="cl2"><li>135</li>
 <li>12,85</li>
 <li>0,59</li>
 <li>1,55</li>
@@ -508,72 +314,72 @@
 <li>3,2</li>
 <li>4,3</li>
 <li>4,28</li>
-<li>&nbsp;</li>
+<li id="feature-category-divider">&nbsp;</li>
 <li>3,21</li>
 <li>4,5</li>
 <li>8,35</li>
 <li>10,6</li>
 <li>12,85</li>
-<li>10,92</li>
+<li>10,92</li></ul>
 
-<li>&nbsp;</li>
+<li id="feature-category">&nbsp;</li>
 
-<li>2475</li>
+<ul id="cl3"><li>2475</li>
 <li>1585</li>
 <li>1585</li>
 <li>785</li>
 <li>390</li>
 <li>3095</li>
-<li>&nbsp;</li>
+<li id="feature-category-divider">&nbsp;</li>
 <li>0</li>
 <li>9</li>
 <li>9</li>
 <li>8</li>
 <li>7</li>
-<li>6</li>
+<li>6</li></ul>
 
-<li>&nbsp;</li>
+<li id="feature-category">&nbsp;</li>
 
-<li>0</li>
+<ul id="cl4"><li>0</li>
 <li>12</li>
 <li>0</li>
-<li>&nbsp;</li>
+<li id="feature-category-divider">&nbsp;</li>
 <li>0</li>
 <li>13</li>
 <li>0</li>
-<li>&nbsp;</li>
+<li id="feature-category-divider">&nbsp;</li>
 <li>0</li>
 <li>12</li>
 <li>0</li>
-<li>&nbsp;</li>
+<li id="feature-category-divider">&nbsp;</li>
 <li>0</li>
 <li>12</li>
 <li>0</li>
-<li>&nbsp;</li>
+<li id="feature-category-divider">&nbsp;</li>
 <li>0</li>
 <li>12</li>
 <li>0</li>
-<li>&nbsp;</li>
+<li id="feature-category-divider">&nbsp;</li>
 <li>0</li>
 <li>0</li>
-<li>0</li>
+<li>0</li></ul>
 
-<li>&nbsp;</li>
+<li id="feature-category">&nbsp;</li>
 
-<li>&nbsp;</li>
+<li id="feature-category">&nbsp;</li>
 
-<li>44</li>
+<ul id="cl5"><li>44</li>
 <li>297</li>
 <li>750</li>
 <li>759</li>
 <li>759</li>
 <li>26,6</li>
 <li>759</li>
-<li>26,6</li>
+<li>26,6</li></ul>
 
-<li>&nbsp;</li>
+<li id="feature-category">&nbsp;</li>
 
-<li>11 x 9.0 </li>
+<ul id="cl6"><li>11 x 9.0 </li>
 <li>99</li>
 <li>750</li>
 <li>30</li>
@@ -584,11 +390,11 @@
 <li>15,14</li>
 <li>156</li>
 <li>330</li>
-<li>15,14</li>
+<li>15,14</li></ul>
 
-<li>&nbsp;</li>
+<li id="feature-category">&nbsp;</li>
 
-<li>0 x 0.0 </li>
+<ul id="cl7"><li>0 x 0.0 </li>
 <li>0</li>
 <li>0</li>
 <li>0</li>
@@ -599,11 +405,11 @@
 <li>0</li>
 <li>0</li>
 <li>0</li>
-<li>0</li>
+<li>0</li></ul>
 
-<li>&nbsp;</li>
+<li id="feature-category">&nbsp;</li>
 
-<li>0 x 0.0 </li>
+<ul id="cl8"><li>0 x 0.0 </li>
 <li>0</li>
 <li>0</li>
 <li>0</li>
@@ -614,11 +420,11 @@
 <li>0</li>
 <li>0</li>
 <li>0</li>
-<li>0</li>
+<li>0</li></ul>
 
-<li>&nbsp;</li>
+<li id="feature-category">&nbsp;</li>
 
-<li>11 x 18.0 </li>
+<ul id="cl9"><li>11 x 18.0 </li>
 <li>198</li>
 <li>750</li>
 <li>39</li>
@@ -629,11 +435,11 @@
 <li>11,5</li>
 <li>156</li>
 <li>429</li>
-<li>11,5</li>
+<li>11,5</li></ul>
 
-<li>&nbsp;</li>
+<li id="feature-category">&nbsp;</li>
 
-<li>1 x 8.0 </li>
+<ul id="cl10"><li>1 x 8.0 </li>
 <li>8</li>
 <li>750</li>
 <li>28</li>
@@ -644,11 +450,11 @@
 <li>1,54</li>
 <li>156</li>
 <li>28</li>
-<li>1,54</li>
+<li>1,54</li></ul>
 
-<li>&nbsp;</li>
+<li id="feature-category">&nbsp;</li>
 
-<li>1 x 12.0 </li>
+<ul id="cl11"><li>1 x 12.0 </li>
 <li>12</li>
 <li>750</li>
 <li>33</li>
@@ -659,11 +465,11 @@
 <li>1,14</li>
 <li>156</li>
 <li>33</li>
-<li>1,14</li>
+<li>1,14</li></ul>
 
-<li>&nbsp;</li>
+<li id="feature-category">&nbsp;</li>
 
-<li>4 x 0.5 </li>
+<ul id="cl12"><li>4 x 0.5 </li>
 <li>2</li>
 <li>125</li>
 <li>8</li>
@@ -674,50 +480,46 @@
 <li>0</li>
 <li>0</li>
 <li>0</li>
-<li>0</li>
+<li>0</li></ul>
+</ul>
+</li>
 
-
-						</ul>
-					</li> <!-- .product -->				
-					
-					<li class="product">
-						<div class="top-info">
-							<div class="check"></div>
-							<img src="https://wiki.burningsea.com/ships/thumbs/achilles_frigate.jpg" alt="Achilles Privateer Frigate">
-							<h3>Achilles Privateer Frigate</h3>
-						</div> <!-- .top-info -->
-
-						<ul class="cd-features-list">
-							<li>50</li>
+<li class="product">
+<div class="top-info">
+<div class="check"></div>
+<img src="https://wiki.burningsea.com/ships/thumbs/achilles_frigate.jpg" alt="Achilles Privateer Frigate">
+<h3>Achilles Privateer Frigate</h3></div>
+<ul class="cd-features-list">
+<li>50</li>
 <li>Warship</li>
 <li>Refit</li>
 <li>Huge</li>
 <li>PV</li>
 
-<li>&nbsp;</li>
+<li id="feature-category">&nbsp;</li>
 
-<li>115</li>
+<ul id="cl0"><li>115</li>
 <li>75</li>
 <li>0</li>
 <li>180</li>
 <li>15</li>
 <li>3</li>
-<li>35212</li>
+<li>35212</li></ul>
 
-<li>&nbsp;</li>
+<li id="feature-category">&nbsp;</li>
 
-<li>135</li>
+<ul id="cl1"><li>135</li>
 <li>56</li>
-<li>&nbsp;</li>
+<li id="feature-category-divider">&nbsp;</li>
 <li>15,12</li>
 <li>20,72</li>
 <li>43,4</li>
 <li>50,4</li>
 <li>56</li>
-<li>52,08</li>
+<li>52,08</li></ul>
 
-<li>&nbsp;</li>
-<li>135</li>
+<li id="feature-category">&nbsp;</li>
+<ul id="cl2"><li>135</li>
 <li>17,59</li>
 <li>1,91</li>
 <li>2,89</li>
@@ -725,72 +527,72 @@
 <li>4,89</li>
 <li>6,9</li>
 <li>8,56</li>
-<li>&nbsp;</li>
+<li id="feature-category-divider">&nbsp;</li>
 <li>4,75</li>
 <li>6,51</li>
 <li>13,63</li>
 <li>15,83</li>
 <li>17,59</li>
-<li>16,36</li>
+<li>16,36</li></ul>
 
-<li>&nbsp;</li>
+<li id="feature-category">&nbsp;</li>
 
-<li>2230</li>
+<ul id="cl3"><li>2230</li>
 <li>1560</li>
 <li>1560</li>
 <li>780</li>
 <li>390</li>
 <li>2400</li>
-<li>&nbsp;</li>
+<li id="feature-category-divider">&nbsp;</li>
 <li>0</li>
 <li>8</li>
 <li>8</li>
 <li>7</li>
 <li>6</li>
-<li>5</li>
+<li>5</li></ul>
 
-<li>&nbsp;</li>
+<li id="feature-category">&nbsp;</li>
 
-<li>4</li>
+<ul id="cl4"><li>4</li>
 <li>20</li>
 <li>0</li>
-<li>&nbsp;</li>
+<li id="feature-category-divider">&nbsp;</li>
 <li>4</li>
 <li>22</li>
 <li>0</li>
-<li>&nbsp;</li>
+<li id="feature-category-divider">&nbsp;</li>
 <li>4</li>
 <li>20</li>
 <li>0</li>
-<li>&nbsp;</li>
+<li id="feature-category-divider">&nbsp;</li>
 <li>4</li>
 <li>20</li>
 <li>0</li>
-<li>&nbsp;</li>
+<li id="feature-category-divider">&nbsp;</li>
 <li>4</li>
 <li>20</li>
 <li>0</li>
-<li>&nbsp;</li>
+<li id="feature-category-divider">&nbsp;</li>
 <li>0</li>
 <li>0</li>
-<li>0</li>
+<li>0</li></ul>
 
-<li>&nbsp;</li>
+<li id="feature-category">&nbsp;</li>
 
-<li>&nbsp;</li>
+<li id="feature-category">&nbsp;</li>
 
-<li>30</li>
+<ul id="cl5"><li>30</li>
 <li>174</li>
 <li>750</li>
 <li>489</li>
 <li>489</li>
 <li>18</li>
 <li>489</li>
-<li>18</li>
+<li>18</li></ul>
 
-<li>&nbsp;</li>
+<li id="feature-category">&nbsp;</li>
 
-<li>2 x 9.0 </li>
+<ul id="cl6"><li>2 x 9.0 </li>
 <li>18</li>
 <li>750</li>
 <li>30</li>
@@ -801,11 +603,11 @@
 <li>2,82</li>
 <li>160</li>
 <li>60</li>
-<li>2,82</li>
+<li>2,82</li></ul>
 
-<li>&nbsp;</li>
+<li id="feature-category">&nbsp;</li>
 
-<li>0 x 0.0 </li>
+<ul id="cl7"><li>0 x 0.0 </li>
 <li>0</li>
 <li>0</li>
 <li>0</li>
@@ -816,11 +618,11 @@
 <li>0</li>
 <li>0</li>
 <li>0</li>
-<li>0</li>
+<li>0</li></ul>
 
-<li>&nbsp;</li>
+<li id="feature-category">&nbsp;</li>
 
-<li>0 x 0.0 </li>
+<ul id="cl8"><li>0 x 0.0 </li>
 <li>0</li>
 <li>0</li>
 <li>0</li>
@@ -831,11 +633,11 @@
 <li>0</li>
 <li>0</li>
 <li>0</li>
-<li>0</li>
+<li>0</li></ul>
 
-<li>&nbsp;</li>
+<li id="feature-category">&nbsp;</li>
 
-<li>13 x 12.0 </li>
+<ul id="cl9"><li>13 x 12.0 </li>
 <li>156</li>
 <li>750</li>
 <li>33</li>
@@ -846,11 +648,11 @@
 <li>15,16</li>
 <li>160</li>
 <li>429</li>
-<li>15,16</li>
+<li>15,16</li></ul>
 
-<li>&nbsp;</li>
+<li id="feature-category">&nbsp;</li>
 
-<li>0 x 0.0 </li>
+<ul id="cl10"><li>0 x 0.0 </li>
 <li>0</li>
 <li>0</li>
 <li>0</li>
@@ -861,11 +663,11 @@
 <li>0</li>
 <li>0</li>
 <li>0</li>
-<li>0</li>
+<li>0</li></ul>
 
-<li>&nbsp;</li>
+<li id="feature-category">&nbsp;</li>
 
-<li>1 x 12.0 </li>
+<ul id="cl11"><li>1 x 12.0 </li>
 <li>12</li>
 <li>750</li>
 <li>33</li>
@@ -876,11 +678,11 @@
 <li>1,17</li>
 <li>160</li>
 <li>33</li>
-<li>1,17</li>
+<li>1,17</li></ul>
 
-<li>&nbsp;</li>
+<li id="feature-category">&nbsp;</li>
 
-<li>4 x 0.5 </li>
+<ul id="cl12"><li>4 x 0.5 </li>
 <li>2</li>
 <li>125</li>
 <li>8</li>
@@ -891,54 +693,46 @@
 <li>0</li>
 <li>0</li>
 <li>0</li>
-<li>0</li>
+<li>0</li></ul>
+</ul>
+</li>
 
-
-						</ul>
-					</li> <!-- .product -->
-					
-					
-					
-					
-					
-					<li class="product">
-						<div class="top-info">
-							<div class="check"></div>
-							<img src="https://wiki.burningsea.com/ships/thumbs/adventure.jpg" alt="Adventure Refit Frigate">
-							<h3>Adventure Refit Frigate</h3>
-						</div> <!-- .top-info -->
-
-						<ul class="cd-features-list">
-						<li>50</li>
+<li class="product">
+<div class="top-info">
+<div class="check"></div>
+<img src="https://wiki.burningsea.com/ships/thumbs/adventure.jpg" alt="Adventure Refit Frigate">
+<h3>Adventure Refit Frigate</h3></div>
+<ul class="cd-features-list">
+<li>50</li>
 <li>Warship</li>
 <li>Refit</li>
 <li>Huge</li>
 <li>NO / PV / FT / BC / CT</li>
 
-<li>&nbsp;</li>
+<li id="feature-category">&nbsp;</li>
 
-<li>165</li>
+<ul id="cl0"><li>165</li>
 <li>79,8</li>
 <li>0</li>
 <li>190</li>
 <li>18</li>
 <li>3</li>
-<li>39752</li>
+<li>39752</li></ul>
 
-<li>&nbsp;</li>
+<li id="feature-category">&nbsp;</li>
 
-<li>135</li>
+<ul id="cl1"><li>135</li>
 <li>51</li>
-<li>&nbsp;</li>
+<li id="feature-category-divider">&nbsp;</li>
 <li>16,32</li>
 <li>21,14</li>
 <li>39,52</li>
 <li>49,72</li>
 <li>51</li>
-<li>15,18</li>
+<li>15,18</li></ul>
 
-<li>&nbsp;</li>
-<li>135</li>
+<li id="feature-category">&nbsp;</li>
+<ul id="cl2"><li>135</li>
 <li>17,15</li>
 <li>1,61</li>
 <li>2,21</li>
@@ -946,71 +740,72 @@
 <li>4,78</li>
 <li>6,52</li>
 <li>7,65</li>
-<li>&nbsp;</li>
+<li id="feature-category-divider">&nbsp;</li>
 <li>6</li>
 <li>7,72</li>
 <li>14,15</li>
 <li>15,86</li>
 <li>17,15</li>
-<li>15,95</li>
+<li>15,95</li></ul>
 
-<li>&nbsp;</li>
+<li id="feature-category">&nbsp;</li>
 
-<li>2270</li>
+<ul id="cl3"><li>2270</li>
 <li>1615</li>
 <li>1615</li>
 <li>805</li>
 <li>400</li>
 <li>3325</li>
-<li>&nbsp;</li>
+<li id="feature-category-divider">&nbsp;</li>
 <li>0</li>
 <li>8</li>
 <li>8</li>
 <li>7</li>
 <li>6</li>
-<li>6</li>
+<li>6</li></ul>
 
-<li>&nbsp;</li>
+<li id="feature-category">&nbsp;</li>
 
-<li>0</li>
+<ul id="cl4"><li>0</li>
 <li>23</li>
 <li>0</li>
-<li>&nbsp;</li>
+<li id="feature-category-divider">&nbsp;</li>
 <li>0</li>
 <li>22</li>
 <li>0</li>
-<li>&nbsp;</li>
+<li id="feature-category-divider">&nbsp;</li>
 <li>0</li>
 <li>22</li>
 <li>0</li>
-<li>&nbsp;</li>
+<li id="feature-category-divider">&nbsp;</li>
 <li>0</li>
 <li>21</li>
 <li>0</li>
-<li>&nbsp;</li>
+<li id="feature-category-divider">&nbsp;</li>
 <li>0</li>
 <li>23</li>
 <li>0</li>
-<li>&nbsp;</li>
+<li id="feature-category-divider">&nbsp;</li>
 <li>0</li>
 <li>0</li>
-<li>0</li>
+<li>0</li></ul>
 
-<li>&nbsp;</li>
+<li id="feature-category">&nbsp;</li>
 
-<li>&nbsp;</li>
-<li>36</li>
+<li id="feature-category">&nbsp;</li>
+
+<ul id="cl5"><li>36</li>
 <li>246</li>
 <li>750</li>
 <li>612</li>
 <li>612</li>
 <li>20,4</li>
 <li>612</li>
-<li>20,4</li>
+<li>20,4</li></ul>
 
-<li>&nbsp;</li>
+<li id="feature-category">&nbsp;</li>
 
-<li>6 x 9.0 </li>
+<ul id="cl6"><li>6 x 9.0 </li>
 <li>54</li>
 <li>750</li>
 <li>30</li>
@@ -1021,11 +816,11 @@
 <li>8,07</li>
 <li>156</li>
 <li>180</li>
-<li>8,07</li>
+<li>8,07</li></ul>
 
-<li>&nbsp;</li>
+<li id="feature-category">&nbsp;</li>
 
-<li>0 x 0.0 </li>
+<ul id="cl7"><li>0 x 0.0 </li>
 <li>0</li>
 <li>0</li>
 <li>0</li>
@@ -1036,11 +831,11 @@
 <li>0</li>
 <li>0</li>
 <li>0</li>
-<li>0</li>
+<li>0</li></ul>
 
-<li>&nbsp;</li>
+<li id="feature-category">&nbsp;</li>
 
-<li>0 x 0.0 </li>
+<ul id="cl8"><li>0 x 0.0 </li>
 <li>0</li>
 <li>0</li>
 <li>0</li>
@@ -1051,11 +846,11 @@
 <li>0</li>
 <li>0</li>
 <li>0</li>
-<li>0</li>
+<li>0</li></ul>
 
-<li>&nbsp;</li>
+<li id="feature-category">&nbsp;</li>
 
-<li>12 x 16.0 </li>
+<ul id="cl9"><li>12 x 16.0 </li>
 <li>192</li>
 <li>750</li>
 <li>36</li>
@@ -1066,11 +861,11 @@
 <li>12,34</li>
 <li>156</li>
 <li>432</li>
-<li>12,34</li>
+<li>12,34</li></ul>
 
-<li>&nbsp;</li>
+<li id="feature-category">&nbsp;</li>
 
-<li>1 x 9.0 </li>
+<ul id="cl10"><li>1 x 9.0 </li>
 <li>9</li>
 <li>750</li>
 <li>30</li>
@@ -1081,11 +876,11 @@
 <li>1,35</li>
 <li>156</li>
 <li>30</li>
-<li>1,35</li>
+<li>1,35</li></ul>
 
-<li>&nbsp;</li>
+<li id="feature-category">&nbsp;</li>
 
-<li>1 x 16.0 </li>
+<ul id="cl11"><li>1 x 16.0 </li>
 <li>16</li>
 <li>750</li>
 <li>36</li>
@@ -1096,11 +891,11 @@
 <li>1,03</li>
 <li>156</li>
 <li>36</li>
-<li>1,03</li>
+<li>1,03</li></ul>
 
-<li>&nbsp;</li>
+<li id="feature-category">&nbsp;</li>
 
-<li>4 x 0.5 </li>
+<ul id="cl12"><li>4 x 0.5 </li>
 <li>2</li>
 <li>125</li>
 <li>8</li>
@@ -1111,50 +906,46 @@
 <li>0</li>
 <li>0</li>
 <li>0</li>
-<li>0</li>
-	
+<li>0</li></ul>
+</ul>
+</li>
 
-						</ul>
-					</li> <!-- .product -->
-
-					<li class="product">
-						<div class="top-info">
-							<div class="check"></div>
-							<img src="https://wiki.burningsea.com/ships/thumbs/agamemnon.jpg" alt="Agamemnon Bark">
-							<h3>Agamemnon Bark</h3>
-						</div> <!-- .top-info -->
-
-						<ul class="cd-features-list">
-							<li>25</li>
+<li class="product">
+<div class="top-info">
+<div class="check"></div>
+<img src="https://wiki.burningsea.com/ships/thumbs/agamemnon.jpg" alt="Agamemnon Bark">
+<h3>Agamemnon Bark</h3></div>
+<ul class="cd-features-list">
+<li>25</li>
 <li>Warship</li>
 <li>Standard</li>
 <li>Large</li>
 <li>CT</li>
 
-<li>&nbsp;</li>
+<li id="feature-category">&nbsp;</li>
 
-<li>170</li>
+<ul id="cl0"><li>170</li>
 <li>66,7</li>
 <li>0</li>
 <li>160</li>
 <li>20</li>
 <li>4</li>
-<li>10541</li>
+<li>10541</li></ul>
 
-<li>&nbsp;</li>
+<li id="feature-category">&nbsp;</li>
 
-<li>135</li>
+<ul id="cl1"><li>135</li>
 <li>57</li>
-<li>&nbsp;</li>
+<li id="feature-category-divider">&nbsp;</li>
 <li>17,1</li>
 <li>22,8</li>
 <li>38,48</li>
 <li>50,45</li>
 <li>57</li>
-<li>52,73</li>
+<li>52,73</li></ul>
 
-<li>&nbsp;</li>
-<li>135</li>
+<li id="feature-category">&nbsp;</li>
+<ul id="cl2"><li>135</li>
 <li>18,6</li>
 <li>2,59</li>
 <li>3,85</li>
@@ -1162,72 +953,72 @@
 <li>6,25</li>
 <li>8,2</li>
 <li>10,25</li>
-<li>&nbsp;</li>
+<li id="feature-category-divider">&nbsp;</li>
 <li>5,58</li>
 <li>7,44</li>
 <li>12,56</li>
 <li>16,46</li>
 <li>18,6</li>
-<li>17,21</li>
+<li>17,21</li></ul>
 
-<li>&nbsp;</li>
+<li id="feature-category">&nbsp;</li>
 
-<li>1325</li>
+<ul id="cl3"><li>1325</li>
 <li>820</li>
 <li>820</li>
 <li>410</li>
 <li>210</li>
 <li>1625</li>
-<li>&nbsp;</li>
+<li id="feature-category-divider">&nbsp;</li>
 <li>0</li>
 <li>6</li>
 <li>6</li>
 <li>5</li>
 <li>4</li>
-<li>4</li>
+<li>4</li></ul>
 
-<li>&nbsp;</li>
+<li id="feature-category">&nbsp;</li>
 
+<ul id="cl4"><li>0</li>
+<li>32</li>
+<li>0</li>
+<li id="feature-category-divider">&nbsp;</li>
 <li>0</li>
 <li>32</li>
 <li>0</li>
-<li>&nbsp;</li>
+<li id="feature-category-divider">&nbsp;</li>
 <li>0</li>
 <li>32</li>
 <li>0</li>
-<li>&nbsp;</li>
+<li id="feature-category-divider">&nbsp;</li>
 <li>0</li>
 <li>32</li>
 <li>0</li>
-<li>&nbsp;</li>
+<li id="feature-category-divider">&nbsp;</li>
 <li>0</li>
 <li>32</li>
 <li>0</li>
-<li>&nbsp;</li>
-<li>0</li>
-<li>32</li>
-<li>0</li>
-<li>&nbsp;</li>
+<li id="feature-category-divider">&nbsp;</li>
 <li>0</li>
 <li>0</li>
-<li>0</li>
+<li>0</li></ul>
 
-<li>&nbsp;</li>
+<li id="feature-category">&nbsp;</li>
 
-<li>&nbsp;</li>
+<li id="feature-category">&nbsp;</li>
 
-<li>26</li>
+<ul id="cl5"><li>26</li>
 <li>99</li>
 <li>750</li>
 <li>366</li>
 <li>366</li>
 <li>18,6</li>
 <li>366</li>
-<li>18,6</li>
+<li>18,6</li></ul>
 
-<li>&nbsp;</li>
+<li id="feature-category">&nbsp;</li>
 
-<li>6 x 6.0 </li>
+<ul id="cl6"><li>6 x 6.0 </li>
 <li>36</li>
 <li>750</li>
 <li>26</li>
@@ -1238,11 +1029,11 @@
 <li>10,06</li>
 <li>156</li>
 <li>156</li>
-<li>10,06</li>
+<li>10,06</li></ul>
 
-<li>&nbsp;</li>
+<li id="feature-category">&nbsp;</li>
 
-<li>0 x 0.0 </li>
+<ul id="cl7"><li>0 x 0.0 </li>
 <li>0</li>
 <li>0</li>
 <li>0</li>
@@ -1253,11 +1044,11 @@
 <li>0</li>
 <li>0</li>
 <li>0</li>
-<li>0</li>
+<li>0</li></ul>
 
-<li>&nbsp;</li>
+<li id="feature-category">&nbsp;</li>
 
-<li>0 x 0.0 </li>
+<ul id="cl8"><li>0 x 0.0 </li>
 <li>0</li>
 <li>0</li>
 <li>0</li>
@@ -1268,11 +1059,11 @@
 <li>0</li>
 <li>0</li>
 <li>0</li>
-<li>0</li>
+<li>0</li></ul>
 
-<li>&nbsp;</li>
+<li id="feature-category">&nbsp;</li>
 
-<li>7 x 9.0 </li>
+<ul id="cl9"><li>7 x 9.0 </li>
 <li>63</li>
 <li>750</li>
 <li>30</li>
@@ -1283,11 +1074,11 @@
 <li>8,57</li>
 <li>156</li>
 <li>210</li>
-<li>8,57</li>
+<li>8,57</li></ul>
 
-<li>&nbsp;</li>
+<li id="feature-category">&nbsp;</li>
 
-<li>1 x 6.0 </li>
+<ul id="cl10"><li>1 x 6.0 </li>
 <li>6</li>
 <li>750</li>
 <li>26</li>
@@ -1298,11 +1089,11 @@
 <li>1,68</li>
 <li>156</li>
 <li>26</li>
-<li>1,68</li>
+<li>1,68</li></ul>
 
-<li>&nbsp;</li>
+<li id="feature-category">&nbsp;</li>
 
-<li>1 x 9.0 </li>
+<ul id="cl11"><li>1 x 9.0 </li>
 <li>9</li>
 <li>750</li>
 <li>30</li>
@@ -1313,11 +1104,11 @@
 <li>1,22</li>
 <li>156</li>
 <li>30</li>
-<li>1,22</li>
+<li>1,22</li></ul>
 
-<li>&nbsp;</li>
+<li id="feature-category">&nbsp;</li>
 
-<li>2 x 0.5 </li>
+<ul id="cl12"><li>2 x 0.5 </li>
 <li>1</li>
 <li>125</li>
 <li>8</li>
@@ -1328,49 +1119,46 @@
 <li>0</li>
 <li>0</li>
 <li>0</li>
-<li>0</li>
+<li>0</li></ul>
+</ul>
+</li>
 
-						</ul>
-					</li> <!-- .product -->
-
-					<li class="product">
-						<div class="top-info">
-							<div class="check"></div>
-							<img src="https://wiki.burningsea.com/ships/thumbs/alexander_fourth_rate.jpg" alt="Alexander Fourth Rate">
-							<h3>Alexander Fourth Rate</h3>
-						</div> <!-- .top-info -->
-
-						<ul class="cd-features-list">
-							<li>50</li>
+<li class="product">
+<div class="top-info">
+<div class="check"></div>
+<img src="https://wiki.burningsea.com/ships/thumbs/alexander_fourth_rate.jpg" alt="Alexander Fourth Rate">
+<h3>Alexander Fourth Rate</h3></div>
+<ul class="cd-features-list">
+<li>50</li>
 <li>Ship of the Line</li>
 <li>Standard</li>
 <li>Huge</li>
 <li>NO</li>
 
-<li>&nbsp;</li>
+<li id="feature-category">&nbsp;</li>
 
-<li>140</li>
+<ul id="cl0"><li>140</li>
 <li>76,2</li>
 <li>0</li>
 <li>365</li>
 <li>13</li>
 <li>2</li>
-<li>230353</li>
+<li>230353</li></ul>
 
-<li>&nbsp;</li>
+<li id="feature-category">&nbsp;</li>
 
-<li>135</li>
+<ul id="cl1"><li>135</li>
 <li>52</li>
-<li>&nbsp;</li>
+<li id="feature-category-divider">&nbsp;</li>
 <li>20,8</li>
 <li>26</li>
 <li>36,4</li>
 <li>42,9</li>
 <li>52</li>
-<li>46,8</li>
+<li>46,8</li></ul>
 
-<li>&nbsp;</li>
-<li>135</li>
+<li id="feature-category">&nbsp;</li>
+<ul id="cl2"><li>135</li>
 <li>15,2</li>
 <li>0,55</li>
 <li>1,64</li>
@@ -1378,72 +1166,72 @@
 <li>2,75</li>
 <li>4,88</li>
 <li>5,45</li>
-<li>&nbsp;</li>
+<li id="feature-category-divider">&nbsp;</li>
 <li>6,08</li>
 <li>7,6</li>
 <li>10,64</li>
 <li>12,54</li>
 <li>15,2</li>
-<li>13,68</li>
+<li>13,68</li></ul>
 
-<li>&nbsp;</li>
+<li id="feature-category">&nbsp;</li>
 
-<li>2750</li>
+<ul id="cl3"><li>2750</li>
 <li>1930</li>
 <li>1930</li>
 <li>975</li>
 <li>485</li>
 <li>3050</li>
-<li>&nbsp;</li>
+<li id="feature-category-divider">&nbsp;</li>
 <li>0</li>
 <li>10</li>
 <li>10</li>
 <li>9</li>
 <li>8</li>
-<li>6</li>
+<li>6</li></ul>
 
-<li>&nbsp;</li>
+<li id="feature-category">&nbsp;</li>
 
-<li>0</li>
+<ul id="cl4"><li>0</li>
 <li>23</li>
 <li>0</li>
-<li>&nbsp;</li>
+<li id="feature-category-divider">&nbsp;</li>
 <li>0</li>
 <li>20</li>
 <li>0</li>
-<li>&nbsp;</li>
+<li id="feature-category-divider">&nbsp;</li>
 <li>0</li>
 <li>18</li>
 <li>0</li>
-<li>&nbsp;</li>
+<li id="feature-category-divider">&nbsp;</li>
 <li>0</li>
 <li>18</li>
 <li>0</li>
-<li>&nbsp;</li>
+<li id="feature-category-divider">&nbsp;</li>
 <li>0</li>
 <li>18</li>
 <li>0</li>
-<li>&nbsp;</li>
+<li id="feature-category-divider">&nbsp;</li>
 <li>0</li>
 <li>0</li>
-<li>0</li>
+<li>0</li></ul>
 
-<li>&nbsp;</li>
+<li id="feature-category">&nbsp;</li>
 
-<li>&nbsp;</li>
+<li id="feature-category">&nbsp;</li>
 
-<li>54</li>
+<ul id="cl5"><li>54</li>
 <li>348</li>
 <li>750</li>
 <li>908</li>
 <li>908</li>
 <li>32,6</li>
 <li>908</li>
-<li>32,6</li>
+<li>32,6</li></ul>
 
-<li>&nbsp;</li>
+<li id="feature-category">&nbsp;</li>
 
-<li>7 x 6.0 </li>
+<ul id="cl6"><li>7 x 6.0 </li>
 <li>42</li>
 <li>750</li>
 <li>26</li>
@@ -1454,11 +1242,11 @@
 <li>12,3</li>
 <li>156</li>
 <li>182</li>
-<li>12,3</li>
+<li>12,3</li></ul>
 
-<li>&nbsp;</li>
+<li id="feature-category">&nbsp;</li>
 
-<li>9 x 12.0 </li>
+<ul id="cl7"><li>9 x 12.0 </li>
 <li>108</li>
 <li>750</li>
 <li>33</li>
@@ -1469,11 +1257,11 @@
 <li>9,58</li>
 <li>156</li>
 <li>297</li>
-<li>9,58</li>
+<li>9,58</li></ul>
 
-<li>&nbsp;</li>
+<li id="feature-category">&nbsp;</li>
 
-<li>0 x 0.0 </li>
+<ul id="cl8"><li>0 x 0.0 </li>
 <li>0</li>
 <li>0</li>
 <li>0</li>
@@ -1484,11 +1272,11 @@
 <li>0</li>
 <li>0</li>
 <li>0</li>
-<li>0</li>
+<li>0</li></ul>
 
-<li>&nbsp;</li>
+<li id="feature-category">&nbsp;</li>
 
-<li>11 x 18.0 </li>
+<ul id="cl9"><li>11 x 18.0 </li>
 <li>198</li>
 <li>750</li>
 <li>39</li>
@@ -1499,11 +1287,11 @@
 <li>10,73</li>
 <li>156</li>
 <li>429</li>
-<li>10,73</li>
+<li>10,73</li></ul>
 
-<li>&nbsp;</li>
+<li id="feature-category">&nbsp;</li>
 
-<li>1 x 6.0 </li>
+<ul id="cl10"><li>1 x 6.0 </li>
 <li>6</li>
 <li>750</li>
 <li>26</li>
@@ -1514,11 +1302,11 @@
 <li>1,76</li>
 <li>156</li>
 <li>26</li>
-<li>1,76</li>
+<li>1,76</li></ul>
 
-<li>&nbsp;</li>
+<li id="feature-category">&nbsp;</li>
 
-<li>1 x 18.0 </li>
+<ul id="cl11"><li>1 x 18.0 </li>
 <li>18</li>
 <li>750</li>
 <li>39</li>
@@ -1529,11 +1317,11 @@
 <li>0,98</li>
 <li>156</li>
 <li>39</li>
-<li>0,98</li>
+<li>0,98</li></ul>
 
-<li>&nbsp;</li>
+<li id="feature-category">&nbsp;</li>
 
-<li>3 x 0.5 </li>
+<ul id="cl12"><li>3 x 0.5 </li>
 <li>1,5</li>
 <li>125</li>
 <li>8</li>
@@ -1544,49 +1332,46 @@
 <li>0</li>
 <li>0</li>
 <li>0</li>
-<li>0</li>
+<li>0</li></ul>
+</ul>
+</li>
 
-						</ul>
-					</li> <!-- .product -->
-
-					<li class="product">
-						<div class="top-info">
-							<div class="check"></div>
-							<img src="https://wiki.burningsea.com/ships/thumbs/algiersrefit_polacre.jpg" alt="Algiers Refit Polacre">
-							<h3>Algiers Refit Polacre</h3>
-						</div> <!-- .top-info -->
-
-						<ul class="cd-features-list">
-							<li>26</li>
+<li class="product">
+<div class="top-info">
+<div class="check"></div>
+<img src="https://wiki.burningsea.com/ships/thumbs/algiersrefit_polacre.jpg" alt="Algiers Refit Polacre">
+<h3>Algiers Refit Polacre</h3></div>
+<ul class="cd-features-list">
+<li>26</li>
 <li>Scout</li>
 <li>Refit</li>
 <li>Large</li>
 <li>NO / PV / FT / BC / CT</li>
 
-<li>&nbsp;</li>
+<li id="feature-category">&nbsp;</li>
 
-<li>850</li>
+<ul id="cl0"><li>850</li>
 <li>71,4</li>
 <li>0</li>
 <li>180</li>
 <li>23</li>
 <li>3</li>
-<li>6299</li>
+<li>6299</li></ul>
 
-<li>&nbsp;</li>
+<li id="feature-category">&nbsp;</li>
 
-<li>90</li>
+<ul id="cl1"><li>90</li>
 <li>62</li>
-<li>&nbsp;</li>
+<li id="feature-category-divider">&nbsp;</li>
 <li>24,8</li>
 <li>31</li>
 <li>55,8</li>
 <li>62</li>
 <li>55,8</li>
-<li>54,25</li>
+<li>54,25</li></ul>
 
-<li>&nbsp;</li>
-<li>90</li>
+<li id="feature-category">&nbsp;</li>
+<ul id="cl2"><li>90</li>
 <li>17,75</li>
 <li>1,61</li>
 <li>2,41</li>
@@ -1594,72 +1379,72 @@
 <li>4,48</li>
 <li>6,64</li>
 <li>8,35</li>
-<li>&nbsp;</li>
+<li id="feature-category-divider">&nbsp;</li>
 <li>7,1</li>
 <li>8,88</li>
 <li>15,98</li>
 <li>17,75</li>
 <li>15,98</li>
-<li>15,53</li>
+<li>15,53</li></ul>
 
-<li>&nbsp;</li>
+<li id="feature-category">&nbsp;</li>
 
-<li>1200</li>
+<ul id="cl3"><li>1200</li>
 <li>950</li>
 <li>950</li>
 <li>475</li>
 <li>240</li>
 <li>2100</li>
-<li>&nbsp;</li>
+<li id="feature-category-divider">&nbsp;</li>
 <li>0</li>
 <li>5</li>
 <li>5</li>
 <li>4</li>
 <li>3</li>
+<li>0</li></ul>
+
+<li id="feature-category">&nbsp;</li>
+
+<ul id="cl4"><li>0</li>
+<li>18</li>
 <li>0</li>
-
-<li>&nbsp;</li>
-
+<li id="feature-category-divider">&nbsp;</li>
 <li>0</li>
 <li>18</li>
 <li>0</li>
-<li>&nbsp;</li>
-<li>0</li>
-<li>18</li>
-<li>0</li>
-<li>&nbsp;</li>
+<li id="feature-category-divider">&nbsp;</li>
 <li>0</li>
 <li>19</li>
 <li>0</li>
-<li>&nbsp;</li>
+<li id="feature-category-divider">&nbsp;</li>
 <li>0</li>
 <li>19</li>
 <li>0</li>
-<li>&nbsp;</li>
+<li id="feature-category-divider">&nbsp;</li>
 <li>0</li>
 <li>19</li>
 <li>0</li>
-<li>&nbsp;</li>
+<li id="feature-category-divider">&nbsp;</li>
 <li>0</li>
 <li>0</li>
-<li>0</li>
+<li>0</li></ul>
 
-<li>&nbsp;</li>
+<li id="feature-category">&nbsp;</li>
 
-<li>&nbsp;</li>
+<li id="feature-category">&nbsp;</li>
 
-<li>18</li>
+<ul id="cl5"><li>18</li>
 <li>81</li>
 <li>750</li>
 <li>270</li>
 <li>270</li>
 <li>11,6</li>
 <li>270</li>
-<li>11,6</li>
+<li>11,6</li></ul>
 
-<li>&nbsp;</li>
+<li id="feature-category">&nbsp;</li>
 
-<li>9 x 9.0 </li>
+<ul id="cl6"><li>9 x 9.0 </li>
 <li>81</li>
 <li>750</li>
 <li>30</li>
@@ -1670,11 +1455,11 @@
 <li>11,59</li>
 <li>156</li>
 <li>270</li>
-<li>11,59</li>
+<li>11,59</li></ul>
 
-<li>&nbsp;</li>
+<li id="feature-category">&nbsp;</li>
 
-<li>0 x 0.0 </li>
+<ul id="cl7"><li>0 x 0.0 </li>
 <li>0</li>
 <li>0</li>
 <li>0</li>
@@ -1685,11 +1470,11 @@
 <li>0</li>
 <li>0</li>
 <li>0</li>
-<li>0</li>
+<li>0</li></ul>
 
-<li>&nbsp;</li>
+<li id="feature-category">&nbsp;</li>
 
-<li>0 x 0.0 </li>
+<ul id="cl8"><li>0 x 0.0 </li>
 <li>0</li>
 <li>0</li>
 <li>0</li>
@@ -1700,11 +1485,11 @@
 <li>0</li>
 <li>0</li>
 <li>0</li>
-<li>0</li>
+<li>0</li></ul>
 
-<li>&nbsp;</li>
+<li id="feature-category">&nbsp;</li>
 
-<li>0 x 0.0 </li>
+<ul id="cl9"><li>0 x 0.0 </li>
 <li>0</li>
 <li>0</li>
 <li>0</li>
@@ -1715,11 +1500,11 @@
 <li>0</li>
 <li>0</li>
 <li>0</li>
-<li>0</li>
+<li>0</li></ul>
 
-<li>&nbsp;</li>
+<li id="feature-category">&nbsp;</li>
 
-<li>1 x 6.0 </li>
+<ul id="cl10"><li>1 x 6.0 </li>
 <li>6</li>
 <li>750</li>
 <li>26</li>
@@ -1730,11 +1515,11 @@
 <li>1,76</li>
 <li>156</li>
 <li>26</li>
-<li>1,76</li>
+<li>1,76</li></ul>
 
-<li>&nbsp;</li>
+<li id="feature-category">&nbsp;</li>
 
-<li>1 x 9.0 </li>
+<ul id="cl11"><li>1 x 9.0 </li>
 <li>9</li>
 <li>750</li>
 <li>30</li>
@@ -1745,11 +1530,11 @@
 <li>1,29</li>
 <li>156</li>
 <li>30</li>
-<li>1,29</li>
+<li>1,29</li></ul>
 
-<li>&nbsp;</li>
+<li id="feature-category">&nbsp;</li>
 
-<li>3 x 0.5 </li>
+<ul id="cl12"><li>3 x 0.5 </li>
 <li>1,5</li>
 <li>125</li>
 <li>8</li>
@@ -1760,49 +1545,46 @@
 <li>0</li>
 <li>0</li>
 <li>0</li>
-<li>0</li>
+<li>0</li></ul>
+</ul>
+</li>
 
-						</ul>
-					</li> <!-- .product -->
-
-					<li class="product">
-						<div class="top-info">
-							<div class="check"></div>
-							<img src="https://wiki.burningsea.com/ships/thumbs/alym.png" alt="Alymer">
-							<h3>Alymer</h3>
-						</div> <!-- .top-info -->
-
-						<ul class="cd-features-list">
-							<li>1</li>
+<li class="product">
+<div class="top-info">
+<div class="check"></div>
+<img src="https://wiki.burningsea.com/ships/thumbs/alym.png" alt="Alymer">
+<h3>Alymer</h3></div>
+<ul class="cd-features-list">
+<li>1</li>
 <li>Scout</li>
 <li>Standard</li>
 <li>Tiny</li>
 <li>NO / PV / FT / BC / CT</li>
 
-<li>&nbsp;</li>
+<li id="feature-category">&nbsp;</li>
 
-<li>50</li>
+<ul id="cl0"><li>50</li>
 <li>23,8</li>
 <li>0</li>
 <li>8</li>
 <li>20</li>
 <li>8</li>
-<li>314</li>
+<li>314</li></ul>
 
-<li>&nbsp;</li>
+<li id="feature-category">&nbsp;</li>
 
-<li>90</li>
+<ul id="cl1"><li>90</li>
 <li>70</li>
-<li>&nbsp;</li>
+<li id="feature-category-divider">&nbsp;</li>
 <li>31,5</li>
 <li>31,5</li>
 <li>64,75</li>
 <li>70</li>
 <li>61,25</li>
-<li>52,5</li>
+<li>52,5</li></ul>
 
-<li>&nbsp;</li>
-<li>90</li>
+<li id="feature-category">&nbsp;</li>
+<ul id="cl2"><li>90</li>
 <li>16</li>
 <li>3,68</li>
 <li>1,32</li>
@@ -1810,72 +1592,72 @@
 <li>5</li>
 <li>19</li>
 <li>5,7</li>
-<li>&nbsp;</li>
+<li id="feature-category-divider">&nbsp;</li>
 <li>16</li>
 <li>16</li>
 <li>16</li>
 <li>16</li>
 <li>16</li>
-<li>16</li>
+<li>16</li></ul>
 
-<li>&nbsp;</li>
+<li id="feature-category">&nbsp;</li>
 
-<li>350</li>
+<ul id="cl3"><li>350</li>
 <li>240</li>
 <li>240</li>
 <li>120</li>
 <li>60</li>
 <li>900</li>
-<li>&nbsp;</li>
+<li id="feature-category-divider">&nbsp;</li>
 <li>0</li>
 <li>0</li>
 <li>0</li>
 <li>0</li>
 <li>0</li>
-<li>0</li>
+<li>0</li></ul>
 
-<li>&nbsp;</li>
+<li id="feature-category">&nbsp;</li>
 
+<ul id="cl4"><li>0</li>
+<li>45</li>
+<li>0</li>
+<li id="feature-category-divider">&nbsp;</li>
 <li>0</li>
 <li>45</li>
 <li>0</li>
-<li>&nbsp;</li>
+<li id="feature-category-divider">&nbsp;</li>
 <li>0</li>
 <li>45</li>
 <li>0</li>
-<li>&nbsp;</li>
+<li id="feature-category-divider">&nbsp;</li>
 <li>0</li>
 <li>45</li>
 <li>0</li>
-<li>&nbsp;</li>
+<li id="feature-category-divider">&nbsp;</li>
 <li>0</li>
 <li>45</li>
 <li>0</li>
-<li>&nbsp;</li>
-<li>0</li>
-<li>45</li>
-<li>0</li>
-<li>&nbsp;</li>
+<li id="feature-category-divider">&nbsp;</li>
 <li>0</li>
 <li>0</li>
-<li>0</li>
+<li>0</li></ul>
 
-<li>&nbsp;</li>
+<li id="feature-category">&nbsp;</li>
 
-<li>&nbsp;</li>
+<li id="feature-category">&nbsp;</li>
 
+<ul id="cl5"><li>0</li>
 <li>0</li>
 <li>0</li>
 <li>0</li>
 <li>0</li>
 <li>0</li>
 <li>0</li>
-<li>0</li>
-<li>0</li>
+<li>0</li></ul>
 
-<li>&nbsp;</li>
+<li id="feature-category">&nbsp;</li>
 
-<li>0 x 0.0 </li>
+<ul id="cl6"><li>0 x 0.0 </li>
 <li>0</li>
 <li>0</li>
 <li>0</li>
@@ -1886,11 +1668,11 @@
 <li>0</li>
 <li>0</li>
 <li>0</li>
-<li>0</li>
+<li>0</li></ul>
 
-<li>&nbsp;</li>
+<li id="feature-category">&nbsp;</li>
 
-<li>0 x 0.0 </li>
+<ul id="cl7"><li>0 x 0.0 </li>
 <li>0</li>
 <li>0</li>
 <li>0</li>
@@ -1901,11 +1683,11 @@
 <li>0</li>
 <li>0</li>
 <li>0</li>
-<li>0</li>
+<li>0</li></ul>
 
-<li>&nbsp;</li>
+<li id="feature-category">&nbsp;</li>
 
-<li>0 x 0.0 </li>
+<ul id="cl8"><li>0 x 0.0 </li>
 <li>0</li>
 <li>0</li>
 <li>0</li>
@@ -1916,11 +1698,11 @@
 <li>0</li>
 <li>0</li>
 <li>0</li>
-<li>0</li>
+<li>0</li></ul>
 
-<li>&nbsp;</li>
+<li id="feature-category">&nbsp;</li>
 
-<li>0 x 0.0 </li>
+<ul id="cl9"><li>0 x 0.0 </li>
 <li>0</li>
 <li>0</li>
 <li>0</li>
@@ -1931,11 +1713,11 @@
 <li>0</li>
 <li>0</li>
 <li>0</li>
-<li>0</li>
+<li>0</li></ul>
 
-<li>&nbsp;</li>
+<li id="feature-category">&nbsp;</li>
 
-<li>0 x 0.0 </li>
+<ul id="cl10"><li>0 x 0.0 </li>
 <li>0</li>
 <li>0</li>
 <li>0</li>
@@ -1946,11 +1728,11 @@
 <li>0</li>
 <li>0</li>
 <li>0</li>
-<li>0</li>
+<li>0</li></ul>
 
-<li>&nbsp;</li>
+<li id="feature-category">&nbsp;</li>
 
-<li>0 x 0.0 </li>
+<ul id="cl11"><li>0 x 0.0 </li>
 <li>0</li>
 <li>0</li>
 <li>0</li>
@@ -1961,11 +1743,11 @@
 <li>0</li>
 <li>0</li>
 <li>0</li>
-<li>0</li>
+<li>0</li></ul>
 
-<li>&nbsp;</li>
+<li id="feature-category">&nbsp;</li>
 
-<li>2 x 0.5 </li>
+<ul id="cl12"><li>2 x 0.5 </li>
 <li>1</li>
 <li>125</li>
 <li>8</li>
@@ -1976,266 +1758,46 @@
 <li>0</li>
 <li>0</li>
 <li>0</li>
-<li>0</li>
-
-						</ul>
-					</li> <!-- .product -->
-
-					<li class="product">
-						<div class="top-info">
-							<div class="check"></div>
-							<img src="https://wiki.burningsea.com/ships/thumbs/arcadia_mc_xebec_lvl_44.jpg" alt="Arcadia Mastercraft Xebec">
-							<h3>Arcadia Mastercraft Xebec</h3>
-						</div> <!-- .top-info -->
-
-						<ul class="cd-features-list">
-							<li>44</li>
-<li>Warship</li>
-<li>Mastercraft</li>
-<li>Huge</li>
-<li>NO / PV / FT / BC / CT</li>
-
-<li>&nbsp;</li>
-
-<li>140</li>
-<li>74,3</li>
-<li>0</li>
-<li>240</li>
-<li>17</li>
-<li>3</li>
-<li>29422</li>
-
-<li>&nbsp;</li>
-
-<li>30</li>
-<li>61</li>
-<li>&nbsp;</li>
-<li>27,45</li>
-<li>27,45</li>
-<li>61</li>
-<li>57,95</li>
-<li>50,94</li>
-<li>48,8</li>
-
-<li>&nbsp;</li>
-<li>30</li>
-<li>18</li>
-<li>1,73</li>
-<li>2,63</li>
-<li>8,55</li>
-<li>4,78</li>
-<li>6,84</li>
-<li>8,45</li>
-<li>&nbsp;</li>
-<li>8,1</li>
-<li>8,1</li>
-<li>18</li>
-<li>17,1</li>
-<li>15,03</li>
-<li>14,4</li>
-
-<li>&nbsp;</li>
-
-<li>1400</li>
-<li>870</li>
-<li>870</li>
-<li>410</li>
-<li>190</li>
-<li>2750</li>
-<li>&nbsp;</li>
-<li>0</li>
-<li>5</li>
-<li>5</li>
-<li>4</li>
-<li>3</li>
-<li>3</li>
-
-<li>&nbsp;</li>
-
-<li>0</li>
-<li>16</li>
-<li>0</li>
-<li>&nbsp;</li>
-<li>0</li>
-<li>16</li>
-<li>0</li>
-<li>&nbsp;</li>
-<li>0</li>
-<li>17</li>
-<li>0</li>
-<li>&nbsp;</li>
-<li>0</li>
-<li>17</li>
-<li>0</li>
-<li>&nbsp;</li>
-<li>0</li>
-<li>17</li>
-<li>0</li>
-<li>&nbsp;</li>
-<li>0</li>
-<li>0</li>
-<li>0</li>
-
-<li>&nbsp;</li>
-
-<li>&nbsp;</li>
-
-<li>26</li>
-<li>144</li>
-<li>750</li>
-<li>415</li>
-<li>415</li>
-<li>16,7</li>
-<li>415</li>
-<li>16,7</li>
-
-<li>&nbsp;</li>
-
-<li>2 x 6.0 </li>
-<li>12</li>
-<li>750</li>
-<li>26</li>
-<li>13,5</li>
-<li>52</li>
-<li>148</li>
-<li>52</li>
-<li>3,85</li>
-<li>156</li>
-<li>52</li>
-<li>3,85</li>
-
-<li>&nbsp;</li>
-
-<li>0 x 0.0 </li>
-<li>0</li>
-<li>0</li>
-<li>0</li>
-<li>0</li>
-<li>0</li>
-<li>0</li>
-<li>0</li>
-<li>0</li>
-<li>0</li>
-<li>0</li>
-<li>0</li>
-
-<li>&nbsp;</li>
-
-<li>0 x 0.0 </li>
-<li>0</li>
-<li>0</li>
-<li>0</li>
-<li>0</li>
-<li>0</li>
-<li>0</li>
-<li>0</li>
-<li>0</li>
-<li>0</li>
-<li>0</li>
-<li>0</li>
-
-<li>&nbsp;</li>
-
-<li>11 x 12.0 </li>
-<li>132</li>
-<li>750</li>
-<li>33</li>
-<li>28,3</li>
-<li>363</li>
-<li>148</li>
-<li>363</li>
-<li>12,83</li>
-<li>156</li>
-<li>363</li>
-<li>12,83</li>
-
-<li>&nbsp;</li>
-
-<li>1 x 4.0 </li>
-<li>4</li>
-<li>750</li>
-<li>24</li>
-<li>9,6</li>
-<li>24</li>
-<li>148</li>
-<li>24</li>
-<li>2,5</li>
-<li>156</li>
-<li>24</li>
-<li>2,5</li>
-
-<li>&nbsp;</li>
-
-<li>1 x 9.0 </li>
-<li>9</li>
-<li>750</li>
-<li>30</li>
-<li>21,3</li>
-<li>30</li>
-<li>148</li>
-<li>30</li>
-<li>1,41</li>
-<li>156</li>
-<li>30</li>
-<li>1,41</li>
-
-<li>&nbsp;</li>
-
-<li>3 x 0.5 </li>
-<li>1,5</li>
-<li>125</li>
-<li>8</li>
-<li>4,8</li>
-<li>24</li>
-<li>0</li>
-<li>0</li>
-<li>0</li>
-<li>0</li>
-<li>0</li>
-<li>0</li>
-
-						</ul>
-					</li> <!-- .product -->
-
+<li>0</li></ul>
+</ul>
+</li>
 
 <li class="product">
-						<div class="top-info">
-							<div class="check"></div>
-							<img src="https://wiki.burningsea.com/ships/thumbs/ship_no_image.gif" alt="Arcadia Mastercraft Xebec">
-							<h3>Arcadia Mastercraft Xebec</h3>
-						</div> <!-- .top-info -->
-
-						<ul class="cd-features-list">
-							<li>44</li>
+<div class="top-info">
+<div class="check"></div>
+<img src="https://wiki.burningsea.com/ships/thumbs/arcadia_mc_xebec_lvl_44.jpg" alt="Arcadia Mastercraft Xebec">
+<h3>Arcadia Mastercraft Xebec</h3></div>
+<ul class="cd-features-list">
+<li>44</li>
 <li>Warship</li>
 <li>Mastercraft</li>
 <li>Huge</li>
 <li>NO / PV / FT / BC / CT</li>
 
-<li>&nbsp;</li>
+<li id="feature-category">&nbsp;</li>
 
-<li>140</li>
+<ul id="cl0"><li>140</li>
 <li>74,3</li>
 <li>0</li>
 <li>240</li>
 <li>17</li>
 <li>3</li>
-<li>29422</li>
+<li>29422</li></ul>
 
-<li>&nbsp;</li>
+<li id="feature-category">&nbsp;</li>
 
-<li>30</li>
+<ul id="cl1"><li>30</li>
 <li>61</li>
-<li>&nbsp;</li>
+<li id="feature-category-divider">&nbsp;</li>
 <li>27,45</li>
 <li>27,45</li>
 <li>61</li>
 <li>57,95</li>
 <li>50,94</li>
-<li>48,8</li>
+<li>48,8</li></ul>
 
-<li>&nbsp;</li>
-<li>30</li>
+<li id="feature-category">&nbsp;</li>
+<ul id="cl2"><li>30</li>
 <li>18</li>
 <li>1,73</li>
 <li>2,63</li>
@@ -2243,72 +1805,72 @@
 <li>4,78</li>
 <li>6,84</li>
 <li>8,45</li>
-<li>&nbsp;</li>
+<li id="feature-category-divider">&nbsp;</li>
 <li>8,1</li>
 <li>8,1</li>
 <li>18</li>
 <li>17,1</li>
 <li>15,03</li>
-<li>14,4</li>
+<li>14,4</li></ul>
 
-<li>&nbsp;</li>
+<li id="feature-category">&nbsp;</li>
 
-<li>1400</li>
+<ul id="cl3"><li>1400</li>
 <li>870</li>
 <li>870</li>
 <li>410</li>
 <li>190</li>
 <li>2750</li>
-<li>&nbsp;</li>
+<li id="feature-category-divider">&nbsp;</li>
 <li>0</li>
 <li>5</li>
 <li>5</li>
 <li>4</li>
 <li>3</li>
-<li>3</li>
+<li>3</li></ul>
 
-<li>&nbsp;</li>
+<li id="feature-category">&nbsp;</li>
 
+<ul id="cl4"><li>0</li>
+<li>16</li>
+<li>0</li>
+<li id="feature-category-divider">&nbsp;</li>
 <li>0</li>
 <li>16</li>
 <li>0</li>
-<li>&nbsp;</li>
-<li>0</li>
-<li>16</li>
-<li>0</li>
-<li>&nbsp;</li>
+<li id="feature-category-divider">&nbsp;</li>
 <li>0</li>
 <li>17</li>
 <li>0</li>
-<li>&nbsp;</li>
+<li id="feature-category-divider">&nbsp;</li>
 <li>0</li>
 <li>17</li>
 <li>0</li>
-<li>&nbsp;</li>
+<li id="feature-category-divider">&nbsp;</li>
 <li>0</li>
 <li>17</li>
 <li>0</li>
-<li>&nbsp;</li>
+<li id="feature-category-divider">&nbsp;</li>
 <li>0</li>
 <li>0</li>
-<li>0</li>
+<li>0</li></ul>
 
-<li>&nbsp;</li>
+<li id="feature-category">&nbsp;</li>
 
-<li>&nbsp;</li>
+<li id="feature-category">&nbsp;</li>
 
-<li>26</li>
+<ul id="cl5"><li>26</li>
 <li>144</li>
 <li>750</li>
 <li>415</li>
 <li>415</li>
 <li>16,7</li>
 <li>415</li>
-<li>16,7</li>
+<li>16,7</li></ul>
 
-<li>&nbsp;</li>
+<li id="feature-category">&nbsp;</li>
 
-<li>2 x 6.0 </li>
+<ul id="cl6"><li>2 x 6.0 </li>
 <li>12</li>
 <li>750</li>
 <li>26</li>
@@ -2319,11 +1881,11 @@
 <li>3,85</li>
 <li>156</li>
 <li>52</li>
-<li>3,85</li>
+<li>3,85</li></ul>
 
-<li>&nbsp;</li>
+<li id="feature-category">&nbsp;</li>
 
-<li>0 x 0.0 </li>
+<ul id="cl7"><li>0 x 0.0 </li>
 <li>0</li>
 <li>0</li>
 <li>0</li>
@@ -2334,11 +1896,11 @@
 <li>0</li>
 <li>0</li>
 <li>0</li>
-<li>0</li>
+<li>0</li></ul>
 
-<li>&nbsp;</li>
+<li id="feature-category">&nbsp;</li>
 
-<li>0 x 0.0 </li>
+<ul id="cl8"><li>0 x 0.0 </li>
 <li>0</li>
 <li>0</li>
 <li>0</li>
@@ -2349,11 +1911,11 @@
 <li>0</li>
 <li>0</li>
 <li>0</li>
-<li>0</li>
+<li>0</li></ul>
 
-<li>&nbsp;</li>
+<li id="feature-category">&nbsp;</li>
 
-<li>11 x 12.0 </li>
+<ul id="cl9"><li>11 x 12.0 </li>
 <li>132</li>
 <li>750</li>
 <li>33</li>
@@ -2364,11 +1926,11 @@
 <li>12,83</li>
 <li>156</li>
 <li>363</li>
-<li>12,83</li>
+<li>12,83</li></ul>
 
-<li>&nbsp;</li>
+<li id="feature-category">&nbsp;</li>
 
-<li>1 x 4.0 </li>
+<ul id="cl10"><li>1 x 4.0 </li>
 <li>4</li>
 <li>750</li>
 <li>24</li>
@@ -2379,11 +1941,11 @@
 <li>2,5</li>
 <li>156</li>
 <li>24</li>
-<li>2,5</li>
+<li>2,5</li></ul>
 
-<li>&nbsp;</li>
+<li id="feature-category">&nbsp;</li>
 
-<li>1 x 9.0 </li>
+<ul id="cl11"><li>1 x 9.0 </li>
 <li>9</li>
 <li>750</li>
 <li>30</li>
@@ -2394,11 +1956,11 @@
 <li>1,41</li>
 <li>156</li>
 <li>30</li>
-<li>1,41</li>
+<li>1,41</li></ul>
 
-<li>&nbsp;</li>
+<li id="feature-category">&nbsp;</li>
 
-<li>3 x 0.5 </li>
+<ul id="cl12"><li>3 x 0.5 </li>
 <li>1,5</li>
 <li>125</li>
 <li>8</li>
@@ -2409,12 +1971,9 @@
 <li>0</li>
 <li>0</li>
 <li>0</li>
-<li>0</li>
-
-						</ul>
-					</li> <!-- .product -->
-
-
+<li>0</li></ul>
+</ul>
+</li>
 
 
 
@@ -2429,10 +1988,18 @@
 				<li><a href="#0" class="next">Next</a></li>
 			</ul>
 		</div> <!-- .cd-products-table -->
+	
 	</section> <!-- .cd-products-comparison-table -->
+	</div>
 	<div>Partial Credits CodyHouse</div>
 <script src="js/jquery-3.6.0.min.js"></script>
 <script src="js/main.js"></script> <!-- Resource jQuery -->
 <script src="js/highlight.js"></script>
+<script src="js/collapsecategory.js"></script>
+
+
+
+
+
 </body>
 </html>

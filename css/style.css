@@ -16,8 +16,6 @@ body {
   font-family: "Source Sans Pro", sans-serif;
   color: #404042;
   background-color: #ffffff;
-  margin-left: 25px;
-  margin-right: 25px;
   background: url(../img/potbs_bg.gif) repeat no-repeat top center;
   background-color: black;
   background-attachment: fixed;
@@ -49,15 +47,72 @@ h1 {
 
 .match { color: green; }
 
+
+input[type="checkbox"]{
+  position: absolute;
+  left: -9999px;
+}
+
+
+
+
+
+.CollapseUL
+ {
+    height: 0;
+  transform: scaleY(0);
+ }
+
+.CollapseUL {
+display:none;
+
+}
+
+
+#feature-category-divider {
+	height: 2px;
+}
+
 /* -------------------------------- 
 
 Main Components 
 
 -------------------------------- */
+
+.top-info {
+	z-index: 999;
+}
+
+.comparison-table-wrapper {
+	margin: auto;
+  width: 95%;
+ 
+}
+
 #feature-category {
 	font-family: -webkit-pictograph;
 	background-color: tan;
+	border: none;
+	clear: both;
+    display: block;
 }
+
+.category-button::after {
+	content: "\22C1";
+	display: inline-block;
+  transform: rotate(0deg);
+      display: block;
+    float: right;
+}
+
+
+label > input:checked
+{
+	transform: rotate(-90deg)
+} 
+
+
+
 .cd-features-list {
     list-style-type: none;
 }
@@ -196,6 +251,7 @@ li.product {
   width: max-content;
   margin-left: 120px;
   background-color: papayawhip;
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
 }
 .cd-products-columns::after {
   clear: both;
