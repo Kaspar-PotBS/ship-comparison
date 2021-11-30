@@ -1,0 +1,285 @@
+﻿
+
+    #skillTool
+    {
+        
+        width: 600px;
+        float: left;
+        font-weight: bold;
+        }
+
+    #charMenu
+    {
+        width: 100%;
+        margin: 0 0 20px 0;
+        float: left;
+        }
+        
+        #charMenu a
+        {
+            height: 120px; width: 100px;
+            float: left;
+            background-image: url("../img/NO_icon.png");
+            margin: 0px 10px 0px 0px;          
+            text-align: center;
+            font: bold 14px/200px arial;
+            border: 1px solid silver;
+            color: #483014;
+            font-family: Trebuchet MS;
+            text-decoration: none;
+            }        
+
+     #Results
+     {
+        width: 100%;
+        margin: 0 0 20px 0;
+        float: left;
+        }
+           
+              #Points
+              {
+               width: 240px; 
+               padding: 5px;
+               float:left;
+               height: 30px;
+               background: green;
+               color: White;
+               font: bold 18px/28px Trebuchet MS;
+               float: left;
+               text-indent: 5px;
+               }
+
+
+
+              #SendNumber
+              {
+               width: 280px; 
+               padding: 5px;
+               float:left;
+               height: 30px;
+               color: #4d4d4d;
+               background: yellow;
+               font: bold 18px/28px Trebuchet MS;
+               float: left;
+               text-indent: 5px;               
+               }
+               
+         .OneSkill
+         {
+             width: 300px;
+             }      
+               
+/******************************************/
+
+
+img
+{
+    margin: 5px; margin-right: 0px;
+    display: inline;
+    float: left;
+    }
+    
+        
+    h1
+    {
+        font-family: Trebuchet MS;
+        font-size: 19px;
+        margin: 0 0 5px 0;
+        color: #546085;
+        }
+        
+    h2
+    {
+        font-family: Trebuchet MS;
+        font-size: 14px;
+        color: #546085;
+        float: left;
+        }        
+        
+      /*  #slider, #slider2{float: left; margin-top: 16px; margin-left: 20px;} */
+      
+      #slider
+      {
+          position: relative;
+          top:90px; 
+          left: 0;
+          z-index: 0;
+          height: 1px;
+          background: transparent;
+          border: 1px solid green;
+          display: none;
+          }
+        
+        .skillhead{
+	        display: block;
+		    color: #B8B5B2;
+		    font-family: Trebuchet MS, Arial;
+		    font-size: 12px;
+	        }
+        
+       .ui-tabs .ui-tabs-nav li.ui-tabs-selected a, .ui-tabs .ui-tabs-nav li.ui-state-disabled a, .ui-tabs .ui-tabs-nav li.ui-state-processing a
+        {color: red !important;
+         font-weight: bold;} 
+         
+         #slider1 .ui-widget-header, #slider2 .ui-widget-header, #slider3 .ui-widget-header, #slider4 .ui-widget-header, #slider5 .ui-widget-header, #slider6 .ui-widget-header, #slider7 .ui-widget-header, #slider8 .ui-widget-header
+         {
+             background: url("../img/green2.png") transparent;
+             background-repeat: repeat;
+             border: 0;
+         
+             }
+             
+             
+      
+             .ui-widget-content{background:transparent; /*border: 0px;*/   }
+             
+             #slider1, #slider2, #slider3, #slider4, #slider5, #slider6, #slider7, #slider8
+             {                 
+                
+                 width: 245px;
+                 margin-top: 4px;
+                 margin-left: 24px;
+                 
+                 }
+             
+			 #skill-1, #skill-2, #skill-3, #skill-4, #skill-5, #skill-6, #skill-7, #skill-8, #skill-9 {
+				background-color: transparent;
+				
+  			 }  
+    
+                
+                 
+                 #tab1,#tab2,#tab3,#tab4,#tab5,#tab6,#tab7,#tab8 {display: block; width: 300px; height: 40px;}
+                 
+              .ui-slider-handle{}
+              
+              
+              /*
+              
+              .ui-tooltip
+              {
+                  
+                  top: 300px !important;
+                  left: 800px !important;
+                  }
+              */
+
+
+     /* betrifft die icons */
+     .Beschreibung{float: left; margin: 5px} 
+
+#Beschreibungen
+{
+    position: absolute; 
+    top: 160px;
+    left: 320px;
+    padding: 8px;
+    padding-top: 8px;
+    width: 300px; 
+    border: 1px dotted gray;
+    z-index: 55;
+    background-color: #2D2C2B;
+    color: #B8B5B2;
+    font-family: Trebuchet MS, Arial;
+    font-size: 12px;   
+    display: block;
+    }
+    
+       .discription
+       {
+		 position: relative; 
+		 top: 0px;      
+ 		 display: inherit;	
+ 		 padding: 0 0 0 5px;
+ 		 width:290px;
+		}
+		
+			       .discription ul
+			       {
+					text-indent: 20px;
+					list-style-position: inside;
+					}
+		
+		 .discription h1{
+			border: 0;
+			padding: 0;
+			margin: 0;
+		}
+  
+  
+  
+  /* charNavi */
+  
+  #charNavi{
+	float: left; 
+	width: 600px; 
+
+	margin: 50px 0 0 0;	
+	}
+                 
+           .charNaviItem{
+           		float:left;
+				width: 110px; height: 145px;
+
+			}
+			
+			.charNaviItem a 
+			{
+				width: 110px; height: 145px;	
+				float: left;
+				}
+			
+.cutt a { background: url("../img/cutt.png") transparent no-repeat; }
+.cutt a:hover { background: url("../img/cutt_over.png") transparent no-repeat; }
+
+.bucc a { background: url("../img/bucc.png") transparent no-repeat; }
+.bucc a:hover { background: url("../img/bucc_over.png") transparent no-repeat; margin: 1px 0 0 0; }
+
+.navy a { background: url("../img/navy.png") transparent no-repeat; }
+.navy a:hover { background: url("../img/navy_over.png") transparent no-repeat; }
+
+.priv a { background: url("../img/priv.png") transparent no-repeat; }
+.priv a:hover { background: url("../img/priv_over.png") transparent no-repeat; }
+
+.free a { background: url("../img/free.png") transparent no-repeat; margin: -5px 0 0 0;  }
+.free a:hover { background: url("../img/free_over.png") transparent no-repeat; margin: -5px 0 0 0; }
+
+
+.csc-frame-frame1
+{
+	width: 900px;
+	float: left;
+	color: #2d2d2d;
+	margin: 30px 0 0 0; 
+	border-top: 1px solid #2d2d2d;
+	padding: 8px;
+	
+}
+
+.csc-frame-frame1 p,.csc-frame-frame1 h1, .csc-frame-frame1 a
+{
+	color: #2d2d2d;
+	font: 11px/14px Arial;
+}
+
+/*
+     FILE ARCHIVED ON 03:27:01 Jun 27, 2017 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 18:01:01 Nov 29, 2021.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 503.15
+  exclusion.robots: 0.148
+  esindex: 0.011
+  exclusion.robots.policy: 0.138
+  cdx.remote: 0.082
+  load_resource: 4053.475
+  PetaboxLoader3.datanode: 4305.569 (4)
+  LoadShardBlock: 391.213 (3)
+  CDXLines.iter: 16.77 (3)
+  PetaboxLoader3.resolve: 99.139
+*/
