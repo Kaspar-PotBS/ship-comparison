@@ -1,4 +1,4 @@
-shipsdata = [{
+{
   "ID":"99",
   "Model":"Abaddons Will Refit Galleon",
   "Level":"50",
@@ -158,4 +158,4 @@ shipsdata = [{
   "Swivel_Damage_ 400":"0",
   "Swivel_DPS_400":"0",
   "lasted_updated":"-"
-}]
+}
