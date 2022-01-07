@@ -33,6 +33,6 @@ for(var i = 0; i < hashParams.length; i++){
 //window.onload = fn; // fire on pageload
 //
 //function fn() {
-//   $('#ship').val(window.location.hash.replace('#', ''));
+//   $('#ship1').val(window.location.hash.replace('#', ''));
 //	
 //}
