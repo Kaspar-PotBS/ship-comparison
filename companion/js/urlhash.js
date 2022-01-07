@@ -21,18 +21,18 @@ for(var i = 0; i < hashParams.length; i++){
 
 
 
-//$(function(){
-//  $('#ship').change(function () {
-//       var selnum = $(this).val();
-//		var url = "ship="+selnum;
-//        window.location.hash = url;
-//    });
-//});
-//window.addEventListener('hashchange', fn, false);
-//
-//window.onload = fn; // fire on pageload
-//
-//function fn() {
-//   $('#ship1').val(window.location.hash.replace('#', ''));
-//	
-//}
+$(function(){
+  $('#ship').change(function () {
+       var selnum = $(this).val();
+		var url = "ship="+selnum;
+        window.location.hash = url;
+    });
+});
+window.addEventListener('hashchange', fn, false);
+
+window.onload = fn; // fire on pageload
+
+function fn() {
+   $('#ship1').val(window.location.hash.replace('#', ''));
+	
+}
