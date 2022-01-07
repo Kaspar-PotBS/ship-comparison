@@ -129,7 +129,7 @@ for (let x of shipstatsarray1) {
 			
 			else if (valueB == 0) {
 								
-				console.log(valueB);				
+				//console.log(valueB);				
 				$( ID_A ).removeClass('comparelower');
 				$( ID_B ).removeClass('comparehigher');
 				
