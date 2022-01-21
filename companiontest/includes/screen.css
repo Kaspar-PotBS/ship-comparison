@@ -18,12 +18,12 @@ body {
     padding-right: 5px;
     padding-bottom: 3px;
     margin: 0px auto;
+	display: flex;
 }
 
 #above_header a {
  /*color: yellow;*/
  text-decoration: none;
- display: flex;
 }
 
 #above_header a:hover {
