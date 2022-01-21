@@ -21,12 +21,13 @@ body {
 }
 
 #above_header a {
- color: yellow;
+ /*color: yellow;*/
  text-decoration: none;
+ display: flex;
 }
 
 #above_header a:hover {
- color: lime;
+ /*color: lime;*/
 }
 
 #header {

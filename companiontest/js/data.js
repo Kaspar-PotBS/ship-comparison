@@ -296,11 +296,6 @@ else if (sortbyorder1 == "d") {
 }
 
 
-
-
-console.log(selectdata);
-
-
 //Build table and add output
         
 		var col = [ "Lvl", "Model", "ID", "Type", "Size", "Dura", "Insurance", "Speed", "B/Pt", "Cargo", "Crew", "Guns*", "Broadside", "Class"   ];
