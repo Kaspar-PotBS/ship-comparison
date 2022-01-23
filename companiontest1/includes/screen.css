@@ -28,7 +28,7 @@ body {
 }
 
 
-input[type="checkbox"]{
+input#collapse-category[type="checkbox"]{
   position: absolute;
   left: -9999px;
 }
