@@ -1,0 +1,1692 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	  <title>PotBS Companion: Compare Ship Details</title>
+	  <meta http-equiv="content-type" content="text/html; charset=iso-8859-1"/>
+	  <meta name="description" content="Comparison of ship details"/>
+	  	  <meta name="keywords" content="pirates,burning sea,potbs,mmo,massively multiplayer,online,rpg,role playing,game,ships,boats,vessels,flying lab studios,fls, portalus, portalusgames, vision"/>
+	  <meta name="language" content="en"/>
+	  <meta name="robots" content="index, follow"/>
+	  <link rel="stylesheet" type="text/css" href="includes/screen.css"/>
+	  <link rel="stylesheet" type="text/css" href="css/style.css"/>
+	  <script src="js/jquery-3.6.0.min.js"></script>
+				
+			
+	</head>
+	<body>
+	  <h1 style="display: none;">Massively Multiplayer, Online, Role Playing Game, MMO, RPG, MMORPG, Computer Game, PC Gaming, Console</h1>
+	  <div id="above_header">&nbsp;
+	  
+	  
+	  <div style="width: 40%; float: left; text-align: left; margin-left:5px;" id="google_translate_element"></div>
+	<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'und', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+}
+	</script>
+	<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+	  
+<div style="width: 40%; float: right; text-align: right; margin-left:5px;">	  
+	  <select id="format" onchange="Formatsetting(this.value);">   
+<option value="0">1,234.56</option>
+<option value="1" selected>1.234,56</option>
+	</select>
+</div>
+</div>
+	  
+	  <div id="header">
+	  <img src="includes/img/header.gif" usemap="#yourmap" border="0">
+<map name="yourmap">
+<area shape="rect" coords="0,0,600,100" href="compare.html">
+<area shape="rect" coords="800, 0, 950, 200" href="http://www.burningsea.com" target="_blank">
+</map>
+	  </div>
+	  <div id="topnav">
+		<div class="nav"><a href="index.html">Shipyard</a></div>
+		<div class="nav"><a href="shipindex.html">Ship Index</a></div>
+		<div class="nav t1"><a href="compare.html">Ship Compare</a></div>
+		
+	  </div>
+	  <div id="main">	
+
+<div id="mediumInnerWrapper">
+	<div>
+	<div style="float:left;">
+	<h1 style="font-variant: small-caps;" ID="model_a_header">Select a ship</h1>
+	Compare:
+	<select id="ship" name="ship1" onchange="StatsLookupA(this.value);">
+	   <option value="9999999">-- n/a --</option>
+<option value="0">Abaddons Will Refit Galleon</option>
+<option value="1">Achilles Privateer Frigate</option>
+<option value="2">Adventure Refit Frigate</option>
+<option value="3">Agamemnon Bark</option>
+<option value="4">Alexander Fourth Rate</option>
+<option value="5">Algiers Refit Polacre</option>
+<option value="6">Alymer</option>
+<option value="7">Arcadia Mastercraft Xebec</option>
+<option value="8">Arcadia Xebec</option>
+<option value="9">Archelon Frigate</option>
+<option value="10">Arrow Privateer Frigate</option>
+<option value="11">Assistance Fourth Rate</option>
+<option value="12">Assurance Frigate</option>
+<option value="13">Atalanta Frigate</option>
+<option value="14">Athena Frigate</option>
+<option value="15">Atlas Bark</option>
+<option value="16">Atlas Bark (Civilian)</option>
+<option value="17">Badger Ketch</option>
+<option value="18">Bahamut Refit Bark</option>
+<option value="19">Batavia Flute</option>
+<option value="20">Bermuda Mastercraft Sloop</option>
+<option value="21">Bermuda Sloop</option>
+<option value="22">Bermuda Sloop (Civilian)</option>
+<option value="23">Bermuda Sloop (Fallback)</option>
+<option value="24">Bermuda Traders Sloop</option>
+<option value="25">Bloody Dagger Refit Frigate</option>
+<option value="26">Breton Chasse-Maree</option>
+<option value="27">Capricieux Courier Frigate</option>
+<option value="28">Capricieux Frigate</option>
+<option value="29">Capricieux Frigate (Civilian)</option>
+<option value="30">Capricieux Heavy Frigate</option>
+<option value="31">Capricieux Mastercraft Frigate</option>
+<option value="32">Centurion Third Rate</option>
+<option value="33">Cerberus Courier Frigate</option>
+<option value="34">Cerberus Frigate</option>
+<option value="35">Cerberus Frigate (Civilian)</option>
+<option value="36">Cerberus Heavy Frigate</option>
+<option value="37">Cerberus Mastercraft Frigate</option>
+<option value="38">Chaleur Schooner</option>
+<option value="39">Chaleur Schooner (Civilian)</option>
+<option value="40">Concorde Frigate</option>
+<option value="41">Conquistador Frigate</option>
+<option value="42">Conquistador Mastercraft Frigate</option>
+<option value="43">Conquistador Sleek Frigate</option>
+<option value="44">Corsair Mastercraft Xebec</option>
+<option value="45">Corsair Sleek Xebec</option>
+<option value="46">Corsair Xebec</option>
+<option value="47">Corsair Xebec (Civilian)</option>
+<option value="48">Corsair Xebec (Fallback)</option>
+<option value="49">Couronne Galleon</option>
+<option value="50">Couronne Mastercraft Galleon</option>
+<option value="51">Cruizer Heavy Snow</option>
+<option value="52">Cruizer Snow</option>
+<option value="53">Curieuse Heavy Snow</option>
+<option value="54">Curieuse Snow</option>
+<option value="55">Curieuse Snow (Civilian)</option>
+<option value="56">Curieuse Snow (Fallback)</option>
+<option value="57">Curieuse Traders Snow</option>
+<option value="58">Currituck Periauger</option>
+<option value="59">Cursed Blade Refit Frigate</option>
+<option value="60">Dauntless Frigate</option>
+<option value="61">Defiant Frigate</option>
+<option value="62">Defiant Frigate (Civilian)</option>
+<option value="63">Defiant Mastercraft Frigate</option>
+<option value="64">Defiant Sleek Frigate</option>
+<option value="65">Defiant Stripped Frigate</option>
+<option value="66">Deliverance Frigate</option>
+<option value="67">Deliverance Heavy Frigate</option>
+<option value="68">Deliverance Mastercraft Frigate</option>
+<option value="69">Desperation Raft</option>
+<option value="70">Discovery Privateer Frigate</option>
+<option value="71">Dolphyn Heavy Ketch</option>
+<option value="72">Dolphyn Ketch</option>
+<option value="73">Dolphyn Ketch (Civilian)</option>
+<option value="74">Dolphyn Ketch (Fallback)</option>
+<option value="75">Dromedary Hellbrand Indiaman</option>
+<option value="76">Dromedary Indiaman</option>
+<option value="77">Dromedary Indiaman (Civilian)</option>
+<option value="78">Eagle Frigate</option>
+<option value="79">Eclipse Snow</option>
+<option value="80">El Dragon Barque</option>
+<option value="81">El Dragon Mastercraft Barque</option>
+<option value="82">Espadon Sloop of War</option>
+<option value="83">Expedition Privateer Packet-Boat</option>
+<option value="84">Falcon Naval Frigate</option>
+<option value="85">Fallen Refit Snow</option>
+<option value="86">Fearless Rowboat</option>
+<option value="87">Fishing Smack</option>
+<option value="88">Formidable Second Rate</option>
+<option value="89">Fox Ketch</option>
+<option value="90">Gallant Naval Frigate</option>
+<option value="91">Guardian Indiaman</option>
+<option value="92">Hades Frigate</option>
+<option value="93">Halifax Mastercraft Schooner</option>
+<option value="94">Halifax Schooner</option>
+<option value="95">Halifax Schooner (Fallback)</option>
+<option value="96">Hawk Frigate</option>
+<option value="97">Hector Frigate</option>
+<option value="98">Hercules Frigate</option>
+<option value="99">Hercules Heavy Frigate</option>
+<option value="100">Hercules Mastercraft Frigate</option>
+<option value="101">Hercules Pirate Frigate</option>
+<option value="102">Hercules Sleek Frigate</option>
+<option value="103">Hermes Mastercraft Packet-Boat</option>
+<option value="104">Hermes Packet-Boat</option>
+<option value="105">Hermes Packet-Boat (Civilian)</option>
+<option value="106">Hermes Packet-Boat (Fallback)</option>
+<option value="107">Hermes Sleek Packet-Boat</option>
+<option value="108">Hiorten Galeas</option>
+<option value="109">Hornet Gunboat</option>
+<option value="110">Hunter Frigate</option>
+<option value="111">Hyperion Refit Frigate</option>
+<option value="112">Indomitable First Rate</option>
+<option value="113">Intrepid Privateer Frigate</option>
+<option value="114">Invincible First Rate</option>
+<option value="115">Jamaica Sloop</option>
+<option value="116">Jamaica Sloop (Civilian)</option>
+<option value="117">Jury Rigged Barrel</option>
+<option value="118">Khan Flute</option>
+<option value="119">Kraken Indiaman</option>
+<option value="120">La Belle Heavy Corvette</option>
+<option value="121">La Belle Light Corvette</option>
+<option value="122">La Belle Light Corvette (Civilian)</option>
+<option value="123">La Belle Light Corvette (Fallback)</option>
+<option value="124">La Belle Mastercraft Corvette</option>
+<option value="125">La Diligente Tartane</option>
+<option value="126">Lancer Naval Cutter</option>
+<option value="127">Leviathan Bark</option>
+<option value="128">Lexington Brig</option>
+<option value="129">Lexington Brig (Civilian)</option>
+<option value="130">Lexington Brig (Fallback)</option>
+<option value="131">Lexington Mastercraft Brig</option>
+<option value="132">Lexington Stripped Brig</option>
+<option value="133">Limburg Flute</option>
+<option value="134">Limburg Flute (Civilian)</option>
+<option value="135">Limburg Traders Flute</option>
+<option value="136">Lion Third Rate</option>
+<option value="137">Locust Corvette</option>
+<option value="138">Locust Corvette (Civilian)</option>
+<option value="139">Locust Corvette (Fallback)</option>
+<option value="140">Locust Mastercraft Corvette</option>
+<option value="141">Locust Sleek Corvette</option>
+<option value="142">Lyon Hoy</option>
+<option value="143">Macedon Hunters Fourth Rate</option>
+<option value="144">Marauder Pirate Ship</option>
+<option value="145">Mars Frigate</option>
+<option value="146">Mediator Cutter</option>
+<option value="147">Mediator Cutter (Civilian)</option>
+<option value="148">Mediator Cutter (Fallback)</option>
+<option value="149">Mediator Heavy Cutter</option>
+<option value="150">Mediator Mastercraft Cutter</option>
+<option value="151">Medway Longboat</option>
+<option value="152">Mercy Naval Frigate</option>
+<option value="153">Mignone Indiaman</option>
+<option value="154">Mignone Indiaman (Civilian)</option>
+<option value="155">Mignone Mastercraft Indiaman</option>
+<option value="156">Mignone Privateer Indiaman</option>
+<option value="157">Mignone Stripped Indiaman</option>
+<option value="158">Minerva Frigate</option>
+<option value="159">Minerva Mastercraft Frigate</option>
+<option value="160">Monarch Indiaman</option>
+<option value="161">Mont Blanc Indiaman</option>
+<option value="162">Mordaunt Fourth Rate</option>
+<option value="163">Mordaunt Sleek Fourth Rate</option>
+<option value="164">Myrmidon Frigate</option>
+<option value="165">Myrmidon Frigate (Civilian)</option>
+<option value="166">Myrmidon Heavy Frigate</option>
+<option value="167">Myrmidon Mastercraft Frigate</option>
+<option value="168">Mystique Polacre</option>
+<option value="169">Nemea Sloop Of War</option>
+<option value="170">Neptunes Disgrace Refit Galleon</option>
+<option value="171">Oliphant Heavy Indiaman</option>
+<option value="172">Oliphant Indiaman</option>
+<option value="173">Oliphant Mastercraft Indiaman</option>
+<option value="174">Otter Skuda</option>
+<option value="175">Otter Skuda (Civilian)</option>
+<option value="176">Otter Skuda (Fallback)</option>
+<option value="177">Peregrine Frigate</option>
+<option value="178">Poseidon Fourth Rate</option>
+<option value="179">Postillionen Heavy Frigate</option>
+<option value="180">Postillionen Mastercraft Frigate</option>
+<option value="181">Postillonen Frigate</option>
+<option value="182">Prince First Rate</option>
+<option value="183">Raa Courier Frigate</option>
+<option value="184">Raa Frigate</option>
+<option value="185">Raa Frigate (Civilian)</option>
+<option value="186">Raa Heavy Frigate</option>
+<option value="187">Raa Mastercraft Frigate</option>
+<option value="188">Raa Sleek Frigate</option>
+<option value="189">Reapers Grasp Refit Bark</option>
+<option value="190">Reason Naval Fourth Rate</option>
+<option value="191">Red Devil Xebec</option>
+<option value="192">Renard Chasse-Maree</option>
+<option value="193">Rover Frigate</option>
+<option value="194">Sampson Frigate</option>
+<option value="195">San Fernando</option>
+<option value="196">San Mateo Galleon</option>
+<option value="197">San Mateo Heavy Galleon</option>
+<option value="198">San Mateo Stripped Galleon</option>
+<option value="199">San Mateo Traders Galleon</option>
+<option value="200">Santa Rita Frigate</option>
+<option value="201">Santa Rosa Refit Frigate</option>
+<option value="202">Santiago Galleon</option>
+<option value="203">Santiago Galleon (Civilian)</option>
+<option value="204">Santiago Traders Galleon</option>
+<option value="205">Sceptre Second Rate</option>
+<option value="206">Shark Frigate</option>
+<option value="207">Sovereign First Rate</option>
+<option value="208">St Anne Schooner</option>
+<option value="209">Stingray Pirate Frigate</option>
+<option value="210">Stralsund Frigate</option>
+<option value="211">Stralsund Frigate (Civilian)</option>
+<option value="212">Stralsund Mastercraft Frigate</option>
+<option value="213">Stralsund Stripped Frigate</option>
+<option value="214">Sultan Flute</option>
+<option value="215">Terror Pirate Second Rate</option>
+<option value="216">Tigre Frigate</option>
+<option value="217">Tigre Heavy Frigate</option>
+<option value="218">Tigre Mastercraft Frigate</option>
+<option value="219">Tigre Sleek Frigate</option>
+<option value="220">Treason Pirate Flagship</option>
+<option value="221">Trinidad Frigate</option>
+<option value="222">Trinity Second Rate</option>
+<option value="223">Triton Interceptor Frigate (Obsolete)</option>
+<option value="224">Triumphant Second Rate</option>
+<option value="225">Trusty Longboat</option>
+<option value="226">Trydent Fourth Rate</option>
+<option value="227">Valiant Third Rate</option>
+<option value="228">Van Hoorn Mastercraft Snow</option>
+<option value="229">Van Hoorn Snow</option>
+<option value="230">Vengeance Privateer Frigate</option>
+<option value="231">Victory First Rate</option>
+<option value="232">Vulcan Frigate</option>
+<option value="233">Wager Indiaman</option>
+<option value="234">Wenden Third Rate</option>
+<option value="235">Wolf Frigate</option>
+<option value="236">Zuiderzee Yacht</option>
+	</select>
+	</div>
+	
+	
+	<div style="float:right;">
+	<h1 style="font-variant: small-caps;" ID="model_b_header">Select a ship</h1>
+	Compare To:
+	<select id="shipb" name="ship2" onchange="StatsLookupB(this.value);">
+	   <option value="9999999">-- n/a --</option>
+<option value="0">Abaddons Will Refit Galleon</option>
+<option value="1">Achilles Privateer Frigate</option>
+<option value="2">Adventure Refit Frigate</option>
+<option value="3">Agamemnon Bark</option>
+<option value="4">Alexander Fourth Rate</option>
+<option value="5">Algiers Refit Polacre</option>
+<option value="6">Alymer</option>
+<option value="7">Arcadia Mastercraft Xebec</option>
+<option value="8">Arcadia Xebec</option>
+<option value="9">Archelon Frigate</option>
+<option value="10">Arrow Privateer Frigate</option>
+<option value="11">Assistance Fourth Rate</option>
+<option value="12">Assurance Frigate</option>
+<option value="13">Atalanta Frigate</option>
+<option value="14">Athena Frigate</option>
+<option value="15">Atlas Bark</option>
+<option value="16">Atlas Bark (Civilian)</option>
+<option value="17">Badger Ketch</option>
+<option value="18">Bahamut Refit Bark</option>
+<option value="19">Batavia Flute</option>
+<option value="20">Bermuda Mastercraft Sloop</option>
+<option value="21">Bermuda Sloop</option>
+<option value="22">Bermuda Sloop (Civilian)</option>
+<option value="23">Bermuda Sloop (Fallback)</option>
+<option value="24">Bermuda Traders Sloop</option>
+<option value="25">Bloody Dagger Refit Frigate</option>
+<option value="26">Breton Chasse-Maree</option>
+<option value="27">Capricieux Courier Frigate</option>
+<option value="28">Capricieux Frigate</option>
+<option value="29">Capricieux Frigate (Civilian)</option>
+<option value="30">Capricieux Heavy Frigate</option>
+<option value="31">Capricieux Mastercraft Frigate</option>
+<option value="32">Centurion Third Rate</option>
+<option value="33">Cerberus Courier Frigate</option>
+<option value="34">Cerberus Frigate</option>
+<option value="35">Cerberus Frigate (Civilian)</option>
+<option value="36">Cerberus Heavy Frigate</option>
+<option value="37">Cerberus Mastercraft Frigate</option>
+<option value="38">Chaleur Schooner</option>
+<option value="39">Chaleur Schooner (Civilian)</option>
+<option value="40">Concorde Frigate</option>
+<option value="41">Conquistador Frigate</option>
+<option value="42">Conquistador Mastercraft Frigate</option>
+<option value="43">Conquistador Sleek Frigate</option>
+<option value="44">Corsair Mastercraft Xebec</option>
+<option value="45">Corsair Sleek Xebec</option>
+<option value="46">Corsair Xebec</option>
+<option value="47">Corsair Xebec (Civilian)</option>
+<option value="48">Corsair Xebec (Fallback)</option>
+<option value="49">Couronne Galleon</option>
+<option value="50">Couronne Mastercraft Galleon</option>
+<option value="51">Cruizer Heavy Snow</option>
+<option value="52">Cruizer Snow</option>
+<option value="53">Curieuse Heavy Snow</option>
+<option value="54">Curieuse Snow</option>
+<option value="55">Curieuse Snow (Civilian)</option>
+<option value="56">Curieuse Snow (Fallback)</option>
+<option value="57">Curieuse Traders Snow</option>
+<option value="58">Currituck Periauger</option>
+<option value="59">Cursed Blade Refit Frigate</option>
+<option value="60">Dauntless Frigate</option>
+<option value="61">Defiant Frigate</option>
+<option value="62">Defiant Frigate (Civilian)</option>
+<option value="63">Defiant Mastercraft Frigate</option>
+<option value="64">Defiant Sleek Frigate</option>
+<option value="65">Defiant Stripped Frigate</option>
+<option value="66">Deliverance Frigate</option>
+<option value="67">Deliverance Heavy Frigate</option>
+<option value="68">Deliverance Mastercraft Frigate</option>
+<option value="69">Desperation Raft</option>
+<option value="70">Discovery Privateer Frigate</option>
+<option value="71">Dolphyn Heavy Ketch</option>
+<option value="72">Dolphyn Ketch</option>
+<option value="73">Dolphyn Ketch (Civilian)</option>
+<option value="74">Dolphyn Ketch (Fallback)</option>
+<option value="75">Dromedary Hellbrand Indiaman</option>
+<option value="76">Dromedary Indiaman</option>
+<option value="77">Dromedary Indiaman (Civilian)</option>
+<option value="78">Eagle Frigate</option>
+<option value="79">Eclipse Snow</option>
+<option value="80">El Dragon Barque</option>
+<option value="81">El Dragon Mastercraft Barque</option>
+<option value="82">Espadon Sloop of War</option>
+<option value="83">Expedition Privateer Packet-Boat</option>
+<option value="84">Falcon Naval Frigate</option>
+<option value="85">Fallen Refit Snow</option>
+<option value="86">Fearless Rowboat</option>
+<option value="87">Fishing Smack</option>
+<option value="88">Formidable Second Rate</option>
+<option value="89">Fox Ketch</option>
+<option value="90">Gallant Naval Frigate</option>
+<option value="91">Guardian Indiaman</option>
+<option value="92">Hades Frigate</option>
+<option value="93">Halifax Mastercraft Schooner</option>
+<option value="94">Halifax Schooner</option>
+<option value="95">Halifax Schooner (Fallback)</option>
+<option value="96">Hawk Frigate</option>
+<option value="97">Hector Frigate</option>
+<option value="98">Hercules Frigate</option>
+<option value="99">Hercules Heavy Frigate</option>
+<option value="100">Hercules Mastercraft Frigate</option>
+<option value="101">Hercules Pirate Frigate</option>
+<option value="102">Hercules Sleek Frigate</option>
+<option value="103">Hermes Mastercraft Packet-Boat</option>
+<option value="104">Hermes Packet-Boat</option>
+<option value="105">Hermes Packet-Boat (Civilian)</option>
+<option value="106">Hermes Packet-Boat (Fallback)</option>
+<option value="107">Hermes Sleek Packet-Boat</option>
+<option value="108">Hiorten Galeas</option>
+<option value="109">Hornet Gunboat</option>
+<option value="110">Hunter Frigate</option>
+<option value="111">Hyperion Refit Frigate</option>
+<option value="112">Indomitable First Rate</option>
+<option value="113">Intrepid Privateer Frigate</option>
+<option value="114">Invincible First Rate</option>
+<option value="115">Jamaica Sloop</option>
+<option value="116">Jamaica Sloop (Civilian)</option>
+<option value="117">Jury Rigged Barrel</option>
+<option value="118">Khan Flute</option>
+<option value="119">Kraken Indiaman</option>
+<option value="120">La Belle Heavy Corvette</option>
+<option value="121">La Belle Light Corvette</option>
+<option value="122">La Belle Light Corvette (Civilian)</option>
+<option value="123">La Belle Light Corvette (Fallback)</option>
+<option value="124">La Belle Mastercraft Corvette</option>
+<option value="125">La Diligente Tartane</option>
+<option value="126">Lancer Naval Cutter</option>
+<option value="127">Leviathan Bark</option>
+<option value="128">Lexington Brig</option>
+<option value="129">Lexington Brig (Civilian)</option>
+<option value="130">Lexington Brig (Fallback)</option>
+<option value="131">Lexington Mastercraft Brig</option>
+<option value="132">Lexington Stripped Brig</option>
+<option value="133">Limburg Flute</option>
+<option value="134">Limburg Flute (Civilian)</option>
+<option value="135">Limburg Traders Flute</option>
+<option value="136">Lion Third Rate</option>
+<option value="137">Locust Corvette</option>
+<option value="138">Locust Corvette (Civilian)</option>
+<option value="139">Locust Corvette (Fallback)</option>
+<option value="140">Locust Mastercraft Corvette</option>
+<option value="141">Locust Sleek Corvette</option>
+<option value="142">Lyon Hoy</option>
+<option value="143">Macedon Hunters Fourth Rate</option>
+<option value="144">Marauder Pirate Ship</option>
+<option value="145">Mars Frigate</option>
+<option value="146">Mediator Cutter</option>
+<option value="147">Mediator Cutter (Civilian)</option>
+<option value="148">Mediator Cutter (Fallback)</option>
+<option value="149">Mediator Heavy Cutter</option>
+<option value="150">Mediator Mastercraft Cutter</option>
+<option value="151">Medway Longboat</option>
+<option value="152">Mercy Naval Frigate</option>
+<option value="153">Mignone Indiaman</option>
+<option value="154">Mignone Indiaman (Civilian)</option>
+<option value="155">Mignone Mastercraft Indiaman</option>
+<option value="156">Mignone Privateer Indiaman</option>
+<option value="157">Mignone Stripped Indiaman</option>
+<option value="158">Minerva Frigate</option>
+<option value="159">Minerva Mastercraft Frigate</option>
+<option value="160">Monarch Indiaman</option>
+<option value="161">Mont Blanc Indiaman</option>
+<option value="162">Mordaunt Fourth Rate</option>
+<option value="163">Mordaunt Sleek Fourth Rate</option>
+<option value="164">Myrmidon Frigate</option>
+<option value="165">Myrmidon Frigate (Civilian)</option>
+<option value="166">Myrmidon Heavy Frigate</option>
+<option value="167">Myrmidon Mastercraft Frigate</option>
+<option value="168">Mystique Polacre</option>
+<option value="169">Nemea Sloop Of War</option>
+<option value="170">Neptunes Disgrace Refit Galleon</option>
+<option value="171">Oliphant Heavy Indiaman</option>
+<option value="172">Oliphant Indiaman</option>
+<option value="173">Oliphant Mastercraft Indiaman</option>
+<option value="174">Otter Skuda</option>
+<option value="175">Otter Skuda (Civilian)</option>
+<option value="176">Otter Skuda (Fallback)</option>
+<option value="177">Peregrine Frigate</option>
+<option value="178">Poseidon Fourth Rate</option>
+<option value="179">Postillionen Heavy Frigate</option>
+<option value="180">Postillionen Mastercraft Frigate</option>
+<option value="181">Postillonen Frigate</option>
+<option value="182">Prince First Rate</option>
+<option value="183">Raa Courier Frigate</option>
+<option value="184">Raa Frigate</option>
+<option value="185">Raa Frigate (Civilian)</option>
+<option value="186">Raa Heavy Frigate</option>
+<option value="187">Raa Mastercraft Frigate</option>
+<option value="188">Raa Sleek Frigate</option>
+<option value="189">Reapers Grasp Refit Bark</option>
+<option value="190">Reason Naval Fourth Rate</option>
+<option value="191">Red Devil Xebec</option>
+<option value="192">Renard Chasse-Maree</option>
+<option value="193">Rover Frigate</option>
+<option value="194">Sampson Frigate</option>
+<option value="195">San Fernando</option>
+<option value="196">San Mateo Galleon</option>
+<option value="197">San Mateo Heavy Galleon</option>
+<option value="198">San Mateo Stripped Galleon</option>
+<option value="199">San Mateo Traders Galleon</option>
+<option value="200">Santa Rita Frigate</option>
+<option value="201">Santa Rosa Refit Frigate</option>
+<option value="202">Santiago Galleon</option>
+<option value="203">Santiago Galleon (Civilian)</option>
+<option value="204">Santiago Traders Galleon</option>
+<option value="205">Sceptre Second Rate</option>
+<option value="206">Shark Frigate</option>
+<option value="207">Sovereign First Rate</option>
+<option value="208">St Anne Schooner</option>
+<option value="209">Stingray Pirate Frigate</option>
+<option value="210">Stralsund Frigate</option>
+<option value="211">Stralsund Frigate (Civilian)</option>
+<option value="212">Stralsund Mastercraft Frigate</option>
+<option value="213">Stralsund Stripped Frigate</option>
+<option value="214">Sultan Flute</option>
+<option value="215">Terror Pirate Second Rate</option>
+<option value="216">Tigre Frigate</option>
+<option value="217">Tigre Heavy Frigate</option>
+<option value="218">Tigre Mastercraft Frigate</option>
+<option value="219">Tigre Sleek Frigate</option>
+<option value="220">Treason Pirate Flagship</option>
+<option value="221">Trinidad Frigate</option>
+<option value="222">Trinity Second Rate</option>
+<option value="223">Triton Interceptor Frigate (Obsolete)</option>
+<option value="224">Triumphant Second Rate</option>
+<option value="225">Trusty Longboat</option>
+<option value="226">Trydent Fourth Rate</option>
+<option value="227">Valiant Third Rate</option>
+<option value="228">Van Hoorn Mastercraft Snow</option>
+<option value="229">Van Hoorn Snow</option>
+<option value="230">Vengeance Privateer Frigate</option>
+<option value="231">Victory First Rate</option>
+<option value="232">Vulcan Frigate</option>
+<option value="233">Wager Indiaman</option>
+<option value="234">Wenden Third Rate</option>
+<option value="235">Wolf Frigate</option>
+<option value="236">Zuiderzee Yacht</option>
+	</select>
+	</div>
+	
+	</div>
+	
+	<hr/>
+
+<!-- Compare values for a side -->	
+<input type="hidden" id="model_a_value" value=""><input type="hidden" id="level_a_value" value=""><input type="hidden" id="type_a_value" value=""><input type="hidden" id="variant_a_value" value=""><input type="hidden" id="size_a_value" value=""><input type="hidden" id="classes_a_value" value="">
+<input type="hidden" id="cargo_capacity_a_value" value=""><input type="hidden" id="os_visibility_a_value" value=""><input type="hidden" id="os_spotting_a_value" value=""><input type="hidden" id="crew_a_value" value=""><input type="hidden" id="target_tracking_a_value" value=""><input type="hidden" id="base_durability_a_value" value=""><input type="hidden" id="insurance_value_a_value" value="">
+<input type="hidden" id="os_best_sailing_point_a_value" value=""><input type="hidden" id="os_max_speed_a_value" value=""><input type="hidden" id="os_upwind_speed_a_value" value=""><input type="hidden" id="os_luffing_speed_a_value" value=""><input type="hidden" id="os_close_haul_speed_a_value" value=""><input type="hidden" id="os_beam_reach_speed_a_value" value=""><input type="hidden" id="os_broad_reach_speed_a_value" value=""><input type="hidden" id="os_running_speed_a_value" value="">
+
+<input type="hidden" id="battle_best_sailing_point_a_value" value=""><input type="hidden" id="battle_max_speed_a_value" value=""><input type="hidden" id="battle_acceleration_a_value" value=""><input type="hidden" id="battle_deceleration_a_value" value=""><input type="hidden" id="battle_turning_fast_a_value" value=""><input type="hidden" id="battle_turning_slow_a_value" value=""><input type="hidden" id="battle_turning_accelerating_a_value" value=""><input type="hidden" id="battle_turning_decelerating_a_value" value="">
+<input type="hidden" id="battle_upwind_speed_a_value" value=""><input type="hidden" id="battle_luffing_speed_a_value" value=""><input type="hidden" id="battle_close_haul_speed_a_value" value=""><input type="hidden" id="battle_beam_reach_speed_a_value" value=""><input type="hidden" id="battle_broad_reach_speed_a_value" value=""><input type="hidden" id="battle_running_speed_a_value" value="">
+
+<input type="hidden" id="structure_integrity_a_value" value=""><input type="hidden" id="port_armour_a_value" value=""><input type="hidden" id="starboard_armour_a_value" value=""><input type="hidden" id="bow_armour_a_value" value=""><input type="hidden" id="stern_armour_a_value" value=""><input type="hidden" id="mast_integrity_a_value" value="">
+<input type="hidden" id="structure_dr_a_value" value=""><input type="hidden" id="port_dr_a_value" value=""><input type="hidden" id="starboard_dr_a_value" value=""><input type="hidden" id="bow_dr_a_value" value=""><input type="hidden" id="stern_dr_a_value" value=""><input type="hidden" id="mast_dr_a_value" value="">
+<input type="hidden" id="mast_offence_a_value" value=""><input type="hidden" id="mast_defence_a_value" value=""><input type="hidden" id="mast_resist_a_value" value="">
+<input type="hidden" id="crew_offence_a_value" value=""><input type="hidden" id="crew_defence_a_value" value=""><input type="hidden" id="crew_resist_a_value" value="">
+<input type="hidden" id="bow_offence_a_value" value=""><input type="hidden" id="bow_defence_a_value" value=""><input type="hidden" id="bow_resist_a_value" value="">
+<input type="hidden" id="stern_offence_a_value" value=""><input type="hidden" id="stern_defence_a_value" value=""><input type="hidden" id="stern_resist_a_value" value="">
+<input type="hidden" id="sides_offence_a_value" value=""><input type="hidden" id="sides_defence_a_value" value=""><input type="hidden" id="sides_resist_a_value" value="">
+<input type="hidden" id="grappling_offence_a_value" value=""><input type="hidden" id="grappling_defence_a_value" value=""><input type="hidden" id="grappling_resist_a_value" value="">
+
+<input type="hidden" id="broadside_total_guns_a_value" value=""><input type="hidden" id="broadside_weight_a_value" value=""><input type="hidden" id="broadside_max_range_a_value" value=""><input type="hidden" id="broadside_max_damage_a_value" value=""><input type="hidden" id="broadside_damage_200_a_value" value=""><input type="hidden" id="broadside_dps_200_a_value" value=""><input type="hidden" id="broadside_damage_400_a_value" value=""><input type="hidden" id="broadside_dps_400_a_value" value="">
+<input type="hidden" id="top_deck_guns_per_side_a_value" value=""><input type="hidden" id="top_deck_weight_a_value" value=""><input type="hidden" id="top_deck_range_a_value" value=""><input type="hidden" id="top_deck_damage_gun_a_value" value=""><input type="hidden" id="top_deck_reload_a_value" value=""><input type="hidden" id="top_deck_max_damage_a_value" value=""><input type="hidden" id="top_deck_accuracy_200_a_value" value=""><input type="hidden" id="top_deck_damage_200_a_value" value=""><input type="hidden" id="top_deck_dps_200_a_value" value=""><input type="hidden" id="top_deck_accuracy_400_a_value" value=""><input type="hidden" id="top_deck_damage_400_a_value" value=""><input type="hidden" id="top_deck_dps_400_a_value" value="">
+<input type="hidden" id="upper_deck_guns_per_side_a_value" value=""><input type="hidden" id="upper_deck_weight_a_value" value=""><input type="hidden" id="upper_deck_range_a_value" value=""><input type="hidden" id="upper_deck_damage_gun_a_value" value=""><input type="hidden" id="upper_deck_reload_a_value" value=""><input type="hidden" id="upper_deck_max_damage_a_value" value=""><input type="hidden" id="upper_deck_accuracy_200_a_value" value=""><input type="hidden" id="upper_deck_damage_200_a_value" value=""><input type="hidden" id="upper_deck_dps_200_a_value" value=""><input type="hidden" id="upper_deck_accuracy_400_a_value" value=""><input type="hidden" id="upper_deck_damage_400_a_value" value=""><input type="hidden" id="upper_deck_dps_400_a_value" value="">
+<input type="hidden" id="middle_deck_guns_per_side_a_value" value=""><input type="hidden" id="middle_deck_weight_a_value" value=""><input type="hidden" id="middle_deck_range_a_value" value=""><input type="hidden" id="middle_deck_damage_gun_a_value" value=""><input type="hidden" id="middle_deck_reload_a_value" value=""><input type="hidden" id="middle_deck_max_damage_a_value" value=""><input type="hidden" id="middle_deck_accuracy_200_a_value" value=""><input type="hidden" id="middle_deck_damage_200_a_value" value=""><input type="hidden" id="middle_deck_dps_200_a_value" value=""><input type="hidden" id="middle_deck_accuracy_400_a_value" value=""><input type="hidden" id="middle_deck_damage_400_a_value" value=""><input type="hidden" id="middle_deck_dps_400_a_value" value="">
+<input type="hidden" id="gun_deck_guns_per_side_a_value" value=""><input type="hidden" id="gun_deck_weight_a_value" value=""><input type="hidden" id="gun_deck_range_a_value" value=""><input type="hidden" id="gun_deck_damage_gun_a_value" value=""><input type="hidden" id="gun_deck_reload_a_value" value=""><input type="hidden" id="gun_deck_max_damage_a_value" value=""><input type="hidden" id="gun_deck_accuracy_200_a_value" value=""><input type="hidden" id="gun_deck_damage_200_a_value" value=""><input type="hidden" id="gun_deck_dps_200_a_value" value=""><input type="hidden" id="gun_deck_accuracy_400_a_value" value=""><input type="hidden" id="gun_deck_damage_400_a_value" value=""><input type="hidden" id="gun_deck_dps_400_a_value" value="">
+<input type="hidden" id="bow_chasers_guns_per_side_a_value" value=""><input type="hidden" id="bow_chasers_weight_a_value" value=""><input type="hidden" id="bow_chasers_range_a_value" value=""><input type="hidden" id="bow_chasers_damage_gun_a_value" value=""><input type="hidden" id="bow_chasers_reload_a_value" value=""><input type="hidden" id="bow_chasers_max_damage_a_value" value=""><input type="hidden" id="bow_chasers_accuracy_200_a_value" value=""><input type="hidden" id="bow_chasers_damage_200_a_value" value=""><input type="hidden" id="bow_chasers_dps_200_a_value" value=""><input type="hidden" id="bow_chasers_accuracy_400_a_value" value=""><input type="hidden" id="bow_chasers_damage_400_a_value" value=""><input type="hidden" id="bow_chasers_dps_400_a_value" value="">
+<input type="hidden" id="stern_chasers_guns_per_side_a_value" value=""><input type="hidden" id="stern_chasers_weight_a_value" value=""><input type="hidden" id="stern_chasers_range_a_value" value=""><input type="hidden" id="stern_chasers_damage_gun_a_value" value=""><input type="hidden" id="stern_chasers_reload_a_value" value=""><input type="hidden" id="stern_chasers_max_damage_a_value" value=""><input type="hidden" id="stern_chasers_accuracy_200_a_value" value=""><input type="hidden" id="stern_chasers_damage_200_a_value" value=""><input type="hidden" id="stern_chasers_dps_200_a_value" value=""><input type="hidden" id="stern_chasers_accuracy_400_a_value" value=""><input type="hidden" id="stern_chasers_damage_400_a_value" value=""><input type="hidden" id="stern_chasers_dps_400_a_value" value="">
+<input type="hidden" id="swivel_guns_guns_per_side_a_value" value=""><input type="hidden" id="swivel_guns_weight_a_value" value=""><input type="hidden" id="swivel_guns_range_a_value" value=""><input type="hidden" id="swivel_guns_damage_gun_a_value" value=""><input type="hidden" id="swivel_guns_reload_a_value" value=""><input type="hidden" id="swivel_guns_max_damage_a_value" value=""><input type="hidden" id="swivel_accuracy_200_a_value" value=""><input type="hidden" id="swivel_damage_200_a_value" value=""><input type="hidden" id="swivel_dps_200_a_value" value=""><input type="hidden" id="swivel_accuracy_400_a_value" value=""><input type="hidden" id="swivel_damage_400_a_value" value=""><input type="hidden" id="swivel_dps_400_a_value" value="">
+
+<input type="hidden" id="last_updated_a_value" value="">
+
+<!-- Compare values for b side -->
+<input type="hidden" id="model_b_value" value=""><input type="hidden" id="level_b_value" value=""><input type="hidden" id="type_b_value" value=""><input type="hidden" id="variant_b_value" value=""><input type="hidden" id="size_b_value" value=""><input type="hidden" id="classes_b_value" value="">
+<input type="hidden" id="cargo_capacity_b_value" value=""><input type="hidden" id="os_visibility_b_value" value=""><input type="hidden" id="os_spotting_b_value" value=""><input type="hidden" id="crew_b_value" value=""><input type="hidden" id="target_tracking_b_value" value=""><input type="hidden" id="base_durability_b_value" value=""><input type="hidden" id="insurance_value_b_value" value="">
+<input type="hidden" id="os_best_sailing_point_b_value" value=""><input type="hidden" id="os_max_speed_b_value" value=""><input type="hidden" id="os_upwind_speed_b_value" value=""><input type="hidden" id="os_luffing_speed_b_value" value=""><input type="hidden" id="os_close_haul_speed_b_value" value=""><input type="hidden" id="os_beam_reach_speed_b_value" value=""><input type="hidden" id="os_broad_reach_speed_b_value" value=""><input type="hidden" id="os_running_speed_b_value" value="">
+
+<input type="hidden" id="battle_best_sailing_point_b_value" value=""><input type="hidden" id="battle_max_speed_b_value" value=""><input type="hidden" id="battle_acceleration_b_value" value=""><input type="hidden" id="battle_deceleration_b_value" value=""><input type="hidden" id="battle_turning_fast_b_value" value=""><input type="hidden" id="battle_turning_slow_b_value" value=""><input type="hidden" id="battle_turning_accelerating_b_value" value=""><input type="hidden" id="battle_turning_decelerating_b_value" value="">
+<input type="hidden" id="battle_upwind_speed_b_value" value=""><input type="hidden" id="battle_luffing_speed_b_value" value=""><input type="hidden" id="battle_close_haul_speed_b_value" value=""><input type="hidden" id="battle_beam_reach_speed_b_value" value=""><input type="hidden" id="battle_broad_reach_speed_b_value" value=""><input type="hidden" id="battle_running_speed_b_value" value="">
+
+<input type="hidden" id="structure_integrity_b_value" value=""><input type="hidden" id="port_armour_b_value" value=""><input type="hidden" id="starboard_armour_b_value" value=""><input type="hidden" id="bow_armour_b_value" value=""><input type="hidden" id="stern_armour_b_value" value=""><input type="hidden" id="mast_integrity_b_value" value="">
+<input type="hidden" id="structure_dr_b_value" value=""><input type="hidden" id="port_dr_b_value" value=""><input type="hidden" id="starboard_dr_b_value" value=""><input type="hidden" id="bow_dr_b_value" value=""><input type="hidden" id="stern_dr_b_value" value=""><input type="hidden" id="mast_dr_b_value" value="">
+<input type="hidden" id="mast_offence_b_value" value=""><input type="hidden" id="mast_defence_b_value" value=""><input type="hidden" id="mast_resist_b_value" value="">
+<input type="hidden" id="crew_offence_b_value" value=""><input type="hidden" id="crew_defence_b_value" value=""><input type="hidden" id="crew_resist_b_value" value="">
+<input type="hidden" id="bow_offence_b_value" value=""><input type="hidden" id="bow_defence_b_value" value=""><input type="hidden" id="bow_resist_b_value" value="">
+<input type="hidden" id="stern_offence_b_value" value=""><input type="hidden" id="stern_defence_b_value" value=""><input type="hidden" id="stern_resist_b_value" value="">
+<input type="hidden" id="sides_offence_b_value" value=""><input type="hidden" id="sides_defence_b_value" value=""><input type="hidden" id="sides_resist_b_value" value="">
+<input type="hidden" id="grappling_offence_b_value" value=""><input type="hidden" id="grappling_defence_b_value" value=""><input type="hidden" id="grappling_resist_b_value" value="">
+
+<input type="hidden" id="broadside_total_guns_b_value" value=""><input type="hidden" id="broadside_weight_b_value" value=""><input type="hidden" id="broadside_max_range_b_value" value=""><input type="hidden" id="broadside_max_damage_b_value" value=""><input type="hidden" id="broadside_damage_200_b_value" value=""><input type="hidden" id="broadside_dps_200_b_value" value=""><input type="hidden" id="broadside_damage_400_b_value" value=""><input type="hidden" id="broadside_dps_400_b_value" value="">
+<input type="hidden" id="top_deck_guns_per_side_b_value" value=""><input type="hidden" id="top_deck_weight_b_value" value=""><input type="hidden" id="top_deck_range_b_value" value=""><input type="hidden" id="top_deck_damage_gun_b_value" value=""><input type="hidden" id="top_deck_reload_b_value" value=""><input type="hidden" id="top_deck_max_damage_b_value" value=""><input type="hidden" id="top_deck_accuracy_200_b_value" value=""><input type="hidden" id="top_deck_damage_200_b_value" value=""><input type="hidden" id="top_deck_dps_200_b_value" value=""><input type="hidden" id="top_deck_accuracy_400_b_value" value=""><input type="hidden" id="top_deck_damage_400_b_value" value=""><input type="hidden" id="top_deck_dps_400_b_value" value="">
+<input type="hidden" id="upper_deck_guns_per_side_b_value" value=""><input type="hidden" id="upper_deck_weight_b_value" value=""><input type="hidden" id="upper_deck_range_b_value" value=""><input type="hidden" id="upper_deck_damage_gun_b_value" value=""><input type="hidden" id="upper_deck_reload_b_value" value=""><input type="hidden" id="upper_deck_max_damage_b_value" value=""><input type="hidden" id="upper_deck_accuracy_200_b_value" value=""><input type="hidden" id="upper_deck_damage_200_b_value" value=""><input type="hidden" id="upper_deck_dps_200_b_value" value=""><input type="hidden" id="upper_deck_accuracy_400_b_value" value=""><input type="hidden" id="upper_deck_damage_400_b_value" value=""><input type="hidden" id="upper_deck_dps_400_b_value" value="">
+<input type="hidden" id="middle_deck_guns_per_side_b_value" value=""><input type="hidden" id="middle_deck_weight_b_value" value=""><input type="hidden" id="middle_deck_range_b_value" value=""><input type="hidden" id="middle_deck_damage_gun_b_value" value=""><input type="hidden" id="middle_deck_reload_b_value" value=""><input type="hidden" id="middle_deck_max_damage_b_value" value=""><input type="hidden" id="middle_deck_accuracy_200_b_value" value=""><input type="hidden" id="middle_deck_damage_200_b_value" value=""><input type="hidden" id="middle_deck_dps_200_b_value" value=""><input type="hidden" id="middle_deck_accuracy_400_b_value" value=""><input type="hidden" id="middle_deck_damage_400_b_value" value=""><input type="hidden" id="middle_deck_dps_400_b_value" value="">
+<input type="hidden" id="gun_deck_guns_per_side_b_value" value=""><input type="hidden" id="gun_deck_weight_b_value" value=""><input type="hidden" id="gun_deck_range_b_value" value=""><input type="hidden" id="gun_deck_damage_gun_b_value" value=""><input type="hidden" id="gun_deck_reload_b_value" value=""><input type="hidden" id="gun_deck_max_damage_b_value" value=""><input type="hidden" id="gun_deck_accuracy_200_b_value" value=""><input type="hidden" id="gun_deck_damage_200_b_value" value=""><input type="hidden" id="gun_deck_dps_200_b_value" value=""><input type="hidden" id="gun_deck_accuracy_400_b_value" value=""><input type="hidden" id="gun_deck_damage_400_b_value" value=""><input type="hidden" id="gun_deck_dps_400_b_value" value="">
+<input type="hidden" id="bow_chasers_guns_per_side_b_value" value=""><input type="hidden" id="bow_chasers_weight_b_value" value=""><input type="hidden" id="bow_chasers_range_b_value" value=""><input type="hidden" id="bow_chasers_damage_gun_b_value" value=""><input type="hidden" id="bow_chasers_reload_b_value" value=""><input type="hidden" id="bow_chasers_max_damage_b_value" value=""><input type="hidden" id="bow_chasers_accuracy_200_b_value" value=""><input type="hidden" id="bow_chasers_damage_200_b_value" value=""><input type="hidden" id="bow_chasers_dps_200_b_value" value=""><input type="hidden" id="bow_chasers_accuracy_400_b_value" value=""><input type="hidden" id="bow_chasers_damage_400_b_value" value=""><input type="hidden" id="bow_chasers_dps_400_b_value" value="">
+<input type="hidden" id="stern_chasers_guns_per_side_b_value" value=""><input type="hidden" id="stern_chasers_weight_b_value" value=""><input type="hidden" id="stern_chasers_range_b_value" value=""><input type="hidden" id="stern_chasers_damage_gun_b_value" value=""><input type="hidden" id="stern_chasers_reload_b_value" value=""><input type="hidden" id="stern_chasers_max_damage_b_value" value=""><input type="hidden" id="stern_chasers_accuracy_200_b_value" value=""><input type="hidden" id="stern_chasers_damage_200_b_value" value=""><input type="hidden" id="stern_chasers_dps_200_b_value" value=""><input type="hidden" id="stern_chasers_accuracy_400_b_value" value=""><input type="hidden" id="stern_chasers_damage_400_b_value" value=""><input type="hidden" id="stern_chasers_dps_400_b_value" value="">
+<input type="hidden" id="swivel_guns_guns_per_side_b_value" value=""><input type="hidden" id="swivel_guns_weight_b_value" value=""><input type="hidden" id="swivel_guns_range_b_value" value=""><input type="hidden" id="swivel_guns_damage_gun_b_value" value=""><input type="hidden" id="swivel_guns_reload_b_value" value=""><input type="hidden" id="swivel_guns_max_damage_b_value" value=""><input type="hidden" id="swivel_accuracy_200_b_value" value=""><input type="hidden" id="swivel_damage_200_b_value" value=""><input type="hidden" id="swivel_dps_200_b_value" value=""><input type="hidden" id="swivel_accuracy_400_b_value" value=""><input type="hidden" id="swivel_damage_400_b_value" value=""><input type="hidden" id="swivel_dps_400_b_value" value="">
+
+<input type="hidden" id="last_updated_b_value" value="">
+
+	
+	<label for="catcollapse" class="category-button" id="collapse-category"><input type="checkbox" name="catcollapse" id="catcollapse" value="Y" class="checkbox" /><h3 id="icon0" class="collapseicon">-</h3></label>
+	
+	
+	<label for="catcollapse0" class="category-button" id="feature-category"><input type="checkbox" name="catcollapse0" id="catcollapse0" value="Y" class="checkbox" /><h3 class="compact">Ship Basic</h3></label>
+	<table id="cl0" class="plain" style="width: 100%; margin: 0px 0px 10px 0px; border: 1px solid #efb168; ">
+	  <tr>
+		<td width="30%" class="thead">Model</td>
+		<td width="25%" id="model_a">--</td>
+		<td width="20%"></td>
+		<td width="25%" id="model_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Last Updated:</td>
+		<td id="last_updated_a">--</td>
+		<td>&nbsp;</td>
+		<td id="last_updated_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Updated By:</td>
+		<td>--</td>
+		<td>&nbsp;</td>
+		<td>--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">&nbsp;</td>
+		<td colspan="3">&nbsp;</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Level:</td>
+		<td id="level_a">--</td>
+		<td>&nbsp;</td>
+		<td id="level_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Type:</td>
+		<td id="type_a">--</td>
+		<td>&nbsp;</td>
+		<td id="type_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Variant:</td>
+		<td id="variant_a">--</td>
+		<td>&nbsp;</td>
+		<td id="variant_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Size:</td>
+		<td id="size_a">--</td>
+		<td>&nbsp;</td>
+		<td id="size_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Classes:</td>
+		<td id="classes_a">--</td>
+		<td>&nbsp;</td>
+		<td id="classes_b">--</td>
+	  </tr>
+	</table>
+	
+	<label for="catcollapse" class="category-button" id="collapse-category"><input type="checkbox" name="catcollapse" id="catcollapse" value="Y" class="checkbox" /><h3 id="icon1" class="collapseicon">-</h3></label>
+	<label for="catcollapse1" class="category-button" id="feature-category"><input type="checkbox" name="catcollapse1" id="catcollapse1" value="Y" class="checkbox" /><h3 class="compact">General Information</h3></label>
+	<table id="cl1" class="plain" style="width: 100%; margin: 0px 0px 10px 0px; border: 1px solid #efb168; ">
+	  <tr>
+		<td width="30%" class="thead" class="cargo_capacity">Cargo Capacity</td>
+		<td width="25%" id="cargo_capacity_a">--</td>
+		<td width="20%">&nbsp;</td>
+		<td width="25%" id="cargo_capacity_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">OS Visibility</td>
+		<td id="os_visibility_a">--</td>
+		<td>&nbsp;</td>
+		<td id="os_visibility_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">OS Spotting</td>
+		<td id="os_spotting_a">--</td>
+		<td>&nbsp;</td>
+		<td id="os_spotting_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Crew</td>
+		<td id="crew_a">--</td>
+		<td>&nbsp;</td>
+		<td id="crew_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Target Tracking</td>
+		<td id="target_tracking_a">--</td>
+		<td>&nbsp;</td>
+		<td id="target_tracking_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Base Durability</td>
+		<td id="base_durability_a">--</td>
+		<td>&nbsp;</td>
+		<td id="base_durability_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Insurance Value (dbs)</td>
+		<td id="insurance_value_a">--</td>
+		<td>&nbsp;</td>
+		<td id="insurance_value_b">--</td>
+	  </tr>
+	</table>
+	<label for="catcollapse" class="category-button" id="collapse-category"><input type="checkbox" name="catcollapse" id="catcollapse" value="Y" class="checkbox" /><h3 id="icon2" class="collapseicon">-</h3></label>
+	<label for="catcollapse2" class="category-button" id="feature-category"><input type="checkbox" name="catcollapse2" id="catcollapse2" value="Y" class="checkbox" /><h3 class="compact">Manoevering</h3></label>
+	<div id="cl2">
+	<label for="catcollapse" class="category-button" id="collapse-category"><input type="checkbox" name="catcollapse" id="catcollapse" value="Y" class="checkbox" /><h4 id="icon3" class="collapseicon">-</h4></label>
+	<label for="catcollapse3" class="category-button" id="feature-category"><input type="checkbox" name="catcollapse3" id="catcollapse3" value="Y" class="checkbox" /><h4>Open Sea</h4></label>
+	<table id="cl3" class="plain" style="width: 100%; margin: 0px 0px 10px 0px; border: 1px solid #efb168; ">
+	  <tr>
+		<td class="thead">Best Sailing Point</td>
+		<td   id="os_best_sailing_point_a">--</td>
+		<td>&nbsp;</td>
+		<td id="os_best_sailing_point_b">--</td>
+	  </tr>
+	  
+	  <tr>
+		<td width="30%" class="thead">Max Speed (Open Sea)</td>
+		<td width="25%"  id="os_max_speed_a">--</td>
+		<td width="20%">&nbsp;</td>
+		<td width="25%" id="os_max_speed_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">&nbsp;</td>
+		<td colspan="3">&nbsp;</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Upwind Speed</td>
+		<td   id="os_upwind_speed_a">--</td>
+		<td>&nbsp;</td>
+		<td id="os_upwind_speed_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Luffing Speed</td>
+		<td  id="os_luffing_speed_a">--</td>
+		<td>&nbsp;</td>
+		<td id="os_luffing_speed_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Close Haul Speed</td>
+		<td  id="os_close_haul_speed_a">--</td>
+		<td>&nbsp;</td>
+		<td id="os_close_haul_speed_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Beam Reach Speed</td>
+		<td  id="os_beam_reach_speed_a">--</td>
+		<td>&nbsp;</td>
+		<td id="os_beam_reach_speed_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Broad Reach Speed</td>
+		<td  id="os_broad_reach_speed_a">--</td>
+		<td>&nbsp;</td>
+		<td id="os_broad_reach_speed_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Running Speed</td>
+		<td  id="os_running_speed_a">--</td>
+		<td>&nbsp;</td>
+		<td id="os_running_speed_b">--</td>
+	  </tr>
+	</table>
+	<label for="catcollapse" class="category-button" id="collapse-category"><input type="checkbox" name="catcollapse" id="catcollapse" value="Y" class="checkbox" /><h4 id="icon4" class="collapseicon">-</h4></label>
+	<label for="catcollapse4" class="category-button" id="feature-category"><input type="checkbox" name="catcollapse4" id="catcollapse4" value="Y" class="checkbox" /><h4>Battle</h4></label>
+	<table id="cl4" class="plain" style="width: 100%; margin: 0px 0px 10px 0px; border: 1px solid #efb168; ">
+	  <tr>
+		<td class="thead">Best Sailing Point</td>
+		<td  id="battle_best_sailing_point_a">--</td>
+		<td>&nbsp;</td>
+		<td id="battle_best_sailing_point_b">--</td>
+	  </tr>
+	  
+	  <tr>
+		<td width="30%" class="thead">Max Speed (Battle)</td>
+		<td width="25%" id="battle_max_speed_a">--</td>
+		<td width="20%">&nbsp;</td>
+		<td width="25%" id="battle_max_speed_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">&nbsp;</td>
+		<td colspan="3">&nbsp;</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Acceleration</td>
+		<td id="battle_acceleration_a">--</td>
+		<td>&nbsp;</td>
+		<td id="battle_acceleration_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Deceleration</td>
+		<td id="battle_deceleration_a">--</td>
+		<td>&nbsp;</td>
+		<td id="battle_deceleration_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Turning, Fast</td>
+		<td id="battle_turning_fast_a">--</td>
+		<td>&nbsp;</td>
+		<td id="battle_turning_fast_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Turning, Slow</td>
+		<td id="battle_turning_slow_a">--</td>
+		<td>&nbsp;</td>
+		<td id="battle_turning_slow_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Turning, Accelerating</td>
+		<td id="battle_turning_accelerating_a">--</td>
+		<td>&nbsp;</td>
+		<td id="battle_turning_accelerating_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Turning, Decelerating</td>
+		<td id="battle_turning_decelerating_a">--</td>
+		<td>&nbsp;</td>
+		<td id="battle_turning_decelerating_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">&nbsp;</td>
+		<td colspan="3">&nbsp;</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Upwind Speed</td>
+		<td   id="battle_upwind_speed_a">--</td>
+		<td>&nbsp;</td>
+		<td id="battle_upwind_speed_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Luffing Speed</td>
+		<td  id="battle_luffing_speed_a">--</td>
+		<td>&nbsp;</td>
+		<td id="battle_luffing_speed_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Close Haul Speed</td>
+		<td  id="battle_close_haul_speed_a">--</td>
+		<td>&nbsp;</td>
+		<td id="battle_close_haul_speed_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Beam Reach Speed</td>
+		<td  id="battle_beam_reach_speed_a">--</td>
+		<td>&nbsp;</td>
+		<td id="battle_beam_reach_speed_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Broad Reach Speed</td>
+		<td  id="battle_broad_reach_speed_a">--</td>
+		<td>&nbsp;</td>
+		<td id="battle_broad_reach_speed_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Running Speed</td>
+		<td  id="battle_running_speed_a">--</td>
+		<td>&nbsp;</td>
+		<td id="battle_running_speed_b">--</td>
+	  </tr>
+	</table>
+	</div> <!-- Manoevering  -->
+	<label for="catcollapse" class="category-button" id="collapse-category"><input type="checkbox" name="catcollapse" id="catcollapse" value="Y" class="checkbox" /><h3 id="icon5" class="collapseicon">-</h3></label>
+	<label for="catcollapse5" class="category-button" id="feature-category"><input type="checkbox" name="catcollapse5" id="catcollapse5" value="Y" class="checkbox" /><h3 class="compact">Armour and Damage Resistance</h3></label>
+	<table id="cl5" class="plain" style="width: 100%; margin: 0px 0px 10px 0px; border: 1px solid #efb168; ">
+	  <tr>
+		<td width="30%" class="thead">Structure Integrity</td>
+		<td width="25%" id="structure_integrity_a">--</td>
+		<td width="20%"></td>
+		<td width="25%" id="structure_integrity_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Port Armour</td>
+		<td id="port_armour_a">--</td>
+		<td>&nbsp;</td>
+		<td id="port_armour_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Starboard Armour</td>
+		<td id="starboard_armour_a">--</td>
+		<td>&nbsp;</td>
+		<td id="starboard_armour_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Bow Armour</td>
+		<td id="bow_armour_a">--</td>
+		<td>&nbsp;</td>
+		<td id="bow_armour_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Stern Armour</td>
+		<td id="stern_armour_a">--</td>
+		<td>&nbsp;</td>
+		<td id="stern_armour_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Mast Integrity</td>
+		<td id="mast_integrity_a">--</td>
+		<td>&nbsp;</td>
+		<td id="mast_integrity_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">&nbsp;</td>
+		<td colspan="3">&nbsp;</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Structure DR</td>
+		<td id="structure_dr_a">--</td>
+		<td>&nbsp;</td>
+		<td id="structure_dr_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Port DR</td>
+		<td id="port_dr_a">--</td>
+		<td>&nbsp;</td>
+		<td id="port_dr_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Starboard DR</td>
+		<td id="starboard_dr_a">--</td>
+		<td>&nbsp;</td>
+		<td id="starboard_dr_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Bow DR</td>
+		<td id="bow_dr_a">--</td>
+		<td>&nbsp;</td>
+		<td id="bow_dr_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Stern DR</td>
+		<td id="stern_dr_a">--</td>
+		<td>&nbsp;</td>
+		<td id="stern_dr_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Mast DR</td>
+		<td id="mast_dr_a">--</td>
+		<td>&nbsp;</td>
+		<td id="mast_dr_b">--</td>
+	  </tr>
+	</table>
+	<label for="catcollapse" class="category-button" id="collapse-category"><input type="checkbox" name="catcollapse" id="catcollapse" value="Y" class="checkbox" /><h3 id="icon6" class="collapseicon">-</h3></label>
+	<label for="catcollapse6" class="category-button" id="feature-category"><input type="checkbox" name="catcollapse6" id="catcollapse6" value="Y" class="checkbox" /><h3 class="compact">Offence/Defence/Resistance Modifiers</h3></label>
+	<table id="cl6" class="plain" style="width: 100%; margin: 0px 0px 10px 0px; border: 1px solid #efb168; ">
+	  <tr>
+		<td width="30%" class="thead">Mast, Offence</td>
+		<td width="25%" id="mast_offence_a">--</td>
+		<td width="20%">&nbsp;</td>
+		<td width="25%" id="mast_offence_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Mast, Defence</td>
+		<td id="mast_defence_a">--</td>
+		<td>&nbsp;</td>
+		<td id="mast_defence_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Mast, Resist</td>
+		<td id="mast_resist_a">--</td>
+		<td>&nbsp;</td>
+		<td id="mast_resist_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">&nbsp;</td>
+		<td colspan="3">&nbsp;</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Crew, Offence</td>
+		<td id="crew_offence_a">--</td>
+		<td>&nbsp;</td>
+		<td id="crew_offence_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Crew, Defence</td>
+		<td id="crew_defence_a">--</td>
+		<td>&nbsp;</td>
+		<td id="crew_defence_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Crew, Resist</td>
+		<td id="crew_resist_a">--</td>
+		<td>&nbsp;</td>
+		<td id="crew_resist_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">&nbsp;</td>
+		<td colspan="3">&nbsp;</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Bow, Offence</td>
+		<td id="bow_offence_a">--</td>
+		<td>&nbsp;</td>
+		<td id="bow_offence_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Bow, Defence</td>
+		<td id="bow_defence_a">--</td>
+		<td>&nbsp;</td>
+		<td id="bow_defence_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Bow, Resist</td>
+		<td id="bow_resist_a">--</td>
+		<td>&nbsp;</td>
+		<td id="bow_resist_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">&nbsp;</td>
+		<td colspan="3">&nbsp;</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Stern, Offence</td>
+		<td id="stern_offence_a">--</td>
+		<td>&nbsp;</td>
+		<td id="stern_offence_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Stern, Defence</td>
+		<td id="stern_defence_a">--</td>
+		<td>&nbsp;</td>
+		<td id="stern_defence_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Stern, Resist</td>
+		<td id="stern_resist_a">--</td>
+		<td>&nbsp;</td>
+		<td id="stern_resist_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">&nbsp;</td>
+		<td colspan="3">&nbsp;</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Sides, Offence</td>
+		<td id="sides_offence_a">--</td>
+		<td>&nbsp;</td>
+		<td id="sides_offence_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Sides, Defence</td>
+		<td id="sides_defence_a">--</td>
+		<td>&nbsp;</td>
+		<td id="sides_defence_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Sides, Resist</td>
+		<td id="sides_resist_a">--</td>
+		<td>&nbsp;</td>
+		<td id="sides_resist_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">&nbsp;</td>
+		<td colspan="3">&nbsp;</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Grappling, Offence</td>
+		<td id="grappling_offence_a">--</td>
+		<td>&nbsp;</td>
+		<td id="grappling_offence_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Grappling, Defence</td>
+		<td id="grappling_defence_a">--</td>
+		<td>&nbsp;</td>
+		<td id="grappling_defence_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Grappling, Resist</td>
+		<td id="grappling_resist_a">--</td>
+		<td>&nbsp;</td>
+		<td id="grappling_resist_b">--</td>
+	  </tr>
+	</table>
+	<label for="catcollapse" class="category-button" id="collapse-category"><input type="checkbox" name="catcollapse" id="catcollapse" value="Y" class="checkbox" /><h3 id="icon7" class="collapseicon">-</h3></label>
+	<label for="catcollapse7" class="category-button" id="feature-category"><input type="checkbox" name="catcollapse7" id="catcollapse7" value="Y" class="checkbox" /><h3 class="compact">Armament</h3></label>
+	<div id="cl7">
+	<label for="catcollapse" class="category-button" id="collapse-category"><input type="checkbox" name="catcollapse" id="catcollapse" value="Y" class="checkbox" /><h4 id="icon8" class="collapseicon">-</h4></label>
+	<label for="catcollapse8" class="category-button" id="feature-category"><input type="checkbox" name="catcollapse8" id="catcollapse8" value="Y" class="checkbox" /><h4>Full Broadside</h4></label>
+		<table id="cl8" class="plain" style="width: 100%; margin: 0px 0px 10px 0px; border: 1px solid #efb168; ">
+	  <tr>
+		<td width="30%" class="thead">Total Guns</td>
+		<td width="25%" id="broadside_total_guns_a">--</td>
+		<td width="20%">&nbsp;</td>
+		<td width="25%" id="broadside_total_guns_b">--</td>
+	  </tr>
+	  <tr>
+		<td width="30%" class="thead">Broadside Weight (lbs)</td>
+		<td width="25%" id="broadside_weight_a">--</td>
+		<td width="20%">&nbsp;</td>
+		<td width="25%" id="broadside_weight_b">--</td>
+	  </tr>
+	  <tr>
+		<td width="30%" class="thead">Max Range (yds)</td>
+		<td width="25%" id="broadside_max_range_a">--</td>
+		<td width="20%">&nbsp;</td>
+		<td width="25%" id="broadside_max_range_b">--</td>
+	  </tr>
+	  <tr>
+		<td width="30%" class="thead">Max Damage / Broadside</td>
+		<td width="25%" id="broadside_max_damage_a">--</td>
+		<td width="20%">&nbsp;</td>
+		<td width="25%" id="broadside_max_damage_b">--</td>
+	  </tr>
+	  <tr>
+		<td width="30%" class="thead">Damage, 200yds</td>
+		<td width="25%" id="broadside_damage_200_a">--</td>
+		<td width="20%">&nbsp;</td>
+		<td width="25%" id="broadside_damage_200_b">--</td>
+	  </tr>
+	  <tr>
+		<td width="30%" class="thead">DPS, 200yds</td>
+		<td width="25%" id="broadside_dps_200_a">--</td>
+		<td width="20">&nbsp;</td>
+		<td width="25%" id="broadside_dps_200_b">--</td>
+	  </tr>
+	  <tr>
+		<td width="30%" class="thead">Damage, 400yds</td>
+		<td width="25%" id="broadside_damage_400_a">--</td>
+		<td width="20%">&nbsp;</td>
+		<td width="25%" id="broadside_damage_400_b">--</td>
+	  </tr>
+	  <tr>
+		<td width="30%" class="thead">DPS, 400yds</td>
+		<td width="25%" id="broadside_dps_400_a">--</td>
+		<td width="20%">&nbsp;</td>
+		<td width="25%" id="broadside_dps_400_b">--</td>
+	  </tr>
+	</table>
+	<label for="catcollapse" class="category-button" id="collapse-category"><input type="checkbox" name="catcollapse" id="catcollapse" value="Y" class="checkbox" /><h4 id="icon9" class="collapseicon">-</h4></label>
+	<label for="catcollapse9" class="category-button" id="feature-category"><input type="checkbox" name="catcollapse9" id="catcollapse9" value="Y" class="checkbox" /><h4>Top Deck</h4></label>
+	<table id="cl9" class="plain" style="width: 100%; margin: 0px 0px 10px 0px; border: 1px solid #efb168; ">
+	  <tr>
+		<td width="30%" class="thead">Guns per side (lbs)</td>
+		<td width="25%" id="top_deck_guns_per_side_a">--</td>
+		<td width="20%"></td>
+		<td width="25%" id="top_deck_guns_per_side_b">--</td>
+	  </tr>
+	  <tr>
+				<td class="thead">Broadside Weight (lbs)</td>
+		<td id="top_deck_weight_a">--</td>
+		<td>&nbsp;</td>
+		<td id="top_deck_weight_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Range (yds)</td>
+		<td id="top_deck_range_a">--</td>
+		<td>&nbsp;</td>
+		<td id="top_deck_range_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Damage/Gun</td>
+		<td id="top_deck_damage_gun_a">--</td>
+		<td>&nbsp;</td>
+		<td id="top_deck_damage_gun_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Reload (seconds)</td>
+		<td id="top_deck_reload_a">--</td>
+		<td>&nbsp;</td>
+		<td id="top_deck_reload_b">--</td>
+	  </tr>
+	  <tr>
+				<td class="thead">Max Damage / Broadside</td>
+		<td id="top_deck_max_damage_a">--</td>
+		<td>&nbsp;</td>
+		<td id="top_deck_max_damage_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Accuracy, 200yds</td>
+		<td id="top_deck_accuracy_200_a">--</td>
+		<td>&nbsp;</td>
+		<td id="top_deck_accuracy_200_b">--</td>
+	  </tr>
+	  <tr>
+				<td class="thead">Damage, 200yds</td>
+		<td id="top_deck_damage_200_a">--</td>
+		<td>&nbsp;</td>
+		<td id="top_deck_damage_200_b">--</td>
+	  </tr>
+	  <tr>
+				<td class="thead">DPS, 200yds</td>
+		<td id="top_deck_dps_200_a">--</td>
+		<td>&nbsp;</td>
+		<td id="top_deck_dps_200_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Accuracy, 400yds</td>
+		<td id="top_deck_accuracy_400_a">--</td>
+		<td>&nbsp;</td>
+		<td id="top_deck_accuracy_400_b">--</td>
+	  </tr>
+	  <tr>
+				<td class="thead">Damage, 400yds</td>
+		<td id="top_deck_damage_400_a">--</td>
+		<td>&nbsp;</td>
+		<td id="top_deck_damage_400_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">DPS, 400yds</td>
+		<td id="top_deck_dps_400_a">--</td>
+		<td>&nbsp;</td>
+		<td id="top_deck_dps_400_b">--</td>
+	  </tr>
+	</table>
+	<label for="catcollapse" class="category-button" id="collapse-category"><input type="checkbox" name="catcollapse" id="catcollapse" value="Y" class="checkbox" /><h4 id="icon10" class="collapseicon">-</h4></label>
+	<label for="catcollapse10" class="category-button" id="feature-category"><input type="checkbox" name="catcollapse10" id="catcollapse10" value="Y" class="checkbox" /><h4>Upper Deck</h4></label>
+	<table id="cl10" class="plain" style="width: 100%; margin: 0px 0px 10px 0px; border: 1px solid #efb168; ">
+	  <tr>
+		<td width="30%" class="thead">Guns per side (lbs)</td>
+		<td width="25%" id="upper_deck_guns_per_side_a">--</td>
+		<td width="20%"></td>
+		<td width="25%" id="upper_deck_guns_per_side_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Broadside Weight (lbs)</td>
+		<td id="upper_deck_weight_a">--</td>
+		<td>&nbsp;</td>
+		<td id="upper_deck_weight_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Range (yds)</td>
+		<td id="upper_deck_range_a">--</td>
+		<td>&nbsp;</td>
+		<td id="upper_deck_range_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Damage/Gun</td>
+		<td id="upper_deck_damage_gun_a">--</td>
+		<td>&nbsp;</td>
+		<td id="upper_deck_damage_gun_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Reload (seconds)</td>
+		<td id="upper_deck_reload_a">--</td>
+		<td>&nbsp;</td>
+		<td id="upper_deck_reload_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Max Damage / Broadside</td>
+		<td id="upper_deck_max_damage_a">--</td>
+		<td>&nbsp;</td>
+		<td id="upper_deck_max_damage_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Accuracy, 200yds</td>
+		<td id="upper_deck_accuracy_200_a">--</td>
+		<td>&nbsp;</td>
+		<td id="upper_deck_accuracy_200_b">--</td>
+	  </tr>
+	  <tr>
+				<td class="thead">Damage, 200yds</td>
+		<td id="upper_deck_damage_200_a">--</td>
+		<td>&nbsp;</td>
+		<td id="upper_deck_damage_200_b">--</td>
+	  </tr>
+	  <tr>
+				<td class="thead">DPS, 200yds</td>
+		<td id="upper_deck_dps_200_a">--</td>
+		<td>&nbsp;</td>
+		<td id="upper_deck_dps_200_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Accuracy, 400yds</td>
+		<td id="upper_deck_accuracy_400_a">--</td>
+		<td>&nbsp;</td>
+		<td id="upper_deck_accuracy_400_b">--</td>
+	  </tr>
+	  <tr>
+				<td class="thead">Damage, 400yds</td>
+		<td id="upper_deck_damage_400_a">--</td>
+		<td>&nbsp;</td>
+		<td id="upper_deck_damage_400_b">--</td>
+	  </tr>
+	  <tr>
+				<td class="thead">DPS, 400yds</td>
+		<td id="upper_deck_dps_400_a">--</td>
+		<td>&nbsp;</td>
+		<td id="upper_deck_dps_400_b">--</td>
+	  </tr>
+	</table>
+	<label for="catcollapse" class="category-button" id="collapse-category"><input type="checkbox" name="catcollapse" id="catcollapse" value="Y" class="checkbox" /><h4 id="icon11" class="collapseicon">-</h4></label>
+	<label for="catcollapse11" class="category-button" id="feature-category"><input type="checkbox" name="catcollapse11" id="catcollapse11" value="Y" class="checkbox" /><h4>Middle Deck</h4></label>
+	<table id="cl11" class="plain" style="width: 100%; margin: 0px 0px 10px 0px; border: 1px solid #efb168; ">
+	  <tr>
+		<td width="30%" class="thead">Guns per side (lbs)</td>
+		<td width="25%" id="middle_deck_guns_per_side_a">--</td>
+		<td width="20%"></td>
+		<td width="25%" id="middle_deck_guns_per_side_b">--</td>
+	  </tr>
+	  <tr>
+				<td class="thead">Broadside Weight (lbs)</td>
+		<td id="middle_deck_weight_a">--</td>
+		<td>&nbsp;</td>
+		<td id="middle_deck_weight_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Range (yds)</td>
+		<td id="middle_deck_range_a">--</td>
+		<td>&nbsp;</td>
+		<td id="middle_deck_range_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Damage/Gun</td>
+		<td id="middle_deck_damage_gun_a">--</td>
+		<td>&nbsp;</td>
+		<td id="middle_deck_damage_gun_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Reload (seconds)</td>
+		<td id="middle_deck_reload_a">--</td>
+		<td>&nbsp;</td>
+		<td id="middle_deck_reload_b">--</td>
+	  </tr>
+	  <tr>
+				<td class="thead">Max Damage / Broadside</td>
+		<td id="middle_deck_max_damage_a">--</td>
+		<td>&nbsp;</td>
+		<td id="middle_deck_max_damage_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Accuracy, 200yds</td>
+		<td id="middle_deck_accuracy_200_a">--</td>
+		<td>&nbsp;</td>
+		<td id="middle_deck_accuracy_200_b">--</td>
+	  </tr>
+	  <tr>
+				<td class="thead">Damage, 200yds</td>
+		<td id="middle_deck_damage_200_a">--</td>
+		<td>&nbsp;</td>
+		<td id="middle_deck_damage_200_b">--</td>
+	  </tr>
+	  <tr>
+				<td class="thead">DPS, 200yds</td>
+		<td id="middle_deck_dps_200_a">--</td>
+		<td>&nbsp;</td>
+		<td id="middle_deck_dps_200_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Accuracy, 400yds</td>
+		<td id="middle_deck_accuracy_400_a">--</td>
+		<td>&nbsp;</td>
+		<td id="middle_deck_accuracy_400_b">--</td>
+	  </tr>
+	  <tr>
+				<td class="thead">Damage, 400yds</td>
+		<td id="middle_deck_damage_400_a">--</td>
+		<td>&nbsp;</td>
+		<td id="middle_deck_damage_400_b">--</td>
+	  </tr>
+	  <tr>
+				<td class="thead">DPS, 400yds</td>
+		<td id="middle_deck_dps_400_a">--</td>
+		<td>&nbsp;</td>
+		<td id="middle_deck_dps_400_b">--</td>
+	  </tr>
+	</table>
+	<label for="catcollapse" class="category-button" id="collapse-category"><input type="checkbox" name="catcollapse" id="catcollapse" value="Y" class="checkbox" /><h4 id="icon12" class="collapseicon">-</h4></label>
+	<label for="catcollapse12" class="category-button" id="feature-category"><input type="checkbox" name="catcollapse12" id="catcollapse12" value="Y" class="checkbox" /><h4>Gun Deck</h4></label>
+	<table id="cl12" class="plain" style="width: 100%; margin: 0px 0px 10px 0px; border: 1px solid #efb168; ">
+	  <tr>
+		<td width="30%" class="thead">Guns per side (lbs)</td>
+		<td width="25%" id="gun_deck_guns_per_side_a">--</td>
+		<td width="20%"></td>
+		<td width="25%" id="gun_deck_guns_per_side_b">--</td>
+	  </tr>
+	  <tr>
+				<td class="thead">Broadside Weight (lbs)</td>
+		<td id="gun_deck_weight_a">--</td>
+		<td>&nbsp;</td>
+		<td id="gun_deck_weight_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Range (yds)</td>
+		<td id="gun_deck_range_a">--</td>
+		<td>&nbsp;</td>
+		<td id="gun_deck_range_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Damage/Gun</td>
+		<td id="gun_deck_damage_gun_a">--</td>
+		<td>&nbsp;</td>
+		<td id="gun_deck_damage_gun_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Reload (seconds)</td>
+		<td id="gun_deck_reload_a">--</td>
+		<td>&nbsp;</td>
+		<td id="gun_deck_reload_b">--</td>
+	  </tr>
+	  <tr>
+				<td class="thead">Max Damage / Broadside</td>
+		<td id="gun_deck_max_damage_a">--</td>
+		<td>&nbsp;</td>
+		<td id="gun_deck_max_damage_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Accuracy, 200yds</td>
+		<td id="gun_deck_accuracy_200_a">--</td>
+		<td>&nbsp;</td>
+		<td id="gun_deck_accuracy_200_b">--</td>
+	  </tr>
+	  <tr>
+				<td class="thead">Damage, 200yds</td>
+		<td id="gun_deck_damage_200_a">--</td>
+		<td>&nbsp;</td>
+		<td id="gun_deck_damage_200_b">--</td>
+	  </tr>
+	  <tr>
+				<td class="thead">DPS, 200yds</td>
+		<td id="gun_deck_dps_200_a">--</td>
+		<td>&nbsp;</td>
+		<td id="gun_deck_dps_200_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Accuracy, 400yds</td>
+		<td id="gun_deck_accuracy_400_a">--</td>
+		<td>&nbsp;</td>
+		<td id="gun_deck_accuracy_400_b">--</td>
+	  </tr>
+	  <tr>
+				<td class="thead">Damage, 400yds</td>
+		<td id="gun_deck_damage_400_a">--</td>
+		<td>&nbsp;</td>
+		<td id="gun_deck_damage_400_b">--</td>
+	  </tr>
+	  <tr>
+				<td class="thead">DPS, 400yds</td>
+		<td id="gun_deck_dps_400_a">--</td>
+		<td>&nbsp;</td>
+		<td id="gun_deck_dps_400_b">--</td>
+	  </tr>
+	</table>
+	<label for="catcollapse" class="category-button" id="collapse-category"><input type="checkbox" name="catcollapse" id="catcollapse" value="Y" class="checkbox" /><h4 id="icon13" class="collapseicon">-</h4></label>
+	<label for="catcollapse13" class="category-button" id="feature-category"><input type="checkbox" name="catcollapse13" id="catcollapse13" value="Y" class="checkbox" /><h4>Bow Chasers</h4></label>
+	<table id="cl13" class="plain" style="width: 100%; margin: 0px 0px 10px 0px; border: 1px solid #efb168; ">
+	  <tr>
+		<td width="30%" class="thead">Guns per side (lbs)</td>
+		<td width="25%" id="bow_chasers_guns_per_side_a">--</td>
+		<td width="20%"></td>
+		<td width="25%" id="bow_chasers_guns_per_side_b">--</td>
+	  </tr>
+	  <tr>
+				<td class="thead">Broadside Weight (yds)</td>
+		<td id="bow_chasers_weight_a">--</td>
+		<td>&nbsp;</td>
+		<td id="bow_chasers_weight_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Range (yds)</td>
+		<td id="bow_chasers_range_a">--</td>
+		<td>&nbsp;</td>
+		<td id="bow_chasers_range_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Damage/Gun</td>
+		<td id="bow_chasers_damage_gun_a">--</td>
+		<td>&nbsp;</td>
+		<td id="bow_chasers_damage_gun_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Reload (seconds)</td>
+		<td id="bow_chasers_reload_a">--</td>
+		<td>&nbsp;</td>
+		<td id="bow_chasers_reload_b">--</td>
+	  </tr>
+	  <tr>
+				<td class="thead">Max Damage / Broadside</td>
+		<td id="bow_chasers_max_damage_a">--</td>
+		<td>&nbsp;</td>
+		<td id="bow_chasers_max_damage_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Accuracy, 200yds</td>
+		<td id="bow_chasers_accuracy_200_a">--</td>
+		<td>&nbsp;</td>
+		<td id="bow_chasers_accuracy_200_b">--</td>
+	  </tr>
+	  <tr>
+				<td class="thead">Damage, 200yds</td>
+		<td id="bow_chasers_damage_200_a">--</td>
+		<td>&nbsp;</td>
+		<td id="bow_chasers_damage_200_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">DPS, 200yds</td>
+		<td id="bow_chasers_dps_200_a">--</td>
+		<td>&nbsp;</td>
+		<td id="bow_chasers_dps_200_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Accuracy, 400yds</td>
+		<td id="bow_chasers_accuracy_400_a">--</td>
+		<td>&nbsp;</td>
+		<td id="bow_chasers_accuracy_400_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Damage, 400yds</td>
+		<td id="bow_chasers_damage_400_a">--</td>
+		<td>&nbsp;</td>
+		<td id="bow_chasers_damage_400_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">DPS, 400yds</td>
+		<td id="bow_chasers_dps_400_a">--</td>
+		<td>&nbsp;</td>
+		<td id="bow_chasers_dps_400_b">--</td>
+	  </tr>
+	</table>
+	<label for="catcollapse" class="category-button" id="collapse-category"><input type="checkbox" name="catcollapse" id="catcollapse" value="Y" class="checkbox" /><h4 id="icon14" class="collapseicon">-</h4></label>
+	<label for="catcollapse14" class="category-button" id="feature-category"><input type="checkbox" name="catcollapse14" id="catcollapse14" value="Y" class="checkbox" /><h4>Stern Chasers</h4></label>
+	<table id="cl14" class="plain" style="width: 100%; margin: 0px 0px 10px 0px; border: 1px solid #efb168; ">
+	  <tr>
+		<td width="30%" class="thead">Guns per side (lbs)</td>
+		<td width="25%"id="stern_chasers_guns_per_side_a">--</td>
+		<td width="20%"></td>
+		<td width="25%" id="stern_chasers_guns_per_side_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Broadside Weight (lbs)</td>
+		<td id="stern_chasers_weight_a">--</td>
+		<td>&nbsp;</td>
+		<td id="stern_chasers_weight_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Range (yds)</td>
+		<td id="stern_chasers_range_a">--</td>
+		<td>&nbsp;</td>
+		<td id="stern_chasers_range_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Damage/Gun</td>
+		<td id="stern_chasers_damage_gun_a">--</td>
+		<td>&nbsp;</td>
+		<td id="stern_chasers_damage_gun_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Reload (seconds)</td>
+		<td id="stern_chasers_reload_a">--</td>
+		<td>&nbsp;</td>
+		<td id="stern_chasers_reload_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Max Damage / Broadside</td>
+		<td id="stern_chasers_max_damage_a">--</td>
+		<td>&nbsp;</td>
+		<td id="stern_chasers_max_damage_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Accuracy, 200yds</td>
+		<td id="stern_chasers_accuracy_200_a">--</td>
+		<td>&nbsp;</td>
+		<td id="stern_chasers_accuracy_200_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Damage, 200yds</td>
+		<td id="stern_chasers_damage_200_a">--</td>
+		<td>&nbsp;</td>
+		<td id="stern_chasers_damage_200_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">DPS, 200yds</td>
+		<td id="stern_chasers_dps_200_a">--</td>
+		<td>&nbsp;</td>
+		<td id="stern_chasers_dps_200_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Accuracy, 400yds</td>
+		<td id="stern_chasers_accuracy_400_a">--</td>
+		<td>&nbsp;</td>
+		<td id="stern_chasers_accuracy_400_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Damage, 400yds</td>
+		<td id="stern_chasers_damage_400_a">--</td>
+		<td>&nbsp;</td>
+		<td id="stern_chasers_damage_400_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">DPS, 400yds</td>
+		<td id="stern_chasers_dps_400_a">--</td>
+		<td>&nbsp;</td>
+		<td id="stern_chasers_dps_400_b">--</td>
+	  </tr>
+	</table>
+	<label for="catcollapse" class="category-button" id="collapse-category"><input type="checkbox" name="catcollapse" id="catcollapse" value="Y" class="checkbox" /><h4 id="icon15" class="collapseicon">-</h4></label>
+	<label for="catcollapse15" class="category-button" id="feature-category"><input type="checkbox" name="catcollapse15" id="catcollapse15" value="Y" class="checkbox" /><h4>Swivel Guns</h4></label>
+	<table id="cl15" class="plain" style="width: 100%; margin: 0px 0px 10px 0px; border: 1px solid #efb168; ">
+	  <tr>
+		<td width="30%" class="thead">Guns per side (lbs)</td>
+		<td width="25%" id="swivel_guns_guns_per_side_a">--</td>
+		<td width="20%"></td>
+		<td width="25%" id="swivel_guns_guns_per_side_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Broadside Weight (lbs)</td>
+		<td id="swivel_guns_weight_a">--</td>
+		<td></td>
+		<td id="swivel_guns_weight_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Range (yds)</td>
+		<td id="swivel_guns_range_a">--</td>
+		<td></td>
+		<td id="swivel_guns_range_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Damage/Gun</td>
+		<td id="swivel_guns_damage_gun_a">--</td>
+		<td></td>
+		<td id="swivel_guns_damage_gun_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Reload (seconds)</td>
+		<td id="swivel_guns_reload_a">--</td>
+		<td></td>
+		<td id="swivel_guns_reload_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Max Damage / Broadside</td>
+		<td id="swivel_guns_max_damage_a">--</td>
+		<td></td>
+		<td id="swivel_guns_max_damage_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Accuracy, 200yds</td>
+		<td id="swivel_accuracy_200_a">--</td>
+		<td></td>
+		<td id="swivel_accuracy_200_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Damage, 200yds</td>
+		<td id="swivel_damage_200_a">--</td>
+		<td></td>
+		<td id="swivel_damage_200_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">DPS, 200yds</td>
+		<td id="swivel_dps_200_a">--</td>
+		<td></td>
+		<td id="swivel_dps_200_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Accuracy, 400yds</td>
+		<td id="swivel_accuracy_400_a">--</td>
+		<td></td>
+		<td id="swivel_accuracy_400_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Damage, 400yds</td>
+		<td id="swivel_damage_400_a">--</td>
+		<td></td>
+		<td id="swivel_damage_400_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">DPS, 400yds</td>
+		<td id="swivel_dps_400_a">--</td>
+		<td style="text-align:center";></td>
+		<td id="swivel_dps_400_b">--</td>
+	  </tr>
+	</table>
+	</div> <!-- Armament -->
+</div>
+	  </div>
+	  <div id="footer">
+		<div style="width: 40%; float: left; text-align: left; margin-left:5px;">
+		Disclaimer: This website is not affiliated with FLS / PortalusGames / Vision in any way.
+		</div>
+		
+		<div style="width: 15%; float: left; text-align: center; color: #5f5f5f;">
+		By: PotBS Community
+		</div>
+		
+		<div style="width: 40%; float: right; text-align: right; margin-right: 5px;" class="footerLink">
+			Bassed on the frontend of the original Captains Companion by <a href="http://www.codecraft.co.uk/" target="new">Codecraft</a>
+		</div>
+	  </div>
+	
+	<script type="text/javascript" src="js/highlight.js"></script>
+	<script type="text/javascript" src="js/format.js"></script>
+	<script type="text/javascript" src="js/updatestatsa.js"></script>
+	<script type="text/javascript" src="js/updatestatsb.js"></script>
+	<script src="js/urlhash.js"></script>
+	<script src="js/collapsecategory.js"></script>
+	</body>
+</html>
