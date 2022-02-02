@@ -1,0 +1,105 @@
+<html>
+<script src="js/jquery-3.6.0.min.js"></script>
+
+
+<div id="insert_here_table" style="margin:5px";></div>
+
+
+<script>
+var tthtml = '<table id="myId8table1" class="display filter-table-style" style="width:100%"><thead><tr><th style="padding-right:12px">Lvl</th><th>Model</th><th>ID</th><th>Type</th><th>Size</th><th style="padding-right:12px">Dura</th><th>Insurance</th><th style="padding-right:12px">Speed</th><th style="padding-right:12px">B/Pt</th><th style="padding-right:12px">Cargo</th><th style="padding-right:12px">Crew</th><th style="padding-right:12px">Guns*</th><th style="padding-right:12px">Broadside</th><th>Class</th></tr></thead><tbody id="tbody1"></tbody></table>'
+console.log(tthtml);
+
+$('#insert_here_table').append(tthtml);
+</script>
+
+<script>
+$.getJSON("https://kaspar-potbs.github.io/ship-comparison/shipdata.json", function(json) {
+	  //console.log( json.Ships );
+	  
+	var selectdata =  json.Ships;
+
+
+//Build table and add output
+        
+		var col = [ "Lvl", "Model", "ID", "Type", "Size", "Dura", "Insurance", "Speed", "B/Pt", "Cargo", "Crew", "Guns*", "Broadside", "Class"   ];
+
+
+        // CREATE DYNAMIC TABLE.
+        
+		var table = document.getElementById("myId8table1");
+		
+		table.setAttribute("id", "myId8table1");
+		var tbody = document.getElementById("tbody1");
+
+        
+        
+
+        // ADD JSON DATA TO THE TABLE AS ROWS.
+		 //var showamount = document.getElementById("showamountrecs").value;
+		var showamount = 999;
+		var spec = [ "level", "model", "ID", "type", "size", "base_durability", "insurance_value", "os_max_speed", "os_best_sailing_point", "cargo_capacity", "crew", "broadside_total_guns", "broadside_weight", "classes" ]
+        for (var i = 0; i < selectdata.length; i++) {
+			if (i == showamount) {
+			break;
+			}
+            tr = tbody.insertRow(0);
+
+            for (var j = 0; j < col.length; j++) {
+                var tabCell = tr.insertCell(-1);
+				var url = "compare.html#ship=";
+				
+				
+				
+                //tabCell.innerHTML = '<a href="'+url+selectdata[i][spec[2]]+'" target="_blank">'+selectdata[i][spec[j]]+'</a>';
+				tabCell.innerHTML = selectdata[i][spec[j]];
+            }
+        }
+		
+
+       
+		
+
+
+
+
+
+});
+</script>
+
+<!--
+<script>
+$(document).ready( function () {
+  var table = $('#myId8table1').DataTable(
+  {
+  "autoWidth": false,
+  "pageLength": 20,
+  "order": [[ 1, "asc" ]],
+  "responsive": true,
+  "lengthMenu": [ [10, 20, 50, -1], [10, 20, 50, "All"] ]
+}
+  
+  );
+} );
+</script>
+-->
+
+<script>
+$(document).ready( function () {
+  var table = $('#myId8table1').dataTable(
+  {
+  "autoWidth": false,
+  "pageLength": 20,
+  "order": [[ 1, "asc" ]],
+  "responsive": true,
+  "lengthMenu": [ [10, 20, 50, -1], [10, 20, 50, "All"] ]
+}
+  
+  );
+} );
+</script>
+
+
+<script src="js/datatables.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/datatables.css"/>
+
+</html>
