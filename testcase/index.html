@@ -13,6 +13,7 @@ $('#insert_here_table').append(tthtml);
 </script>
 
 <script>
+ $(document).ready( function () {	
 $.getJSON("https://kaspar-potbs.github.io/ship-comparison/shipdata.json", function(json) {
 	  //console.log( json.Ships );
 	  
@@ -56,20 +57,8 @@ $.getJSON("https://kaspar-potbs.github.io/ship-comparison/shipdata.json", functi
         }
 		
 
-       
-		
 
-
-
-
-
-});
-</script>
-
-<!--
-<script>
-$(document).ready( function () {
-  var table = $('#myId8table1').DataTable(
+  var table = $('#myId8table1').dataTable(
   {
   "autoWidth": false,
   "pageLength": 20,
@@ -79,9 +68,12 @@ $(document).ready( function () {
 }
   
   );
-} );
+      
+});
+	} );
 </script>
--->
+
+
 
 <script>
 $(document).ready( function () {
