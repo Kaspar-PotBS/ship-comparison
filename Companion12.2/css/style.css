@@ -26,7 +26,7 @@ html {
 
 
 input[type="checkbox"]{
- /* position: absolute; */
+ position: absolute;
   left: -9999px;
 }
 
