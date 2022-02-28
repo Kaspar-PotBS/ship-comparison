@@ -1,0 +1,1300 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	  <title>PotBS Companion: Compare Ship Details</title>
+	  <link rel="icon" type="image/x-icon" href="includes/img/favicon.png">
+	  <meta http-equiv="content-type" content="text/html; charset=iso-8859-1"/>
+	  <meta name="description" content="Comparison of ship details"/>
+	  	  <meta name="keywords" content="pirates,burning sea,potbs,mmo,massively multiplayer,online,rpg,role playing,game,ships,boats,vessels,flying lab studios,fls, portalus, portalusgames, vision"/>
+	  <meta name="language" content="en"/>
+	  <meta name="robots" content="index, follow"/>
+	  <link rel="stylesheet" type="text/css" href="includes/screen.css"/>
+	  <link rel="stylesheet" type="text/css" href="css/style.css"/>
+	  <script src="js/jquery-3.6.0.min.js"></script>
+				
+			
+	</head>
+	<body>
+	  <h1 style="display: none;">Massively Multiplayer, Online, Role Playing Game, MMO, RPG, MMORPG, Computer Game, PC Gaming, Console</h1>
+	  <div id="above_header" style="padding-bottom:0px;">&nbsp;
+	  
+
+</div>
+	  
+	  <div id="header">
+	  <img src="includes/img/header.gif" usemap="#yourmap" border="0">
+<map name="yourmap">
+<area shape="rect" coords="0,0,600,100" href="compare.html">
+<area shape="rect" coords="800, 0, 950, 200" href="http://www.burningsea.com" target="_blank">
+</map>
+	  </div>
+	  
+	  
+	  
+	  <div id="topnav">
+		<div class="nav"><a href="index.html">Shipyard</a></div>
+		<div class="nav"><a href="shipindex.html">Ship Index</a></div>
+		<div class="nav t1"><a href="compare.html">Ship Compare</a></div>
+		
+		
+		<div style="width: 45%; float: right; text-align: right; margin-top:5px;">
+				
+<select id="dataset" name="versionset" onchange="BuildDropdowns();" style="height:25px">   
+<option value="0">2.10.x Legacy</option>
+<option value="1" selected>2.17.x Antigua & Roberts</option>
+	</select>
+	
+	<select id="format" onchange="Formatsetting(this.value);" style="height:25px">   
+<option value="0">1,234.56</option>
+<option value="1" selected>1.234,56</option>
+	</select>
+	
+	<div style="width: 40%; float: right; text-align: left; margin-left:5px; margin-right:-10px;" id="google_translate_element"></div>
+	
+	
+</div>	
+
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'und', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+}
+	</script>
+	<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
+		
+	  </div>
+	  <div id="main">	
+
+<div id="mediumInnerWrapper">
+	<div>
+	<div class="ship-drop" style="float:left; width:365px; text-align: left;">
+	<h1 style="font-variant: small-caps; height: 45px" ID="model_a_header">Select a ship</h1>
+	Compare:
+	<select id="ship" name="ship1" onchange="StatsLookupA(this.value);">
+	   <option value="9999999">-- n/a --</option>
+
+	</select>
+	</div>
+	
+	
+	<div class="ship-drop1" style="float:right; width:365px; text-align: left;">
+	<h1 style="font-variant: small-caps; height: 45px" ID="model_b_header">Select a ship</h1>
+	Compare To:
+	<select id="shipb" name="ship2" onchange="StatsLookupB(this.value);">
+	   <option value="9999999">-- n/a --</option>
+
+	</select>
+	</div>
+	</div>
+<script>
+function BuildDropdowns(){
+};
+$.getJSON("js/shipdata.json", function(json) {
+	  
+	  
+	  var DatasetValue = [];
+	  var DatasetValue = document.getElementById("dataset").value;
+	  
+	  
+	  if (DatasetValue == "0")
+	{
+	var shipdata = json.Legacy;
+	}
+	else
+	
+	var shipdata = json.Ships;
+	  
+	  
+	  
+	//var shipdata =  json.Ships;
+	
+	shipdata.sort(function(a, b) {
+  var modelA = a.model.toUpperCase(); // ignore upper and lowercase
+  var modelB = b.model.toUpperCase(); // ignore upper and lowercase
+  if (modelA < modelB) {
+    return -1;
+  }
+  if (modelA > modelB) {
+    return 1;
+  }
+
+  // names must be equal
+  return 0;
+});
+	
+	
+	const arr = shipdata.map(i => `${i.model}`);
+	const arr1 = shipdata.map(i => `${i.ID}`);
+	
+
+shipselect = document.getElementById('ship');
+ship1select = document.getElementById('shipb');
+
+arr.forEach((Stat1, index) => {
+  const Stat2 = arr1[index];
+
+shipselect.options[shipselect.options.length] = new Option(Stat1, Stat2);
+ship1select.options[ship1select.options.length] = new Option(Stat1, Stat2);
+});
+
+});
+</script>  
+	
+	<br>
+	<hr/>
+
+<!-- Compare values for a side -->	
+<input type="hidden" id="model_a_value" value=""><input type="hidden" id="level_a_value" value=""><input type="hidden" id="type_a_value" value=""><input type="hidden" id="variant_a_value" value=""><input type="hidden" id="size_a_value" value=""><input type="hidden" id="classes_a_value" value="">
+<input type="hidden" id="cargo_capacity_a_value" value=""><input type="hidden" id="os_visibility_a_value" value=""><input type="hidden" id="os_spotting_a_value" value=""><input type="hidden" id="crew_a_value" value=""><input type="hidden" id="target_tracking_a_value" value=""><input type="hidden" id="base_durability_a_value" value=""><input type="hidden" id="insurance_value_a_value" value="">
+<input type="hidden" id="os_best_sailing_point_a_value" value=""><input type="hidden" id="os_max_speed_a_value" value=""><input type="hidden" id="os_upwind_speed_a_value" value=""><input type="hidden" id="os_luffing_speed_a_value" value=""><input type="hidden" id="os_close_haul_speed_a_value" value=""><input type="hidden" id="os_beam_reach_speed_a_value" value=""><input type="hidden" id="os_broad_reach_speed_a_value" value=""><input type="hidden" id="os_running_speed_a_value" value="">
+
+<input type="hidden" id="battle_best_sailing_point_a_value" value=""><input type="hidden" id="battle_max_speed_a_value" value=""><input type="hidden" id="battle_acceleration_a_value" value=""><input type="hidden" id="battle_deceleration_a_value" value=""><input type="hidden" id="battle_turning_fast_a_value" value=""><input type="hidden" id="battle_turning_slow_a_value" value=""><input type="hidden" id="battle_turning_accelerating_a_value" value=""><input type="hidden" id="battle_turning_decelerating_a_value" value="">
+<input type="hidden" id="battle_upwind_speed_a_value" value=""><input type="hidden" id="battle_luffing_speed_a_value" value=""><input type="hidden" id="battle_close_haul_speed_a_value" value=""><input type="hidden" id="battle_beam_reach_speed_a_value" value=""><input type="hidden" id="battle_broad_reach_speed_a_value" value=""><input type="hidden" id="battle_running_speed_a_value" value="">
+
+<input type="hidden" id="structure_integrity_a_value" value=""><input type="hidden" id="port_armour_a_value" value=""><input type="hidden" id="starboard_armour_a_value" value=""><input type="hidden" id="bow_armour_a_value" value=""><input type="hidden" id="stern_armour_a_value" value=""><input type="hidden" id="mast_integrity_a_value" value="">
+<input type="hidden" id="structure_dr_a_value" value=""><input type="hidden" id="port_dr_a_value" value=""><input type="hidden" id="starboard_dr_a_value" value=""><input type="hidden" id="bow_dr_a_value" value=""><input type="hidden" id="stern_dr_a_value" value=""><input type="hidden" id="mast_dr_a_value" value="">
+<input type="hidden" id="mast_offence_a_value" value=""><input type="hidden" id="mast_defence_a_value" value=""><input type="hidden" id="mast_resist_a_value" value="">
+<input type="hidden" id="crew_offence_a_value" value=""><input type="hidden" id="crew_defence_a_value" value=""><input type="hidden" id="crew_resist_a_value" value="">
+<input type="hidden" id="bow_offence_a_value" value=""><input type="hidden" id="bow_defence_a_value" value=""><input type="hidden" id="bow_resist_a_value" value="">
+<input type="hidden" id="stern_offence_a_value" value=""><input type="hidden" id="stern_defence_a_value" value=""><input type="hidden" id="stern_resist_a_value" value="">
+<input type="hidden" id="sides_offence_a_value" value=""><input type="hidden" id="sides_defence_a_value" value=""><input type="hidden" id="sides_resist_a_value" value="">
+<input type="hidden" id="grappling_offence_a_value" value=""><input type="hidden" id="grappling_defence_a_value" value=""><input type="hidden" id="grappling_resist_a_value" value="">
+
+<input type="hidden" id="broadside_total_guns_a_value" value=""><input type="hidden" id="broadside_weight_a_value" value=""><input type="hidden" id="broadside_max_range_a_value" value=""><input type="hidden" id="broadside_max_damage_a_value" value=""><input type="hidden" id="broadside_damage_200_a_value" value=""><input type="hidden" id="broadside_dps_200_a_value" value=""><input type="hidden" id="broadside_damage_400_a_value" value=""><input type="hidden" id="broadside_dps_400_a_value" value="">
+<input type="hidden" id="top_deck_guns_per_side_a_value" value=""><input type="hidden" id="top_deck_weight_a_value" value=""><input type="hidden" id="top_deck_range_a_value" value=""><input type="hidden" id="top_deck_damage_gun_a_value" value=""><input type="hidden" id="top_deck_reload_a_value" value=""><input type="hidden" id="top_deck_max_damage_a_value" value=""><input type="hidden" id="top_deck_accuracy_200_a_value" value=""><input type="hidden" id="top_deck_damage_200_a_value" value=""><input type="hidden" id="top_deck_dps_200_a_value" value=""><input type="hidden" id="top_deck_accuracy_400_a_value" value=""><input type="hidden" id="top_deck_damage_400_a_value" value=""><input type="hidden" id="top_deck_dps_400_a_value" value="">
+<input type="hidden" id="upper_deck_guns_per_side_a_value" value=""><input type="hidden" id="upper_deck_weight_a_value" value=""><input type="hidden" id="upper_deck_range_a_value" value=""><input type="hidden" id="upper_deck_damage_gun_a_value" value=""><input type="hidden" id="upper_deck_reload_a_value" value=""><input type="hidden" id="upper_deck_max_damage_a_value" value=""><input type="hidden" id="upper_deck_accuracy_200_a_value" value=""><input type="hidden" id="upper_deck_damage_200_a_value" value=""><input type="hidden" id="upper_deck_dps_200_a_value" value=""><input type="hidden" id="upper_deck_accuracy_400_a_value" value=""><input type="hidden" id="upper_deck_damage_400_a_value" value=""><input type="hidden" id="upper_deck_dps_400_a_value" value="">
+<input type="hidden" id="middle_deck_guns_per_side_a_value" value=""><input type="hidden" id="middle_deck_weight_a_value" value=""><input type="hidden" id="middle_deck_range_a_value" value=""><input type="hidden" id="middle_deck_damage_gun_a_value" value=""><input type="hidden" id="middle_deck_reload_a_value" value=""><input type="hidden" id="middle_deck_max_damage_a_value" value=""><input type="hidden" id="middle_deck_accuracy_200_a_value" value=""><input type="hidden" id="middle_deck_damage_200_a_value" value=""><input type="hidden" id="middle_deck_dps_200_a_value" value=""><input type="hidden" id="middle_deck_accuracy_400_a_value" value=""><input type="hidden" id="middle_deck_damage_400_a_value" value=""><input type="hidden" id="middle_deck_dps_400_a_value" value="">
+<input type="hidden" id="gun_deck_guns_per_side_a_value" value=""><input type="hidden" id="gun_deck_weight_a_value" value=""><input type="hidden" id="gun_deck_range_a_value" value=""><input type="hidden" id="gun_deck_damage_gun_a_value" value=""><input type="hidden" id="gun_deck_reload_a_value" value=""><input type="hidden" id="gun_deck_max_damage_a_value" value=""><input type="hidden" id="gun_deck_accuracy_200_a_value" value=""><input type="hidden" id="gun_deck_damage_200_a_value" value=""><input type="hidden" id="gun_deck_dps_200_a_value" value=""><input type="hidden" id="gun_deck_accuracy_400_a_value" value=""><input type="hidden" id="gun_deck_damage_400_a_value" value=""><input type="hidden" id="gun_deck_dps_400_a_value" value="">
+<input type="hidden" id="bow_chasers_guns_per_side_a_value" value=""><input type="hidden" id="bow_chasers_weight_a_value" value=""><input type="hidden" id="bow_chasers_range_a_value" value=""><input type="hidden" id="bow_chasers_damage_gun_a_value" value=""><input type="hidden" id="bow_chasers_reload_a_value" value=""><input type="hidden" id="bow_chasers_max_damage_a_value" value=""><input type="hidden" id="bow_chasers_accuracy_200_a_value" value=""><input type="hidden" id="bow_chasers_damage_200_a_value" value=""><input type="hidden" id="bow_chasers_dps_200_a_value" value=""><input type="hidden" id="bow_chasers_accuracy_400_a_value" value=""><input type="hidden" id="bow_chasers_damage_400_a_value" value=""><input type="hidden" id="bow_chasers_dps_400_a_value" value="">
+<input type="hidden" id="stern_chasers_guns_per_side_a_value" value=""><input type="hidden" id="stern_chasers_weight_a_value" value=""><input type="hidden" id="stern_chasers_range_a_value" value=""><input type="hidden" id="stern_chasers_damage_gun_a_value" value=""><input type="hidden" id="stern_chasers_reload_a_value" value=""><input type="hidden" id="stern_chasers_max_damage_a_value" value=""><input type="hidden" id="stern_chasers_accuracy_200_a_value" value=""><input type="hidden" id="stern_chasers_damage_200_a_value" value=""><input type="hidden" id="stern_chasers_dps_200_a_value" value=""><input type="hidden" id="stern_chasers_accuracy_400_a_value" value=""><input type="hidden" id="stern_chasers_damage_400_a_value" value=""><input type="hidden" id="stern_chasers_dps_400_a_value" value="">
+<input type="hidden" id="swivel_guns_guns_per_side_a_value" value=""><input type="hidden" id="swivel_guns_weight_a_value" value=""><input type="hidden" id="swivel_guns_range_a_value" value=""><input type="hidden" id="swivel_guns_damage_gun_a_value" value=""><input type="hidden" id="swivel_guns_reload_a_value" value=""><input type="hidden" id="swivel_guns_max_damage_a_value" value=""><input type="hidden" id="swivel_accuracy_200_a_value" value=""><input type="hidden" id="swivel_damage_200_a_value" value=""><input type="hidden" id="swivel_dps_200_a_value" value=""><input type="hidden" id="swivel_accuracy_400_a_value" value=""><input type="hidden" id="swivel_damage_400_a_value" value=""><input type="hidden" id="swivel_dps_400_a_value" value="">
+
+<input type="hidden" id="last_updated_a_value" value="">
+
+<!-- Compare values for b side -->
+<input type="hidden" id="model_b_value" value=""><input type="hidden" id="level_b_value" value=""><input type="hidden" id="type_b_value" value=""><input type="hidden" id="variant_b_value" value=""><input type="hidden" id="size_b_value" value=""><input type="hidden" id="classes_b_value" value="">
+<input type="hidden" id="cargo_capacity_b_value" value=""><input type="hidden" id="os_visibility_b_value" value=""><input type="hidden" id="os_spotting_b_value" value=""><input type="hidden" id="crew_b_value" value=""><input type="hidden" id="target_tracking_b_value" value=""><input type="hidden" id="base_durability_b_value" value=""><input type="hidden" id="insurance_value_b_value" value="">
+<input type="hidden" id="os_best_sailing_point_b_value" value=""><input type="hidden" id="os_max_speed_b_value" value=""><input type="hidden" id="os_upwind_speed_b_value" value=""><input type="hidden" id="os_luffing_speed_b_value" value=""><input type="hidden" id="os_close_haul_speed_b_value" value=""><input type="hidden" id="os_beam_reach_speed_b_value" value=""><input type="hidden" id="os_broad_reach_speed_b_value" value=""><input type="hidden" id="os_running_speed_b_value" value="">
+
+<input type="hidden" id="battle_best_sailing_point_b_value" value=""><input type="hidden" id="battle_max_speed_b_value" value=""><input type="hidden" id="battle_acceleration_b_value" value=""><input type="hidden" id="battle_deceleration_b_value" value=""><input type="hidden" id="battle_turning_fast_b_value" value=""><input type="hidden" id="battle_turning_slow_b_value" value=""><input type="hidden" id="battle_turning_accelerating_b_value" value=""><input type="hidden" id="battle_turning_decelerating_b_value" value="">
+<input type="hidden" id="battle_upwind_speed_b_value" value=""><input type="hidden" id="battle_luffing_speed_b_value" value=""><input type="hidden" id="battle_close_haul_speed_b_value" value=""><input type="hidden" id="battle_beam_reach_speed_b_value" value=""><input type="hidden" id="battle_broad_reach_speed_b_value" value=""><input type="hidden" id="battle_running_speed_b_value" value="">
+
+<input type="hidden" id="structure_integrity_b_value" value=""><input type="hidden" id="port_armour_b_value" value=""><input type="hidden" id="starboard_armour_b_value" value=""><input type="hidden" id="bow_armour_b_value" value=""><input type="hidden" id="stern_armour_b_value" value=""><input type="hidden" id="mast_integrity_b_value" value="">
+<input type="hidden" id="structure_dr_b_value" value=""><input type="hidden" id="port_dr_b_value" value=""><input type="hidden" id="starboard_dr_b_value" value=""><input type="hidden" id="bow_dr_b_value" value=""><input type="hidden" id="stern_dr_b_value" value=""><input type="hidden" id="mast_dr_b_value" value="">
+<input type="hidden" id="mast_offence_b_value" value=""><input type="hidden" id="mast_defence_b_value" value=""><input type="hidden" id="mast_resist_b_value" value="">
+<input type="hidden" id="crew_offence_b_value" value=""><input type="hidden" id="crew_defence_b_value" value=""><input type="hidden" id="crew_resist_b_value" value="">
+<input type="hidden" id="bow_offence_b_value" value=""><input type="hidden" id="bow_defence_b_value" value=""><input type="hidden" id="bow_resist_b_value" value="">
+<input type="hidden" id="stern_offence_b_value" value=""><input type="hidden" id="stern_defence_b_value" value=""><input type="hidden" id="stern_resist_b_value" value="">
+<input type="hidden" id="sides_offence_b_value" value=""><input type="hidden" id="sides_defence_b_value" value=""><input type="hidden" id="sides_resist_b_value" value="">
+<input type="hidden" id="grappling_offence_b_value" value=""><input type="hidden" id="grappling_defence_b_value" value=""><input type="hidden" id="grappling_resist_b_value" value="">
+
+<input type="hidden" id="broadside_total_guns_b_value" value=""><input type="hidden" id="broadside_weight_b_value" value=""><input type="hidden" id="broadside_max_range_b_value" value=""><input type="hidden" id="broadside_max_damage_b_value" value=""><input type="hidden" id="broadside_damage_200_b_value" value=""><input type="hidden" id="broadside_dps_200_b_value" value=""><input type="hidden" id="broadside_damage_400_b_value" value=""><input type="hidden" id="broadside_dps_400_b_value" value="">
+<input type="hidden" id="top_deck_guns_per_side_b_value" value=""><input type="hidden" id="top_deck_weight_b_value" value=""><input type="hidden" id="top_deck_range_b_value" value=""><input type="hidden" id="top_deck_damage_gun_b_value" value=""><input type="hidden" id="top_deck_reload_b_value" value=""><input type="hidden" id="top_deck_max_damage_b_value" value=""><input type="hidden" id="top_deck_accuracy_200_b_value" value=""><input type="hidden" id="top_deck_damage_200_b_value" value=""><input type="hidden" id="top_deck_dps_200_b_value" value=""><input type="hidden" id="top_deck_accuracy_400_b_value" value=""><input type="hidden" id="top_deck_damage_400_b_value" value=""><input type="hidden" id="top_deck_dps_400_b_value" value="">
+<input type="hidden" id="upper_deck_guns_per_side_b_value" value=""><input type="hidden" id="upper_deck_weight_b_value" value=""><input type="hidden" id="upper_deck_range_b_value" value=""><input type="hidden" id="upper_deck_damage_gun_b_value" value=""><input type="hidden" id="upper_deck_reload_b_value" value=""><input type="hidden" id="upper_deck_max_damage_b_value" value=""><input type="hidden" id="upper_deck_accuracy_200_b_value" value=""><input type="hidden" id="upper_deck_damage_200_b_value" value=""><input type="hidden" id="upper_deck_dps_200_b_value" value=""><input type="hidden" id="upper_deck_accuracy_400_b_value" value=""><input type="hidden" id="upper_deck_damage_400_b_value" value=""><input type="hidden" id="upper_deck_dps_400_b_value" value="">
+<input type="hidden" id="middle_deck_guns_per_side_b_value" value=""><input type="hidden" id="middle_deck_weight_b_value" value=""><input type="hidden" id="middle_deck_range_b_value" value=""><input type="hidden" id="middle_deck_damage_gun_b_value" value=""><input type="hidden" id="middle_deck_reload_b_value" value=""><input type="hidden" id="middle_deck_max_damage_b_value" value=""><input type="hidden" id="middle_deck_accuracy_200_b_value" value=""><input type="hidden" id="middle_deck_damage_200_b_value" value=""><input type="hidden" id="middle_deck_dps_200_b_value" value=""><input type="hidden" id="middle_deck_accuracy_400_b_value" value=""><input type="hidden" id="middle_deck_damage_400_b_value" value=""><input type="hidden" id="middle_deck_dps_400_b_value" value="">
+<input type="hidden" id="gun_deck_guns_per_side_b_value" value=""><input type="hidden" id="gun_deck_weight_b_value" value=""><input type="hidden" id="gun_deck_range_b_value" value=""><input type="hidden" id="gun_deck_damage_gun_b_value" value=""><input type="hidden" id="gun_deck_reload_b_value" value=""><input type="hidden" id="gun_deck_max_damage_b_value" value=""><input type="hidden" id="gun_deck_accuracy_200_b_value" value=""><input type="hidden" id="gun_deck_damage_200_b_value" value=""><input type="hidden" id="gun_deck_dps_200_b_value" value=""><input type="hidden" id="gun_deck_accuracy_400_b_value" value=""><input type="hidden" id="gun_deck_damage_400_b_value" value=""><input type="hidden" id="gun_deck_dps_400_b_value" value="">
+<input type="hidden" id="bow_chasers_guns_per_side_b_value" value=""><input type="hidden" id="bow_chasers_weight_b_value" value=""><input type="hidden" id="bow_chasers_range_b_value" value=""><input type="hidden" id="bow_chasers_damage_gun_b_value" value=""><input type="hidden" id="bow_chasers_reload_b_value" value=""><input type="hidden" id="bow_chasers_max_damage_b_value" value=""><input type="hidden" id="bow_chasers_accuracy_200_b_value" value=""><input type="hidden" id="bow_chasers_damage_200_b_value" value=""><input type="hidden" id="bow_chasers_dps_200_b_value" value=""><input type="hidden" id="bow_chasers_accuracy_400_b_value" value=""><input type="hidden" id="bow_chasers_damage_400_b_value" value=""><input type="hidden" id="bow_chasers_dps_400_b_value" value="">
+<input type="hidden" id="stern_chasers_guns_per_side_b_value" value=""><input type="hidden" id="stern_chasers_weight_b_value" value=""><input type="hidden" id="stern_chasers_range_b_value" value=""><input type="hidden" id="stern_chasers_damage_gun_b_value" value=""><input type="hidden" id="stern_chasers_reload_b_value" value=""><input type="hidden" id="stern_chasers_max_damage_b_value" value=""><input type="hidden" id="stern_chasers_accuracy_200_b_value" value=""><input type="hidden" id="stern_chasers_damage_200_b_value" value=""><input type="hidden" id="stern_chasers_dps_200_b_value" value=""><input type="hidden" id="stern_chasers_accuracy_400_b_value" value=""><input type="hidden" id="stern_chasers_damage_400_b_value" value=""><input type="hidden" id="stern_chasers_dps_400_b_value" value="">
+<input type="hidden" id="swivel_guns_guns_per_side_b_value" value=""><input type="hidden" id="swivel_guns_weight_b_value" value=""><input type="hidden" id="swivel_guns_range_b_value" value=""><input type="hidden" id="swivel_guns_damage_gun_b_value" value=""><input type="hidden" id="swivel_guns_reload_b_value" value=""><input type="hidden" id="swivel_guns_max_damage_b_value" value=""><input type="hidden" id="swivel_accuracy_200_b_value" value=""><input type="hidden" id="swivel_damage_200_b_value" value=""><input type="hidden" id="swivel_dps_200_b_value" value=""><input type="hidden" id="swivel_accuracy_400_b_value" value=""><input type="hidden" id="swivel_damage_400_b_value" value=""><input type="hidden" id="swivel_dps_400_b_value" value="">
+
+<input type="hidden" id="last_updated_b_value" value="">
+
+	
+	<!-- <label for="catcollapse" class="category-button" id="collapse-category"><input type="checkbox" name="catcollapse" id="catcollapse" value="Y" class="checkbox" /><h3 id="icon0" class="collapseicon">-</h3></label> -->
+	
+	<div class="collapse-info" style="text-align-last: center;">Click a section header to collapse/expand that section</div>
+	
+	<label for="catcollapse" class="category-button" id="collapse-category"><input type="checkbox" name="catcollapse" id="catcollapse" value="Y" class="checkbox" /><h3 id="icon0" class="collapseicon">-</h3></label>
+	<label for="catcollapse0" class="category-button" id="feature-category"><input type="checkbox" name="catcollapse0" id="catcollapse0" value="Y" class="checkbox" /><h3 class="compact">Ship Basic</h3></label>
+	<table id="cl0" class="plain" style="width: 100%; margin: 0px 0px 10px 0px; border: 1px solid #efb168; ">
+	  <tr>
+		<td width="30%" class="thead">Model</td>
+		<td width="25%" id="model_a">--</td>
+		<td width="20%"></td>
+		<td width="25%" id="model_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Last Updated:</td>
+		<td id="last_updated_a">--</td>
+		<td>&nbsp;</td>
+		<td id="last_updated_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Updated By:</td>
+		<td>--</td>
+		<td>&nbsp;</td>
+		<td>--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">&nbsp;</td>
+		<td colspan="3">&nbsp;</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Level:</td>
+		<td id="level_a">--</td>
+		<td>&nbsp;</td>
+		<td id="level_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Type:</td>
+		<td id="type_a">--</td>
+		<td>&nbsp;</td>
+		<td id="type_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Variant:</td>
+		<td id="variant_a">--</td>
+		<td>&nbsp;</td>
+		<td id="variant_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Size:</td>
+		<td id="size_a">--</td>
+		<td>&nbsp;</td>
+		<td id="size_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Classes:</td>
+		<td id="classes_a">--</td>
+		<td>&nbsp;</td>
+		<td id="classes_b">--</td>
+	  </tr>
+	</table>
+	
+	<label for="catcollapse" class="category-button" id="collapse-category"><input type="checkbox" name="catcollapse" id="catcollapse" value="Y" class="checkbox" /><h3 id="icon1" class="collapseicon">-</h3></label>
+	<label for="catcollapse1" class="category-button" id="feature-category"><input type="checkbox" name="catcollapse1" id="catcollapse1" value="Y" class="checkbox" /><h3 class="compact">General Information</h3></label>
+	<table id="cl1" class="plain" style="width: 100%; margin: 0px 0px 10px 0px; border: 1px solid #efb168; ">
+	  <tr>
+		<td width="30%" class="thead" class="cargo_capacity">Cargo Capacity</td>
+		<td width="25%" id="cargo_capacity_a">--</td>
+		<td width="20%">&nbsp;</td>
+		<td width="25%" id="cargo_capacity_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">OS Visibility</td>
+		<td id="os_visibility_a">--</td>
+		<td>&nbsp;</td>
+		<td id="os_visibility_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">OS Spotting</td>
+		<td id="os_spotting_a">--</td>
+		<td>&nbsp;</td>
+		<td id="os_spotting_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Crew</td>
+		<td id="crew_a">--</td>
+		<td>&nbsp;</td>
+		<td id="crew_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Target Tracking</td>
+		<td id="target_tracking_a">--</td>
+		<td>&nbsp;</td>
+		<td id="target_tracking_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Base Durability</td>
+		<td id="base_durability_a">--</td>
+		<td>&nbsp;</td>
+		<td id="base_durability_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Insurance Value (dbs)</td>
+		<td id="insurance_value_a">--</td>
+		<td>&nbsp;</td>
+		<td id="insurance_value_b">--</td>
+	  </tr>
+	</table>
+	<label for="catcollapse" class="category-button" id="collapse-category"><input type="checkbox" name="catcollapse" id="catcollapse" value="Y" class="checkbox" /><h3 id="icon2" class="collapseicon">-</h3></label>
+	<label for="catcollapse2" class="category-button" id="feature-category"><input type="checkbox" name="catcollapse2" id="catcollapse2" value="Y" class="checkbox" /><h3 class="compact">Manoevering</h3></label>
+	<div id="cl2">
+	<label for="catcollapse" class="category-button" id="collapse-category"><input type="checkbox" name="catcollapse" id="catcollapse" value="Y" class="checkbox" /><h4 id="icon3" class="collapseicon">-</h4></label>
+	<label for="catcollapse3" class="category-button" id="feature-category"><input type="checkbox" name="catcollapse3" id="catcollapse3" value="Y" class="checkbox" /><h4>Open Sea</h4></label>
+	<table id="cl3" class="plain" style="width: 100%; margin: 0px 0px 10px 0px; border: 1px solid #efb168; ">
+	  <tr>
+		<td class="thead">Best Sailing Point</td>
+		<td   id="os_best_sailing_point_a">--</td>
+		<td>&nbsp;</td>
+		<td id="os_best_sailing_point_b">--</td>
+	  </tr>
+	  
+	  <tr>
+		<td width="30%" class="thead">Max Speed (Open Sea)</td>
+		<td width="25%"  id="os_max_speed_a">--</td>
+		<td width="20%">&nbsp;</td>
+		<td width="25%" id="os_max_speed_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">&nbsp;</td>
+		<td colspan="3">&nbsp;</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Upwind Speed</td>
+		<td   id="os_upwind_speed_a">--</td>
+		<td>&nbsp;</td>
+		<td id="os_upwind_speed_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Luffing Speed</td>
+		<td  id="os_luffing_speed_a">--</td>
+		<td>&nbsp;</td>
+		<td id="os_luffing_speed_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Close Haul Speed</td>
+		<td  id="os_close_haul_speed_a">--</td>
+		<td>&nbsp;</td>
+		<td id="os_close_haul_speed_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Beam Reach Speed</td>
+		<td  id="os_beam_reach_speed_a">--</td>
+		<td>&nbsp;</td>
+		<td id="os_beam_reach_speed_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Broad Reach Speed</td>
+		<td  id="os_broad_reach_speed_a">--</td>
+		<td>&nbsp;</td>
+		<td id="os_broad_reach_speed_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Running Speed</td>
+		<td  id="os_running_speed_a">--</td>
+		<td>&nbsp;</td>
+		<td id="os_running_speed_b">--</td>
+	  </tr>
+	</table>
+	<label for="catcollapse" class="category-button" id="collapse-category"><input type="checkbox" name="catcollapse" id="catcollapse" value="Y" class="checkbox" /><h4 id="icon4" class="collapseicon">-</h4></label>
+	<label for="catcollapse4" class="category-button" id="feature-category"><input type="checkbox" name="catcollapse4" id="catcollapse4" value="Y" class="checkbox" /><h4>Battle</h4></label>
+	<table id="cl4" class="plain" style="width: 100%; margin: 0px 0px 10px 0px; border: 1px solid #efb168; ">
+	  <tr>
+		<td class="thead">Best Sailing Point</td>
+		<td  id="battle_best_sailing_point_a">--</td>
+		<td>&nbsp;</td>
+		<td id="battle_best_sailing_point_b">--</td>
+	  </tr>
+	  
+	  <tr>
+		<td width="30%" class="thead">Max Speed (Battle)</td>
+		<td width="25%" id="battle_max_speed_a">--</td>
+		<td width="20%">&nbsp;</td>
+		<td width="25%" id="battle_max_speed_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">&nbsp;</td>
+		<td colspan="3">&nbsp;</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Acceleration</td>
+		<td id="battle_acceleration_a">--</td>
+		<td>&nbsp;</td>
+		<td id="battle_acceleration_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Deceleration</td>
+		<td id="battle_deceleration_a">--</td>
+		<td>&nbsp;</td>
+		<td id="battle_deceleration_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Turning, Fast</td>
+		<td id="battle_turning_fast_a">--</td>
+		<td>&nbsp;</td>
+		<td id="battle_turning_fast_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Turning, Slow</td>
+		<td id="battle_turning_slow_a">--</td>
+		<td>&nbsp;</td>
+		<td id="battle_turning_slow_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Turning, Accelerating</td>
+		<td id="battle_turning_accelerating_a">--</td>
+		<td>&nbsp;</td>
+		<td id="battle_turning_accelerating_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Turning, Decelerating</td>
+		<td id="battle_turning_decelerating_a">--</td>
+		<td>&nbsp;</td>
+		<td id="battle_turning_decelerating_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">&nbsp;</td>
+		<td colspan="3">&nbsp;</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Upwind Speed</td>
+		<td   id="battle_upwind_speed_a">--</td>
+		<td>&nbsp;</td>
+		<td id="battle_upwind_speed_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Luffing Speed</td>
+		<td  id="battle_luffing_speed_a">--</td>
+		<td>&nbsp;</td>
+		<td id="battle_luffing_speed_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Close Haul Speed</td>
+		<td  id="battle_close_haul_speed_a">--</td>
+		<td>&nbsp;</td>
+		<td id="battle_close_haul_speed_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Beam Reach Speed</td>
+		<td  id="battle_beam_reach_speed_a">--</td>
+		<td>&nbsp;</td>
+		<td id="battle_beam_reach_speed_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Broad Reach Speed</td>
+		<td  id="battle_broad_reach_speed_a">--</td>
+		<td>&nbsp;</td>
+		<td id="battle_broad_reach_speed_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Running Speed</td>
+		<td  id="battle_running_speed_a">--</td>
+		<td>&nbsp;</td>
+		<td id="battle_running_speed_b">--</td>
+	  </tr>
+	</table>
+	</div> <!-- Manoevering  -->
+	<label for="catcollapse" class="category-button" id="collapse-category"><input type="checkbox" name="catcollapse" id="catcollapse" value="Y" class="checkbox" /><h3 id="icon5" class="collapseicon">-</h3></label>
+	<label for="catcollapse5" class="category-button" id="feature-category"><input type="checkbox" name="catcollapse5" id="catcollapse5" value="Y" class="checkbox" /><h3 class="compact">Armour and Damage Resistance</h3></label>
+	<table id="cl5" class="plain" style="width: 100%; margin: 0px 0px 10px 0px; border: 1px solid #efb168; ">
+	  <tr>
+		<td width="30%" class="thead">Structure Integrity</td>
+		<td width="25%" id="structure_integrity_a">--</td>
+		<td width="20%"></td>
+		<td width="25%" id="structure_integrity_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Port Armour</td>
+		<td id="port_armour_a">--</td>
+		<td>&nbsp;</td>
+		<td id="port_armour_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Starboard Armour</td>
+		<td id="starboard_armour_a">--</td>
+		<td>&nbsp;</td>
+		<td id="starboard_armour_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Bow Armour</td>
+		<td id="bow_armour_a">--</td>
+		<td>&nbsp;</td>
+		<td id="bow_armour_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Stern Armour</td>
+		<td id="stern_armour_a">--</td>
+		<td>&nbsp;</td>
+		<td id="stern_armour_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Mast Integrity</td>
+		<td id="mast_integrity_a">--</td>
+		<td>&nbsp;</td>
+		<td id="mast_integrity_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">&nbsp;</td>
+		<td colspan="3">&nbsp;</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Structure DR</td>
+		<td id="structure_dr_a">--</td>
+		<td>&nbsp;</td>
+		<td id="structure_dr_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Port DR</td>
+		<td id="port_dr_a">--</td>
+		<td>&nbsp;</td>
+		<td id="port_dr_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Starboard DR</td>
+		<td id="starboard_dr_a">--</td>
+		<td>&nbsp;</td>
+		<td id="starboard_dr_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Bow DR</td>
+		<td id="bow_dr_a">--</td>
+		<td>&nbsp;</td>
+		<td id="bow_dr_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Stern DR</td>
+		<td id="stern_dr_a">--</td>
+		<td>&nbsp;</td>
+		<td id="stern_dr_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Mast DR</td>
+		<td id="mast_dr_a">--</td>
+		<td>&nbsp;</td>
+		<td id="mast_dr_b">--</td>
+	  </tr>
+	</table>
+	<label for="catcollapse" class="category-button" id="collapse-category"><input type="checkbox" name="catcollapse" id="catcollapse" value="Y" class="checkbox" /><h3 id="icon6" class="collapseicon">-</h3></label>
+	<label for="catcollapse6" class="category-button" id="feature-category"><input type="checkbox" name="catcollapse6" id="catcollapse6" value="Y" class="checkbox" /><h3 class="compact">Offence/Defence/Resistance Modifiers</h3></label>
+	<table id="cl6" class="plain" style="width: 100%; margin: 0px 0px 10px 0px; border: 1px solid #efb168; ">
+	  <tr>
+		<td width="30%" class="thead">Mast, Offence</td>
+		<td width="25%" id="mast_offence_a">--</td>
+		<td width="20%">&nbsp;</td>
+		<td width="25%" id="mast_offence_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Mast, Defence</td>
+		<td id="mast_defence_a">--</td>
+		<td>&nbsp;</td>
+		<td id="mast_defence_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Mast, Resist</td>
+		<td id="mast_resist_a">--</td>
+		<td>&nbsp;</td>
+		<td id="mast_resist_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">&nbsp;</td>
+		<td colspan="3">&nbsp;</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Crew, Offence</td>
+		<td id="crew_offence_a">--</td>
+		<td>&nbsp;</td>
+		<td id="crew_offence_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Crew, Defence</td>
+		<td id="crew_defence_a">--</td>
+		<td>&nbsp;</td>
+		<td id="crew_defence_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Crew, Resist</td>
+		<td id="crew_resist_a">--</td>
+		<td>&nbsp;</td>
+		<td id="crew_resist_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">&nbsp;</td>
+		<td colspan="3">&nbsp;</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Bow, Offence</td>
+		<td id="bow_offence_a">--</td>
+		<td>&nbsp;</td>
+		<td id="bow_offence_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Bow, Defence</td>
+		<td id="bow_defence_a">--</td>
+		<td>&nbsp;</td>
+		<td id="bow_defence_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Bow, Resist</td>
+		<td id="bow_resist_a">--</td>
+		<td>&nbsp;</td>
+		<td id="bow_resist_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">&nbsp;</td>
+		<td colspan="3">&nbsp;</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Stern, Offence</td>
+		<td id="stern_offence_a">--</td>
+		<td>&nbsp;</td>
+		<td id="stern_offence_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Stern, Defence</td>
+		<td id="stern_defence_a">--</td>
+		<td>&nbsp;</td>
+		<td id="stern_defence_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Stern, Resist</td>
+		<td id="stern_resist_a">--</td>
+		<td>&nbsp;</td>
+		<td id="stern_resist_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">&nbsp;</td>
+		<td colspan="3">&nbsp;</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Sides, Offence</td>
+		<td id="sides_offence_a">--</td>
+		<td>&nbsp;</td>
+		<td id="sides_offence_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Sides, Defence</td>
+		<td id="sides_defence_a">--</td>
+		<td>&nbsp;</td>
+		<td id="sides_defence_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Sides, Resist</td>
+		<td id="sides_resist_a">--</td>
+		<td>&nbsp;</td>
+		<td id="sides_resist_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">&nbsp;</td>
+		<td colspan="3">&nbsp;</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Grappling, Offence</td>
+		<td id="grappling_offence_a">--</td>
+		<td>&nbsp;</td>
+		<td id="grappling_offence_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Grappling, Defence</td>
+		<td id="grappling_defence_a">--</td>
+		<td>&nbsp;</td>
+		<td id="grappling_defence_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Grappling, Resist</td>
+		<td id="grappling_resist_a">--</td>
+		<td>&nbsp;</td>
+		<td id="grappling_resist_b">--</td>
+	  </tr>
+	</table>
+	<label for="catcollapse" class="category-button" id="collapse-category"><input type="checkbox" name="catcollapse" id="catcollapse" value="Y" class="checkbox" /><h3 id="icon7" class="collapseicon">-</h3></label>
+	<label for="catcollapse7" class="category-button" id="feature-category"><input type="checkbox" name="catcollapse7" id="catcollapse7" value="Y" class="checkbox" /><h3 class="compact">Armament</h3></label>
+	<div id="cl7">
+	<label for="catcollapse" class="category-button" id="collapse-category"><input type="checkbox" name="catcollapse" id="catcollapse" value="Y" class="checkbox" /><h4 id="icon8" class="collapseicon">-</h4></label>
+	<label for="catcollapse8" class="category-button" id="feature-category"><input type="checkbox" name="catcollapse8" id="catcollapse8" value="Y" class="checkbox" /><h4>Full Broadside</h4></label>
+		<table id="cl8" class="plain" style="width: 100%; margin: 0px 0px 10px 0px; border: 1px solid #efb168; ">
+	  <tr>
+		<td width="30%" class="thead">Total Guns</td>
+		<td width="25%" id="broadside_total_guns_a">--</td>
+		<td width="20%">&nbsp;</td>
+		<td width="25%" id="broadside_total_guns_b">--</td>
+	  </tr>
+	  <tr>
+		<td width="30%" class="thead">Broadside Weight (lbs)</td>
+		<td width="25%" id="broadside_weight_a">--</td>
+		<td width="20%">&nbsp;</td>
+		<td width="25%" id="broadside_weight_b">--</td>
+	  </tr>
+	  <tr>
+		<td width="30%" class="thead">Max Range (yds)</td>
+		<td width="25%" id="broadside_max_range_a">--</td>
+		<td width="20%">&nbsp;</td>
+		<td width="25%" id="broadside_max_range_b">--</td>
+	  </tr>
+	  <tr>
+		<td width="30%" class="thead">Max Damage / Broadside</td>
+		<td width="25%" id="broadside_max_damage_a">--</td>
+		<td width="20%">&nbsp;</td>
+		<td width="25%" id="broadside_max_damage_b">--</td>
+	  </tr>
+	  <tr>
+		<td width="30%" class="thead">Damage, 200yds</td>
+		<td width="25%" id="broadside_damage_200_a">--</td>
+		<td width="20%">&nbsp;</td>
+		<td width="25%" id="broadside_damage_200_b">--</td>
+	  </tr>
+	  <tr>
+		<td width="30%" class="thead">DPS, 200yds</td>
+		<td width="25%" id="broadside_dps_200_a">--</td>
+		<td width="20">&nbsp;</td>
+		<td width="25%" id="broadside_dps_200_b">--</td>
+	  </tr>
+	  <tr>
+		<td width="30%" class="thead">Damage, 400yds</td>
+		<td width="25%" id="broadside_damage_400_a">--</td>
+		<td width="20%">&nbsp;</td>
+		<td width="25%" id="broadside_damage_400_b">--</td>
+	  </tr>
+	  <tr>
+		<td width="30%" class="thead">DPS, 400yds</td>
+		<td width="25%" id="broadside_dps_400_a">--</td>
+		<td width="20%">&nbsp;</td>
+		<td width="25%" id="broadside_dps_400_b">--</td>
+	  </tr>
+	</table>
+	<label for="catcollapse" class="category-button" id="collapse-category"><input type="checkbox" name="catcollapse" id="catcollapse" value="Y" class="checkbox" /><h4 id="icon9" class="collapseicon">-</h4></label>
+	<label for="catcollapse9" class="category-button" id="feature-category"><input type="checkbox" name="catcollapse9" id="catcollapse9" value="Y" class="checkbox" /><h4>Top Deck</h4></label>
+	<table id="cl9" class="plain" style="width: 100%; margin: 0px 0px 10px 0px; border: 1px solid #efb168; ">
+	  <tr>
+		<td width="30%" class="thead">Guns per side (lbs)</td>
+		<td width="25%" id="top_deck_guns_per_side_a">--</td>
+		<td width="20%"></td>
+		<td width="25%" id="top_deck_guns_per_side_b">--</td>
+	  </tr>
+	  <tr>
+				<td class="thead">Broadside Weight (lbs)</td>
+		<td id="top_deck_weight_a">--</td>
+		<td>&nbsp;</td>
+		<td id="top_deck_weight_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Range (yds)</td>
+		<td id="top_deck_range_a">--</td>
+		<td>&nbsp;</td>
+		<td id="top_deck_range_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Damage/Gun</td>
+		<td id="top_deck_damage_gun_a">--</td>
+		<td>&nbsp;</td>
+		<td id="top_deck_damage_gun_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Reload (seconds)</td>
+		<td id="top_deck_reload_a">--</td>
+		<td>&nbsp;</td>
+		<td id="top_deck_reload_b">--</td>
+	  </tr>
+	  <tr>
+				<td class="thead">Max Damage / Broadside</td>
+		<td id="top_deck_max_damage_a">--</td>
+		<td>&nbsp;</td>
+		<td id="top_deck_max_damage_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Accuracy, 200yds</td>
+		<td id="top_deck_accuracy_200_a">--</td>
+		<td>&nbsp;</td>
+		<td id="top_deck_accuracy_200_b">--</td>
+	  </tr>
+	  <tr>
+				<td class="thead">Damage, 200yds</td>
+		<td id="top_deck_damage_200_a">--</td>
+		<td>&nbsp;</td>
+		<td id="top_deck_damage_200_b">--</td>
+	  </tr>
+	  <tr>
+				<td class="thead">DPS, 200yds</td>
+		<td id="top_deck_dps_200_a">--</td>
+		<td>&nbsp;</td>
+		<td id="top_deck_dps_200_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Accuracy, 400yds</td>
+		<td id="top_deck_accuracy_400_a">--</td>
+		<td>&nbsp;</td>
+		<td id="top_deck_accuracy_400_b">--</td>
+	  </tr>
+	  <tr>
+				<td class="thead">Damage, 400yds</td>
+		<td id="top_deck_damage_400_a">--</td>
+		<td>&nbsp;</td>
+		<td id="top_deck_damage_400_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">DPS, 400yds</td>
+		<td id="top_deck_dps_400_a">--</td>
+		<td>&nbsp;</td>
+		<td id="top_deck_dps_400_b">--</td>
+	  </tr>
+	</table>
+	<label for="catcollapse" class="category-button" id="collapse-category"><input type="checkbox" name="catcollapse" id="catcollapse" value="Y" class="checkbox" /><h4 id="icon10" class="collapseicon">-</h4></label>
+	<label for="catcollapse10" class="category-button" id="feature-category"><input type="checkbox" name="catcollapse10" id="catcollapse10" value="Y" class="checkbox" /><h4>Upper Deck</h4></label>
+	<table id="cl10" class="plain" style="width: 100%; margin: 0px 0px 10px 0px; border: 1px solid #efb168; ">
+	  <tr>
+		<td width="30%" class="thead">Guns per side (lbs)</td>
+		<td width="25%" id="upper_deck_guns_per_side_a">--</td>
+		<td width="20%"></td>
+		<td width="25%" id="upper_deck_guns_per_side_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Broadside Weight (lbs)</td>
+		<td id="upper_deck_weight_a">--</td>
+		<td>&nbsp;</td>
+		<td id="upper_deck_weight_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Range (yds)</td>
+		<td id="upper_deck_range_a">--</td>
+		<td>&nbsp;</td>
+		<td id="upper_deck_range_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Damage/Gun</td>
+		<td id="upper_deck_damage_gun_a">--</td>
+		<td>&nbsp;</td>
+		<td id="upper_deck_damage_gun_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Reload (seconds)</td>
+		<td id="upper_deck_reload_a">--</td>
+		<td>&nbsp;</td>
+		<td id="upper_deck_reload_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Max Damage / Broadside</td>
+		<td id="upper_deck_max_damage_a">--</td>
+		<td>&nbsp;</td>
+		<td id="upper_deck_max_damage_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Accuracy, 200yds</td>
+		<td id="upper_deck_accuracy_200_a">--</td>
+		<td>&nbsp;</td>
+		<td id="upper_deck_accuracy_200_b">--</td>
+	  </tr>
+	  <tr>
+				<td class="thead">Damage, 200yds</td>
+		<td id="upper_deck_damage_200_a">--</td>
+		<td>&nbsp;</td>
+		<td id="upper_deck_damage_200_b">--</td>
+	  </tr>
+	  <tr>
+				<td class="thead">DPS, 200yds</td>
+		<td id="upper_deck_dps_200_a">--</td>
+		<td>&nbsp;</td>
+		<td id="upper_deck_dps_200_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Accuracy, 400yds</td>
+		<td id="upper_deck_accuracy_400_a">--</td>
+		<td>&nbsp;</td>
+		<td id="upper_deck_accuracy_400_b">--</td>
+	  </tr>
+	  <tr>
+				<td class="thead">Damage, 400yds</td>
+		<td id="upper_deck_damage_400_a">--</td>
+		<td>&nbsp;</td>
+		<td id="upper_deck_damage_400_b">--</td>
+	  </tr>
+	  <tr>
+				<td class="thead">DPS, 400yds</td>
+		<td id="upper_deck_dps_400_a">--</td>
+		<td>&nbsp;</td>
+		<td id="upper_deck_dps_400_b">--</td>
+	  </tr>
+	</table>
+	<label for="catcollapse" class="category-button" id="collapse-category"><input type="checkbox" name="catcollapse" id="catcollapse" value="Y" class="checkbox" /><h4 id="icon11" class="collapseicon">-</h4></label>
+	<label for="catcollapse11" class="category-button" id="feature-category"><input type="checkbox" name="catcollapse11" id="catcollapse11" value="Y" class="checkbox" /><h4>Middle Deck</h4></label>
+	<table id="cl11" class="plain" style="width: 100%; margin: 0px 0px 10px 0px; border: 1px solid #efb168; ">
+	  <tr>
+		<td width="30%" class="thead">Guns per side (lbs)</td>
+		<td width="25%" id="middle_deck_guns_per_side_a">--</td>
+		<td width="20%"></td>
+		<td width="25%" id="middle_deck_guns_per_side_b">--</td>
+	  </tr>
+	  <tr>
+				<td class="thead">Broadside Weight (lbs)</td>
+		<td id="middle_deck_weight_a">--</td>
+		<td>&nbsp;</td>
+		<td id="middle_deck_weight_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Range (yds)</td>
+		<td id="middle_deck_range_a">--</td>
+		<td>&nbsp;</td>
+		<td id="middle_deck_range_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Damage/Gun</td>
+		<td id="middle_deck_damage_gun_a">--</td>
+		<td>&nbsp;</td>
+		<td id="middle_deck_damage_gun_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Reload (seconds)</td>
+		<td id="middle_deck_reload_a">--</td>
+		<td>&nbsp;</td>
+		<td id="middle_deck_reload_b">--</td>
+	  </tr>
+	  <tr>
+				<td class="thead">Max Damage / Broadside</td>
+		<td id="middle_deck_max_damage_a">--</td>
+		<td>&nbsp;</td>
+		<td id="middle_deck_max_damage_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Accuracy, 200yds</td>
+		<td id="middle_deck_accuracy_200_a">--</td>
+		<td>&nbsp;</td>
+		<td id="middle_deck_accuracy_200_b">--</td>
+	  </tr>
+	  <tr>
+				<td class="thead">Damage, 200yds</td>
+		<td id="middle_deck_damage_200_a">--</td>
+		<td>&nbsp;</td>
+		<td id="middle_deck_damage_200_b">--</td>
+	  </tr>
+	  <tr>
+				<td class="thead">DPS, 200yds</td>
+		<td id="middle_deck_dps_200_a">--</td>
+		<td>&nbsp;</td>
+		<td id="middle_deck_dps_200_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Accuracy, 400yds</td>
+		<td id="middle_deck_accuracy_400_a">--</td>
+		<td>&nbsp;</td>
+		<td id="middle_deck_accuracy_400_b">--</td>
+	  </tr>
+	  <tr>
+				<td class="thead">Damage, 400yds</td>
+		<td id="middle_deck_damage_400_a">--</td>
+		<td>&nbsp;</td>
+		<td id="middle_deck_damage_400_b">--</td>
+	  </tr>
+	  <tr>
+				<td class="thead">DPS, 400yds</td>
+		<td id="middle_deck_dps_400_a">--</td>
+		<td>&nbsp;</td>
+		<td id="middle_deck_dps_400_b">--</td>
+	  </tr>
+	</table>
+	<label for="catcollapse" class="category-button" id="collapse-category"><input type="checkbox" name="catcollapse" id="catcollapse" value="Y" class="checkbox" /><h4 id="icon12" class="collapseicon">-</h4></label>
+	<label for="catcollapse12" class="category-button" id="feature-category"><input type="checkbox" name="catcollapse12" id="catcollapse12" value="Y" class="checkbox" /><h4>Gun Deck</h4></label>
+	<table id="cl12" class="plain" style="width: 100%; margin: 0px 0px 10px 0px; border: 1px solid #efb168; ">
+	  <tr>
+		<td width="30%" class="thead">Guns per side (lbs)</td>
+		<td width="25%" id="gun_deck_guns_per_side_a">--</td>
+		<td width="20%"></td>
+		<td width="25%" id="gun_deck_guns_per_side_b">--</td>
+	  </tr>
+	  <tr>
+				<td class="thead">Broadside Weight (lbs)</td>
+		<td id="gun_deck_weight_a">--</td>
+		<td>&nbsp;</td>
+		<td id="gun_deck_weight_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Range (yds)</td>
+		<td id="gun_deck_range_a">--</td>
+		<td>&nbsp;</td>
+		<td id="gun_deck_range_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Damage/Gun</td>
+		<td id="gun_deck_damage_gun_a">--</td>
+		<td>&nbsp;</td>
+		<td id="gun_deck_damage_gun_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Reload (seconds)</td>
+		<td id="gun_deck_reload_a">--</td>
+		<td>&nbsp;</td>
+		<td id="gun_deck_reload_b">--</td>
+	  </tr>
+	  <tr>
+				<td class="thead">Max Damage / Broadside</td>
+		<td id="gun_deck_max_damage_a">--</td>
+		<td>&nbsp;</td>
+		<td id="gun_deck_max_damage_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Accuracy, 200yds</td>
+		<td id="gun_deck_accuracy_200_a">--</td>
+		<td>&nbsp;</td>
+		<td id="gun_deck_accuracy_200_b">--</td>
+	  </tr>
+	  <tr>
+				<td class="thead">Damage, 200yds</td>
+		<td id="gun_deck_damage_200_a">--</td>
+		<td>&nbsp;</td>
+		<td id="gun_deck_damage_200_b">--</td>
+	  </tr>
+	  <tr>
+				<td class="thead">DPS, 200yds</td>
+		<td id="gun_deck_dps_200_a">--</td>
+		<td>&nbsp;</td>
+		<td id="gun_deck_dps_200_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Accuracy, 400yds</td>
+		<td id="gun_deck_accuracy_400_a">--</td>
+		<td>&nbsp;</td>
+		<td id="gun_deck_accuracy_400_b">--</td>
+	  </tr>
+	  <tr>
+				<td class="thead">Damage, 400yds</td>
+		<td id="gun_deck_damage_400_a">--</td>
+		<td>&nbsp;</td>
+		<td id="gun_deck_damage_400_b">--</td>
+	  </tr>
+	  <tr>
+				<td class="thead">DPS, 400yds</td>
+		<td id="gun_deck_dps_400_a">--</td>
+		<td>&nbsp;</td>
+		<td id="gun_deck_dps_400_b">--</td>
+	  </tr>
+	</table>
+	<label for="catcollapse" class="category-button" id="collapse-category"><input type="checkbox" name="catcollapse" id="catcollapse" value="Y" class="checkbox" /><h4 id="icon13" class="collapseicon">-</h4></label>
+	<label for="catcollapse13" class="category-button" id="feature-category"><input type="checkbox" name="catcollapse13" id="catcollapse13" value="Y" class="checkbox" /><h4>Bow Chasers</h4></label>
+	<table id="cl13" class="plain" style="width: 100%; margin: 0px 0px 10px 0px; border: 1px solid #efb168; ">
+	  <tr>
+		<td width="30%" class="thead">Guns per side (lbs)</td>
+		<td width="25%" id="bow_chasers_guns_per_side_a">--</td>
+		<td width="20%"></td>
+		<td width="25%" id="bow_chasers_guns_per_side_b">--</td>
+	  </tr>
+	  <tr>
+				<td class="thead">Broadside Weight (yds)</td>
+		<td id="bow_chasers_weight_a">--</td>
+		<td>&nbsp;</td>
+		<td id="bow_chasers_weight_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Range (yds)</td>
+		<td id="bow_chasers_range_a">--</td>
+		<td>&nbsp;</td>
+		<td id="bow_chasers_range_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Damage/Gun</td>
+		<td id="bow_chasers_damage_gun_a">--</td>
+		<td>&nbsp;</td>
+		<td id="bow_chasers_damage_gun_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Reload (seconds)</td>
+		<td id="bow_chasers_reload_a">--</td>
+		<td>&nbsp;</td>
+		<td id="bow_chasers_reload_b">--</td>
+	  </tr>
+	  <tr>
+				<td class="thead">Max Damage / Broadside</td>
+		<td id="bow_chasers_max_damage_a">--</td>
+		<td>&nbsp;</td>
+		<td id="bow_chasers_max_damage_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Accuracy, 200yds</td>
+		<td id="bow_chasers_accuracy_200_a">--</td>
+		<td>&nbsp;</td>
+		<td id="bow_chasers_accuracy_200_b">--</td>
+	  </tr>
+	  <tr>
+				<td class="thead">Damage, 200yds</td>
+		<td id="bow_chasers_damage_200_a">--</td>
+		<td>&nbsp;</td>
+		<td id="bow_chasers_damage_200_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">DPS, 200yds</td>
+		<td id="bow_chasers_dps_200_a">--</td>
+		<td>&nbsp;</td>
+		<td id="bow_chasers_dps_200_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Accuracy, 400yds</td>
+		<td id="bow_chasers_accuracy_400_a">--</td>
+		<td>&nbsp;</td>
+		<td id="bow_chasers_accuracy_400_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Damage, 400yds</td>
+		<td id="bow_chasers_damage_400_a">--</td>
+		<td>&nbsp;</td>
+		<td id="bow_chasers_damage_400_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">DPS, 400yds</td>
+		<td id="bow_chasers_dps_400_a">--</td>
+		<td>&nbsp;</td>
+		<td id="bow_chasers_dps_400_b">--</td>
+	  </tr>
+	</table>
+	<label for="catcollapse" class="category-button" id="collapse-category"><input type="checkbox" name="catcollapse" id="catcollapse" value="Y" class="checkbox" /><h4 id="icon14" class="collapseicon">-</h4></label>
+	<label for="catcollapse14" class="category-button" id="feature-category"><input type="checkbox" name="catcollapse14" id="catcollapse14" value="Y" class="checkbox" /><h4>Stern Chasers</h4></label>
+	<table id="cl14" class="plain" style="width: 100%; margin: 0px 0px 10px 0px; border: 1px solid #efb168; ">
+	  <tr>
+		<td width="30%" class="thead">Guns per side (lbs)</td>
+		<td width="25%"id="stern_chasers_guns_per_side_a">--</td>
+		<td width="20%"></td>
+		<td width="25%" id="stern_chasers_guns_per_side_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Broadside Weight (lbs)</td>
+		<td id="stern_chasers_weight_a">--</td>
+		<td>&nbsp;</td>
+		<td id="stern_chasers_weight_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Range (yds)</td>
+		<td id="stern_chasers_range_a">--</td>
+		<td>&nbsp;</td>
+		<td id="stern_chasers_range_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Damage/Gun</td>
+		<td id="stern_chasers_damage_gun_a">--</td>
+		<td>&nbsp;</td>
+		<td id="stern_chasers_damage_gun_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Reload (seconds)</td>
+		<td id="stern_chasers_reload_a">--</td>
+		<td>&nbsp;</td>
+		<td id="stern_chasers_reload_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Max Damage / Broadside</td>
+		<td id="stern_chasers_max_damage_a">--</td>
+		<td>&nbsp;</td>
+		<td id="stern_chasers_max_damage_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Accuracy, 200yds</td>
+		<td id="stern_chasers_accuracy_200_a">--</td>
+		<td>&nbsp;</td>
+		<td id="stern_chasers_accuracy_200_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Damage, 200yds</td>
+		<td id="stern_chasers_damage_200_a">--</td>
+		<td>&nbsp;</td>
+		<td id="stern_chasers_damage_200_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">DPS, 200yds</td>
+		<td id="stern_chasers_dps_200_a">--</td>
+		<td>&nbsp;</td>
+		<td id="stern_chasers_dps_200_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Accuracy, 400yds</td>
+		<td id="stern_chasers_accuracy_400_a">--</td>
+		<td>&nbsp;</td>
+		<td id="stern_chasers_accuracy_400_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Damage, 400yds</td>
+		<td id="stern_chasers_damage_400_a">--</td>
+		<td>&nbsp;</td>
+		<td id="stern_chasers_damage_400_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">DPS, 400yds</td>
+		<td id="stern_chasers_dps_400_a">--</td>
+		<td>&nbsp;</td>
+		<td id="stern_chasers_dps_400_b">--</td>
+	  </tr>
+	</table>
+	<label for="catcollapse" class="category-button" id="collapse-category"><input type="checkbox" name="catcollapse" id="catcollapse" value="Y" class="checkbox" /><h4 id="icon15" class="collapseicon">-</h4></label>
+	<label for="catcollapse15" class="category-button" id="feature-category"><input type="checkbox" name="catcollapse15" id="catcollapse15" value="Y" class="checkbox" /><h4>Swivel Guns</h4></label>
+	<table id="cl15" class="plain" style="width: 100%; margin: 0px 0px 10px 0px; border: 1px solid #efb168; ">
+	  <tr>
+		<td width="30%" class="thead">Guns per side (lbs)</td>
+		<td width="25%" id="swivel_guns_guns_per_side_a">--</td>
+		<td width="20%"></td>
+		<td width="25%" id="swivel_guns_guns_per_side_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Broadside Weight (lbs)</td>
+		<td id="swivel_guns_weight_a">--</td>
+		<td></td>
+		<td id="swivel_guns_weight_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Range (yds)</td>
+		<td id="swivel_guns_range_a">--</td>
+		<td></td>
+		<td id="swivel_guns_range_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Damage/Gun</td>
+		<td id="swivel_guns_damage_gun_a">--</td>
+		<td></td>
+		<td id="swivel_guns_damage_gun_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Reload (seconds)</td>
+		<td id="swivel_guns_reload_a">--</td>
+		<td></td>
+		<td id="swivel_guns_reload_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Max Damage / Broadside</td>
+		<td id="swivel_guns_max_damage_a">--</td>
+		<td></td>
+		<td id="swivel_guns_max_damage_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Accuracy, 200yds</td>
+		<td id="swivel_accuracy_200_a">--</td>
+		<td></td>
+		<td id="swivel_accuracy_200_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Damage, 200yds</td>
+		<td id="swivel_damage_200_a">--</td>
+		<td></td>
+		<td id="swivel_damage_200_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">DPS, 200yds</td>
+		<td id="swivel_dps_200_a">--</td>
+		<td></td>
+		<td id="swivel_dps_200_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Accuracy, 400yds</td>
+		<td id="swivel_accuracy_400_a">--</td>
+		<td></td>
+		<td id="swivel_accuracy_400_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">Damage, 400yds</td>
+		<td id="swivel_damage_400_a">--</td>
+		<td></td>
+		<td id="swivel_damage_400_b">--</td>
+	  </tr>
+	  <tr>
+		<td class="thead">DPS, 400yds</td>
+		<td id="swivel_dps_400_a">--</td>
+		<td style="text-align:center";></td>
+		<td id="swivel_dps_400_b">--</td>
+	  </tr>
+	</table>
+	</div> <!-- Armament -->
+</div>
+	  </div>
+	   <style>
+
+</style>
+	 <div id="footer" style="color: #999999;line-height: 15px;">
+		<div style="width: 40%; float: left; text-align: left; margin-left:5px;">
+		Disclaimer: This website is not affiliated with FLS / PortalusGames / Vision.
+		</div>
+		<div style="width: 15%; float: left; text-align: center; color: #999999;">
+		By: PotBS Community
+		</div>
+		<div style="width: 40%; float: right; text-align: right; margin-right: 5px;" class="footerLink">
+			Based on the frontend of the original Captains Companion by <a href="http://www.codecraft.co.uk/" target="new">Codecraft</a>
+		</div>
+		
+		<div style="width: 47%; float: left; text-align: left; margin-left:5px;">
+		Google Translate<sup>TM</sup> is a trademark of Google LLC.
+		</div>
+		
+		
+	  </div>
+	
+	<script type="text/javascript" src="js/highlight.js"></script>
+	<script type="text/javascript" src="js/format.js"></script>
+	<script type="text/javascript" src="js/updatestatsa.js"></script>
+	<script type="text/javascript" src="js/updatestatsb.js"></script>
+	<script src="js/urlhash.js"></script>
+	<script src="js/collapsecategory.js"></script>
+	<script src="js/builddropdowns.js"></script>
+	</body>
+</html>

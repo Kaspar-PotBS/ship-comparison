@@ -1,0 +1,757 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+	  <title>PotBS Companion: Ship Statistics (General Stats)</title>
+	  <link rel="icon" type="image/x-icon" href="includes/img/favicon.png">
+	  <meta http-equiv="content-type" content="text/html; charset=iso-8859-1"/>
+	  <meta name="description" content="Search the ship list to get information about in-game ships and how they compare with each other."/>
+	  	  <meta name="keywords" content="pirates,burning sea,potbs,mmo,massively multiplayer,online,rpg,role playing,game,ships,boats,vessels,navy,privateer,freetrader,flying lab studios,fls,mmorpg"/>
+	  <meta name="language" content="en"/>
+	  <meta name="verify-v1" content="i5+ERmckQeqrasCASz/2aLDIdc7428Jyvt3qyNydf54="/>
+	  <meta name="robots" content="index, follow"/>
+	  <link rel="stylesheet" type="text/css" href="includes/screen.css"/>
+	  <link rel="stylesheet" type="text/css" href="css/style.css"/>
+	  <script src="js/jquery-3.6.0.min.js"></script>
+	</head>
+	
+	<body>
+	  <h1 style="display: none;">Massively Multiplayer Online Role Playing Game, MMO, RPG</h1>
+	  
+<div id="above_header" style="padding-bottom:0px;">&nbsp;	
+	</div>
+
+</div>
+	   
+	  <div id="header">
+	  <img src="includes/img/header.gif" usemap="#headermap" border="0">
+<map name="headermap">
+<area shape="rect" coords="0,0,600,100" href="index.html">
+<area shape="rect" coords="800, 0, 950, 200" href="http://www.burningsea.com" target="_blank">
+</map>
+		
+	  </div>
+	  <div id="topnav">
+	  <div class="nav"><a href="index.html">Shipyard</a></div>
+		<div class="nav"><a href="shipindex.html">Ship Index</a></div>
+		<div class="nav"><a href="compare.html">Ship Compare</a></div>
+		
+		<div style="width: 40%; float: right; text-align: right; margin:5px;">
+<select id="dataset-select" onchange="formChanged();" style="height:25px">   
+<option value="0">2.10.x Legacy</option>
+<option value="1" selected>2.17.x Antigua & Roberts</option>
+	</select>
+	
+	<div style="width: 40%; float: right; text-align: left; margin-left:5px; margin-right:5px" id="google_translate_element"></div>
+	
+</div>	
+	
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'und', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+}
+	</script>
+	<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script> 
+	
+	  </div>
+	  <div id="main">
+		
+<div id="innerWrapper" class="innerWrapper-table">
+<script type="text/javascript" language="javascript">
+function formChanged() {
+  var fs = document.getElementById('filterSubmit');
+  var sp = document.getElementById('filterSubmitMsg');
+  fs.disabled = false;
+  fs.style.backgroundColor = "#99EF59";
+  fs.style.color = "black";
+  fs.style.fontWeight = "bold";
+  fs.style.border = "1px solid green";
+  fs.style.cursor = "pointer";
+  sp.style.backgroundColor = "#fcd46b";
+  return;
+}
+</script>
+
+<div class="filterDivWrapper">
+
+<div class="filterDivWrapper levelsWrapper" style="width:360px; float:left; margin: 0 0 0 0">
+  <div class="filterDivLabel">Levels:</div>
+  <div class="filterDiv Divlevels" style="width:185px">
+	From:&nbsp;
+	<select name="levelFrom" id="levelRangeFrom" onchange="formChanged();">
+	  <option value="1" selected="selected">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+<option value="9">9</option>
+<option value="10">10</option>
+<option value="11">11</option>
+<option value="12">12</option>
+<option value="13">13</option>
+<option value="14">14</option>
+<option value="15">15</option>
+<option value="16">16</option>
+<option value="17">17</option>
+<option value="18">18</option>
+<option value="19">19</option>
+<option value="20">20</option>
+<option value="21">21</option>
+<option value="22">22</option>
+<option value="23">23</option>
+<option value="24">24</option>
+<option value="25">25</option>
+<option value="26">26</option>
+<option value="27">27</option>
+<option value="28">28</option>
+<option value="29">29</option>
+<option value="30">30</option>
+<option value="31">31</option>
+<option value="32">32</option>
+<option value="33">33</option>
+<option value="34">34</option>
+<option value="35">35</option>
+<option value="36">36</option>
+<option value="37">37</option>
+<option value="38">38</option>
+<option value="39">39</option>
+<option value="40">40</option>
+<option value="41">41</option>
+<option value="42">42</option>
+<option value="43">43</option>
+<option value="44">44</option>
+<option value="45">45</option>
+<option value="46">46</option>
+<option value="47">47</option>
+<option value="48">48</option>
+<option value="49">49</option>
+<option value="50">50</option>
+	</select>
+	&nbsp;To:&nbsp;
+	<select name="levelTo" id="levelRangeTo" onchange="formChanged();">
+	  <option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+<option value="9">9</option>
+<option value="10">10</option>
+<option value="11">11</option>
+<option value="12">12</option>
+<option value="13">13</option>
+<option value="14">14</option>
+<option value="15">15</option>
+<option value="16">16</option>
+<option value="17">17</option>
+<option value="18">18</option>
+<option value="19">19</option>
+<option value="20">20</option>
+<option value="21">21</option>
+<option value="22">22</option>
+<option value="23">23</option>
+<option value="24">24</option>
+<option value="25">25</option>
+<option value="26">26</option>
+<option value="27">27</option>
+<option value="28">28</option>
+<option value="29">29</option>
+<option value="30">30</option>
+<option value="31">31</option>
+<option value="32">32</option>
+<option value="33">33</option>
+<option value="34">34</option>
+<option value="35">35</option>
+<option value="36">36</option>
+<option value="37">37</option>
+<option value="38">38</option>
+<option value="39">39</option>
+<option value="40">40</option>
+<option value="41">41</option>
+<option value="42">42</option>
+<option value="43">43</option>
+<option value="44">44</option>
+<option value="45">45</option>
+<option value="46">46</option>
+<option value="47">47</option>
+<option value="48">48</option>
+<option value="49">49</option>
+<option value="50" selected="selected">50</option>
+	</select>
+  </div>
+</div>
+
+
+<div class="filterDivWrapper labelWrapper" style="width: 540px; margin: 0 0 0 0">
+
+  <div class="filterDivLabel labelInfo">Show Info:</div>
+  <div id="filterSubmitMsg" class="filterDiv" style="width: 140px; height: 19px; text-align: center; padding-top: 3px;">
+	<button id="filterSubmit" class="filterDivBtn btnselect" disabled="disabled" onclick="filterscript1()">UPDATE</button>
+  </div>
+  <div class="filterDiv" style="width: 215px; margin: 0 0 0 0">
+  
+	  <!-- How many records to show? -->
+	 <div style="display:none">	  <select name="showNumRecs" id="showamountrecs" onchange="formChanged();" disabled>
+		<option value="10">Top 10</option>
+		<option value="25">Top 25</option>
+		<option value="50">Top 50</option>
+		<option value="100">Top 100</option>
+		<option value="999" selected="selected">Show All</option>
+	  </select> </div>
+	  &nbsp;
+	  <!-- Which data to show? -->
+	  <select name="showData" id="showstats" onchange="formChanged();" disabled>
+					<option value="1">General Stats</option>
+					<option value="2">Open Sea</option>
+					<option value="3">Combat: Manoevering</option>
+					<option value="4">Combat: Grappling</option>
+					<option value="5">Combat: Gunnery - 200yds</option>
+					<option value="6">Combat: Gunnery - 400yds</option>
+					<option value="7">Armour and DR</option>
+					<option value="8">Allowed Player Classes</option>
+					<option value="9">Guns: Overview</option>
+					<option value="10">Guns: Top Deck</option>
+					<option value="11">Guns: Upper Deck</option>
+					<option value="12">Guns: Middle Deck</option>
+					<option value="13">Guns: Gun Deck</option>
+					<option value="99">Updated Info</option>
+			  </select>
+	  &nbsp;
+	  <!-- Name filter -->
+	<div style="display:none";>  Filter by text:&nbsp;<input type="text" maxlength="20" name="nameFilter" size="15" onchange="formChanged();" disabled value=""/> </div>
+  </div>
+</div>
+</div>
+
+<div class="filterDivWrapper">
+  <div class="filterDivLabel">Classes:</div>
+  <div class="filterDiv">
+		<input type="checkbox" id="classNO" name="playerClass[1]" value="1" checked="checked" onchange="formChanged();">Naval Officer&nbsp;&nbsp;
+	<input type="checkbox" id="classPR" name="playerClass[2]" value="1" checked="checked" onchange="formChanged();">Privateer&nbsp;&nbsp;
+	<input type="checkbox" id="classFT" name="playerClass[3]" value="1" checked="checked" onchange="formChanged();">Freetrader&nbsp;&nbsp;
+	<input type="checkbox" id="classBC" name="playerClass[4]" value="1" checked="checked" onchange="formChanged();">Buccaneer&nbsp;&nbsp;
+	<input type="checkbox" id="classCT" name="playerClass[5]" value="1" checked="checked" onchange="formChanged();">Cutthroat&nbsp;&nbsp;
+  </div>
+</div>
+<div class="filterDivWrapper">
+  <div class="filterDivLabel">Sizes:</div>
+  <div class="filterDiv">
+	  <input type="checkbox" id="sizeTiny" name="size[]" value="1" checked="checked" onchange="formChanged();">Tiny&nbsp;&nbsp;
+	  <input type="checkbox" id="sizeSmall" name="size[]" value="2" checked="checked" onchange="formChanged();">Small&nbsp;&nbsp;
+	  <input type="checkbox" id="sizeMedium" name="size[]" value="3" checked="checked" onchange="formChanged();">Medium&nbsp;&nbsp;
+	  <input type="checkbox" id="sizeLarge" name="size[]" value="4" checked="checked" onchange="formChanged();">Large&nbsp;&nbsp;
+	  <input type="checkbox" id="sizeHuge" name="size[]" value="5" checked="checked" onchange="formChanged();">Huge&nbsp;&nbsp;
+	  <input type="checkbox" id="sizeColossal" name="size[]" value="6" checked="checked" onchange="formChanged();">Colossal&nbsp;&nbsp;  </div>
+</div>
+<div class="filterDivWrapper">
+  <div class="filterDivLabel">Types:</div>
+  <div class="filterDiv">
+	  <input type="checkbox" id="typeMerchant" name="shiptype[]" value="1" checked="checked" onchange="formChanged();">Merchant&nbsp;&nbsp;
+	  <input type="checkbox" id="typeScout" name="shiptype[]" value="2" checked="checked" onchange="formChanged();">Scout&nbsp;&nbsp;
+	  <input type="checkbox" id="typeWarship" name="shiptype[]" value="3" checked="checked" onchange="formChanged();">Warship&nbsp;&nbsp;
+	  <input type="checkbox" id="typeSOL" name="shiptype[]" value="4" checked="checked" onchange="formChanged();">Ship of the Line&nbsp;&nbsp;  </div>
+</div>
+<div class="filterDivWrapper">
+  <div class="filterDivLabel">Variants:</div>
+  <div class="filterDiv">
+	  <input type="checkbox" id="variantStripped" name="variant[]" value="1" checked="checked" onchange="formChanged();">Stripped&nbsp;&nbsp;
+	  <input type="checkbox" id="variantCivilian" name="variant[]" value="2" checked="checked" onchange="formChanged();">Civilian&nbsp;&nbsp;
+	  <input type="checkbox" id="variantCourier" name="variant[]" value="3" checked="checked" onchange="formChanged();">Courier&nbsp;&nbsp;
+	  <input type="checkbox" id="variantSleek" name="variant[]" value="4" checked="checked" onchange="formChanged();">Sleek&nbsp;&nbsp;
+	  <input type="checkbox" id="variantFallback" name="variant[]" value="5" checked="checked" onchange="formChanged();">Fallback&nbsp;&nbsp;
+	  <input type="checkbox" id="variantStandard" name="variant[]" value="6" checked="checked" onchange="formChanged();">Standard&nbsp;&nbsp;
+	  <input type="checkbox" id="variantHeavy" name="variant[]" value="7" checked="checked" onchange="formChanged();">Heavy&nbsp;&nbsp;
+	  <input type="checkbox" id="variantMastercraft" name="variant[]" value="8" checked="checked" onchange="formChanged();">Mastercraft&nbsp;&nbsp;
+	  <input type="checkbox" id="variantRefit" name="variant[]" value="9" checked="checked" onchange="formChanged();">Refit&nbsp;&nbsp;  </div>
+</div>
+<div class="filterDivWrapper" style="display:none";>
+  <div class="filterDivLabel">Sort by:</div>
+  <div class="filterDiv">
+	  <select name="order[1]" onchange="formChanged();" disabled>
+	  <option value="0">n/a</option><option value="1">Record Updated</option><option value="2" selected="selected">Name</option><option value="3">Variant</option><option value="4">Type</option><option value="5">Level</option><option value="6">Size</option><option value="7">Max Speed</option><option value="8">Accel</option><option value="9">Decel</option><option value="10">Turning Fast</option><option value="11">Turning Slow</option><option value="12">Turning Accel</option><option value="13">Turning Decel</option><option value="14">Best Point</option><option value="15">Cargo Capacity</option><option value="16">Os Visibility</option><option value="17">Os Spotting</option><option value="18">Crew</option><option value="19">Target Tracking</option><option value="20">Base Durability</option><option value="21">Insurance</option><option value="22">Hull Integrity</option><option value="23">Port Integrity</option><option value="24">Starboard Integrity</option><option value="25">Bow Integrity</option><option value="26">Stern Integrity</option><option value="27">Sail Integrity</option><option value="28">Hull Dmg Res</option><option value="29">Port Dmg Res</option><option value="30">Starboard Dmg Res</option><option value="31">Bow Dmg Res</option><option value="32">Stern Dmg Res</option><option value="33">Sails Dmg Res</option><option value="34">Sails Mod Off</option><option value="35">Sails Mod Def</option><option value="36">Sails Mod Res</option><option value="37">Crew Mod Off</option><option value="38">Crew Mod Def</option><option value="39">Crew Mod Res</option><option value="40">Bow Mod Off</option><option value="41">Bow Mod Def</option><option value="42">Bow Mod Res</option><option value="43">Stern Mod Off</option><option value="44">Stern Mod Def</option><option value="45">Stern Mod Res</option><option value="46">Sides Mod Off</option><option value="47">Sides Mod Def</option><option value="48">Sides Mod Res</option><option value="49">Grap Mod Off</option><option value="50">Grap Mod Def</option><option value="51">Grap Mod Res</option><option value="52">Swivel Weight</option><option value="53">Swivel Number</option><option value="54">Swivel Reload</option><option value="55">Swivel Dmg</option><option value="56">Swivel Range</option><option value="57">Swivel Acc Short</option><option value="58">Swivel Acc Long</option><option value="59">Topdeck Weight</option><option value="60">Topdeck Number</option><option value="61">Topdeck Reload</option><option value="62">Topdeck Dmg</option><option value="63">Topdeck Range</option><option value="64">Topdeck Acc Short</option><option value="65">Topdeck Acc Long</option><option value="66">Upper Weight</option><option value="67">Upper Number</option><option value="68">Upper Reload</option><option value="69">Upper Dmg</option><option value="70">Upper Range</option><option value="71">Upper Acc Short</option><option value="72">Upper Acc Long</option><option value="73">Mid Weight</option><option value="74">Mid Number</option><option value="75">Mid Reload</option><option value="76">Mid Dmg</option><option value="77">Mid Range</option><option value="78">Mid Acc Short</option><option value="79">Mid Acc Long</option><option value="80">Gundeck Weight</option><option value="81">Gundeck Number</option><option value="82">Gundeck Reload</option><option value="83">Gundeck Dmg</option><option value="84">Gundeck Range</option><option value="85">Gundeck Acc Short</option><option value="86">Gundeck Acc Long</option><option value="87">Bow Weight</option><option value="88">Bow Number</option><option value="89">Bow Reload</option><option value="90">Bow Dmg</option><option value="91">Bow Range</option><option value="92">Bow Acc Short</option><option value="93">Bow Acc Long</option><option value="94">Aft Weight</option><option value="95">Aft Number</option><option value="96">Aft Reload</option><option value="97">Aft Dmg</option><option value="98">Aft Range</option><option value="99">Aft Acc Short</option><option value="100">Aft Acc Long</option><option value="101">Broadside Weight</option><option value="102">Total Cannon</option><option value="103">Max Damage</option><option value="104">Avg Damage, 200yd</option><option value="105">DPS, 200yd</option><option value="106">Avg Damage, 400yd</option><option value="107">DPS, 400yd</option></select>&nbsp;
+	  <select name="orddir[1]" id="sortbyorder1" onchange="formChanged();" disabled>
+	  <option value="a" selected="selected">Asc</option><option value="d">Desc</option></select>&nbsp;then&nbsp;
+	  <select name="order[2]" onchange="formChanged();" disabled>
+	  <option value="0">n/a</option><option value="0">n/a</option><option value="1">Record Updated</option><option value="2">Name</option><option value="3">Variant</option><option value="4">Type</option><option value="5">Level</option><option value="6">Size</option><option value="7">Max Speed</option><option value="8">Accel</option><option value="9">Decel</option><option value="10">Turning Fast</option><option value="11">Turning Slow</option><option value="12">Turning Accel</option><option value="13">Turning Decel</option><option value="14">Best Point</option><option value="15">Cargo Capacity</option><option value="16">Os Visibility</option><option value="17">Os Spotting</option><option value="18">Crew</option><option value="19">Target Tracking</option><option value="20">Base Durability</option><option value="21">Insurance</option><option value="22">Hull Integrity</option><option value="23">Port Integrity</option><option value="24">Starboard Integrity</option><option value="25">Bow Integrity</option><option value="26">Stern Integrity</option><option value="27">Sail Integrity</option><option value="28">Hull Dmg Res</option><option value="29">Port Dmg Res</option><option value="30">Starboard Dmg Res</option><option value="31">Bow Dmg Res</option><option value="32">Stern Dmg Res</option><option value="33">Sails Dmg Res</option><option value="34">Sails Mod Off</option><option value="35">Sails Mod Def</option><option value="36">Sails Mod Res</option><option value="37">Crew Mod Off</option><option value="38">Crew Mod Def</option><option value="39">Crew Mod Res</option><option value="40">Bow Mod Off</option><option value="41">Bow Mod Def</option><option value="42">Bow Mod Res</option><option value="43">Stern Mod Off</option><option value="44">Stern Mod Def</option><option value="45">Stern Mod Res</option><option value="46">Sides Mod Off</option><option value="47">Sides Mod Def</option><option value="48">Sides Mod Res</option><option value="49">Grap Mod Off</option><option value="50">Grap Mod Def</option><option value="51">Grap Mod Res</option><option value="52">Swivel Weight</option><option value="53">Swivel Number</option><option value="54">Swivel Reload</option><option value="55">Swivel Dmg</option><option value="56">Swivel Range</option><option value="57">Swivel Acc Short</option><option value="58">Swivel Acc Long</option><option value="59">Topdeck Weight</option><option value="60">Topdeck Number</option><option value="61">Topdeck Reload</option><option value="62">Topdeck Dmg</option><option value="63">Topdeck Range</option><option value="64">Topdeck Acc Short</option><option value="65">Topdeck Acc Long</option><option value="66">Upper Weight</option><option value="67">Upper Number</option><option value="68">Upper Reload</option><option value="69">Upper Dmg</option><option value="70">Upper Range</option><option value="71">Upper Acc Short</option><option value="72">Upper Acc Long</option><option value="73">Mid Weight</option><option value="74">Mid Number</option><option value="75">Mid Reload</option><option value="76">Mid Dmg</option><option value="77">Mid Range</option><option value="78">Mid Acc Short</option><option value="79">Mid Acc Long</option><option value="80">Gundeck Weight</option><option value="81">Gundeck Number</option><option value="82">Gundeck Reload</option><option value="83">Gundeck Dmg</option><option value="84">Gundeck Range</option><option value="85">Gundeck Acc Short</option><option value="86">Gundeck Acc Long</option><option value="87">Bow Weight</option><option value="88">Bow Number</option><option value="89">Bow Reload</option><option value="90">Bow Dmg</option><option value="91">Bow Range</option><option value="92">Bow Acc Short</option><option value="93">Bow Acc Long</option><option value="94">Aft Weight</option><option value="95">Aft Number</option><option value="96">Aft Reload</option><option value="97">Aft Dmg</option><option value="98">Aft Range</option><option value="99">Aft Acc Short</option><option value="100">Aft Acc Long</option><option value="101">Broadside Weight</option><option value="102">Total Cannon</option><option value="103">Max Damage</option><option value="104">Avg Damage, 200yd</option><option value="105">DPS, 200yd</option><option value="106">Avg Damage, 400yd</option><option value="107">DPS, 400yd</option></select>&nbsp;
+	  <select name="orddir[2]" onchange="formChanged();" disabled>
+	  <option value="a" selected="selected">Asc</option><option value="d">Desc</option></select>&nbsp;then&nbsp;
+	  <select name="order[3]" onchange="formChanged();" disabled>
+	  <option value="0">n/a</option><option value="0">n/a</option><option value="1">Record Updated</option><option value="2">Name</option><option value="3">Variant</option><option value="4">Type</option><option value="5">Level</option><option value="6">Size</option><option value="7">Max Speed</option><option value="8">Accel</option><option value="9">Decel</option><option value="10">Turning Fast</option><option value="11">Turning Slow</option><option value="12">Turning Accel</option><option value="13">Turning Decel</option><option value="14">Best Point</option><option value="15">Cargo Capacity</option><option value="16">Os Visibility</option><option value="17">Os Spotting</option><option value="18">Crew</option><option value="19">Target Tracking</option><option value="20">Base Durability</option><option value="21">Insurance</option><option value="22">Hull Integrity</option><option value="23">Port Integrity</option><option value="24">Starboard Integrity</option><option value="25">Bow Integrity</option><option value="26">Stern Integrity</option><option value="27">Sail Integrity</option><option value="28">Hull Dmg Res</option><option value="29">Port Dmg Res</option><option value="30">Starboard Dmg Res</option><option value="31">Bow Dmg Res</option><option value="32">Stern Dmg Res</option><option value="33">Sails Dmg Res</option><option value="34">Sails Mod Off</option><option value="35">Sails Mod Def</option><option value="36">Sails Mod Res</option><option value="37">Crew Mod Off</option><option value="38">Crew Mod Def</option><option value="39">Crew Mod Res</option><option value="40">Bow Mod Off</option><option value="41">Bow Mod Def</option><option value="42">Bow Mod Res</option><option value="43">Stern Mod Off</option><option value="44">Stern Mod Def</option><option value="45">Stern Mod Res</option><option value="46">Sides Mod Off</option><option value="47">Sides Mod Def</option><option value="48">Sides Mod Res</option><option value="49">Grap Mod Off</option><option value="50">Grap Mod Def</option><option value="51">Grap Mod Res</option><option value="52">Swivel Weight</option><option value="53">Swivel Number</option><option value="54">Swivel Reload</option><option value="55">Swivel Dmg</option><option value="56">Swivel Range</option><option value="57">Swivel Acc Short</option><option value="58">Swivel Acc Long</option><option value="59">Topdeck Weight</option><option value="60">Topdeck Number</option><option value="61">Topdeck Reload</option><option value="62">Topdeck Dmg</option><option value="63">Topdeck Range</option><option value="64">Topdeck Acc Short</option><option value="65">Topdeck Acc Long</option><option value="66">Upper Weight</option><option value="67">Upper Number</option><option value="68">Upper Reload</option><option value="69">Upper Dmg</option><option value="70">Upper Range</option><option value="71">Upper Acc Short</option><option value="72">Upper Acc Long</option><option value="73">Mid Weight</option><option value="74">Mid Number</option><option value="75">Mid Reload</option><option value="76">Mid Dmg</option><option value="77">Mid Range</option><option value="78">Mid Acc Short</option><option value="79">Mid Acc Long</option><option value="80">Gundeck Weight</option><option value="81">Gundeck Number</option><option value="82">Gundeck Reload</option><option value="83">Gundeck Dmg</option><option value="84">Gundeck Range</option><option value="85">Gundeck Acc Short</option><option value="86">Gundeck Acc Long</option><option value="87">Bow Weight</option><option value="88">Bow Number</option><option value="89">Bow Reload</option><option value="90">Bow Dmg</option><option value="91">Bow Range</option><option value="92">Bow Acc Short</option><option value="93">Bow Acc Long</option><option value="94">Aft Weight</option><option value="95">Aft Number</option><option value="96">Aft Reload</option><option value="97">Aft Dmg</option><option value="98">Aft Range</option><option value="99">Aft Acc Short</option><option value="100">Aft Acc Long</option><option value="101">Broadside Weight</option><option value="102">Total Cannon</option><option value="103">Max Damage</option><option value="104">Avg Damage, 200yd</option><option value="105">DPS, 200yd</option><option value="106">Avg Damage, 400yd</option><option value="107">DPS, 400yd</option></select>&nbsp;
+	  <select name="orddir[3]" onchange="formChanged();"disabled>
+	  <option value="a" selected="selected">Asc</option><option value="d">Desc</option></select>  </div>
+</div>
+</form>
+<div class="collapse-info" style="text-align-last: center;">Click a column header to change sorting. Shift+click a 2. or 3. header in order to multi-sort</div>
+
+<div id="insert_here_table" style="margin:5px";></div>
+
+<script>
+var tthtml = '<table id="myId8table1" class="display filter-table-style" style="width:100%"><thead><tr><th style="padding-right:12px">Lvl</th><th>Model</th><th>ID</th><th>Type</th><th>Size</th><th style="padding-right:12px">Dura</th><th>Insurance</th><th style="padding-right:12px">Speed</th><th style="padding-right:12px">B/Pt</th><th style="padding-right:12px">Cargo</th><th style="padding-right:12px">Crew</th><th style="padding-right:12px">Guns*</th><th style="padding-right:12px">Broadside</th><th>Class</th></tr></thead><tbody id="tbody1"></tbody></table>'
+
+$('#insert_here_table').append(tthtml);
+</script>
+<script>
+$(document).ready( function () {
+$.getJSON("js/shipdata.json", function(json) {
+	  
+	var selectdata =  json.Ships;
+
+//Build table and add output
+        
+		var col = [ "Lvl", "Model", "ID", "Type", "Size", "Dura", "Insurance", "Speed", "B/Pt", "Cargo", "Crew", "Guns*", "Broadside", "Class"   ];
+
+
+        // CREATE DYNAMIC TABLE.
+        //var table = document.createElement("table");//
+		var table = document.getElementById("myId8table1");
+		//table.className = "filter-table-style nowrap hover dataTable no-footer";
+		table.setAttribute("id", "myId8table1");
+		var tbody = document.getElementById("tbody1");
+
+        
+        
+
+        // ADD JSON DATA TO THE TABLE AS ROWS.
+		 //var showamount = document.getElementById("showamountrecs").value;
+		var showamount = 999;
+		var spec = [ "level", "model", "ID", "type", "size", "base_durability", "insurance_value", "os_max_speed", "os_best_sailing_point", "cargo_capacity", "crew", "broadside_total_guns", "broadside_weight", "classes" ]
+        for (var i = 0; i < selectdata.length; i++) {
+			if (i == showamount) {
+			break;
+			}
+            tr = tbody.insertRow(0);
+
+            for (var j = 0; j < col.length; j++) {
+                var tabCell = tr.insertCell(-1);
+				var url = "compare.html#ship=";
+				
+				
+				
+                tabCell.innerHTML = '<a href="'+url+selectdata[i][spec[2]]+'" target="_blank">'+selectdata[i][spec[j]]+'</a>';
+            }
+        }
+		
+
+        // ADD THE NEWLY CREATED TABLE WITH JSON DATA TO A CONTAINER.
+		
+	
+// Hide ID column
+            
+			col = 3;
+          col = parseInt(col, 10);
+            col = col - 1;
+			var tbl = document.getElementsByClassName("filter-table-style");
+			
+            if (tbl != null) {
+                if (col < 0 || col >= tbl[0].rows.length - 1) {
+                    
+                    return;
+                }
+                for (var i = 0; i < tbl[0].rows.length; i++) {
+                    for (var j = 0; j < tbl[0].rows[i].cells.length; j++) {
+                        tbl[0].rows[i].cells[j].style.display = "";
+                        if (j == col)
+                           tbl[0].rows[i].cells[j].style.display = "none";
+                   }
+                }
+            }
+
+
+
+
+  $('#myId8table1').DataTable({
+  "autoWidth": false,
+  "pageLength": 20,
+  "order": [[ 1, "asc" ]],
+  "responsive": true,
+  "lengthMenu": [ [10, 20, 50, -1], [10, 20, 50, "All"] ],
+  "language": {
+    "decimal": ",",
+    "thousands": "."
+  },
+  "formatNumber": function ( toFormat ) {
+    return toFormat.toString().replace(
+      /\B(?=(\d{3})+(?!\d))/g, "'"
+    );
+  }
+
+}
+);
+
+});
+  
+});
+</script>
+<script>
+function filterscript1() {
+
+	  $.getJSON("js/shipdata.json", function(json) {
+	
+	var DatasetValue = [];
+	  var DatasetValue = document.getElementById("dataset-select").value;
+	  console.log(DatasetValue);
+	  
+	  if (DatasetValue == "0")
+	{
+	var shipdata = json.Legacy;
+	}
+	else
+	
+	var shipdata = json.Ships;
+	
+
+//Levels
+var levelRangeFrom = document.getElementById("levelRangeFrom").value;
+var levelRangeTo = document.getElementById("levelRangeTo").value;
+//levelRangeFrom--;
+levelRangeTo++;
+var leveldatacollection = [];
+var leveldatasingle = [];
+
+for (var i = levelRangeFrom; i < levelRangeTo; i++) {
+			let leveldatasingle = shipdata.filter(function (e) {
+			return e.level == (i) ;
+		
+			
+});
+	leveldatacollection.push(...leveldatasingle);
+
+};
+
+
+
+//Classes
+var class1 = document.getElementById("classBC");
+var class2 = document.getElementById("classCT");
+var class3 = document.getElementById("classFT");
+var class4 = document.getElementById("classNO");
+var class5 = document.getElementById("classPR");
+
+
+let class1data = leveldatacollection.filter(function (e) {
+	if (class1.checked) {
+		return e.classes.includes("BC") ;
+		} else {
+		}
+});
+
+let class2data = leveldatacollection.filter(function (e) {
+	if (class2.checked) {
+		return e.classes.includes("CT") ;
+		} else {
+		}
+});
+
+let class3data = leveldatacollection.filter(function (e) {
+	if (class3.checked) {
+		return e.classes.includes("FT") ;
+		} else {
+		}
+});
+
+let class4data = leveldatacollection.filter(function (e) {
+	if (class4.checked) {
+		return e.classes.includes("NO") ;
+		} else {
+		}
+});
+
+let class5data = leveldatacollection.filter(function (e) {
+	if (class5.checked) {
+		return e.classes.includes("PV") ;
+		} else {
+		}
+});
+
+const classContainsDuplicatedata = class1data.concat(class2data,class3data,class4data,class5data);
+
+//Remove duplicates
+const SetWithoutDuplicates = new Set(classContainsDuplicatedata);
+//Convert back to array
+const classdata= (Array.from(SetWithoutDuplicates));
+
+	
+//Sizes
+	var size1 = document.getElementById("sizeTiny");
+	var size2 = document.getElementById("sizeSmall");
+	var size3 = document.getElementById("sizeMedium");
+	var size4 = document.getElementById("sizeLarge");
+	var size5 = document.getElementById("sizeHuge");
+	var size6 = document.getElementById("sizeColossal");
+
+	let size1data = classdata.filter(function (e) {
+	if (size1.checked) {
+		return e.size == 'Tiny';
+	} else {
+	}	
+});
+	
+	let size2data = classdata.filter(function (e) {
+	if (size2.checked) {
+		return e.size == 'Small';
+	} else {
+	}	
+});
+
+let size3data = classdata.filter(function (e) {
+	if (size3.checked) {
+		return e.size == 'Medium';
+	} else {
+	}	
+});
+
+let size4data = classdata.filter(function (e) {
+	if (size4.checked) {
+		return e.size == 'Large';
+	} else {
+	}	
+});
+
+let size5data = classdata.filter(function (e) {
+	if (size5.checked) {
+		return e.size == 'Huge';
+	} else {
+	}	
+});
+
+let size6data = classdata.filter(function (e) {
+	if (size6.checked) {
+		return e.size == 'Colossal';
+	} else {
+	}	
+});
+
+const sizedata = size1data.concat(size2data,size3data,size4data,size5data,size6data);
+
+
+// Types
+	var type1 = document.getElementById("typeMerchant");
+	var type2 = document.getElementById("typeScout");
+	var type3 = document.getElementById("typeWarship");
+	var type4 = document.getElementById("typeSOL");
+	
+
+	let type1data = sizedata.filter(function (e) {
+	if (type1.checked) {
+		return e.type == 'Merchant';
+	} else {
+	}	
+});
+
+	
+	let type2data = sizedata.filter(function (e) {
+	if (type2.checked) {
+		return e.type == 'Scout';
+	} else {
+	}	
+});
+
+let type3data = sizedata.filter(function (e) {
+	if (type3.checked) {
+		return e.type == 'Warship';
+	} else {
+	}	
+});
+
+let type4data = sizedata.filter(function (e) {
+	if (type4.checked) {
+		return e.type == 'Ship of the Line';
+	} else {
+	}	
+});
+
+const typedata = type1data.concat(type2data,type3data,type4data);
+
+
+
+//Variants
+	var variant1 = document.getElementById("variantStripped");
+	var variant2 = document.getElementById("variantCivilian");
+	var variant3 = document.getElementById("variantCourier");
+	var variant4 = document.getElementById("variantSleek");
+	var variant5 = document.getElementById("variantFallback");
+	var variant6 = document.getElementById("variantStandard");
+	var variant7 = document.getElementById("variantHeavy");
+	var variant8 = document.getElementById("variantMastercraft");
+	var variant9 = document.getElementById("variantRefit");
+	
+	
+let variant1data = typedata.filter(function (e) {
+	if (variant1.checked) {
+		return e.variant == 'Stripped';
+	} else {
+	}	
+});
+
+let variant2data = typedata.filter(function (e) {
+	if (variant2.checked) {
+		return e.variant == 'Civilian';
+	} else {
+	}	
+});
+
+let variant3data = typedata.filter(function (e) {
+	if (variant3.checked) {
+		return e.variant == 'Courier';
+	} else {
+	}	
+});
+
+let variant4data = typedata.filter(function (e) {
+	if (variant4.checked) {
+		return e.variant == 'Sleek';
+	} else {
+	}	
+});
+
+let variant5data = typedata.filter(function (e) {
+	if (variant5.checked) {
+		return e.variant == 'Fallback';
+	} else {
+	}	
+});
+
+let variant6data = typedata.filter(function (e) {
+	if (variant7.checked) {
+		return e.variant == 'Standard';
+	} else {
+	}	
+});
+
+let variant7data = typedata.filter(function (e) {
+	if (variant7.checked) {
+		return e.variant == 'Heavy';
+	} else {
+	}	
+});
+
+let variant8data = typedata.filter(function (e) {
+	if (variant8.checked) {
+		return e.variant == 'Mastercraft';
+	} else {
+	}	
+});
+
+let variant9data = typedata.filter(function (e) {
+	if (variant9.checked) {
+		return e.variant == 'Refit';
+	} else {
+	}	
+});
+
+const selectdata = variant1data.concat(variant2data,variant3data,variant4data,variant5data,variant6data,variant7data,variant8data,variant9data);
+
+
+//Build table and add output
+        
+		var col = [ "Lvl", "Model", "ID", "Type", "Size", "Dura", "Insurance", "Speed", "B/Pt", "Cargo", "Crew", "Guns*", "Broadside", "Class"   ];
+
+divtableContainer = document.getElementById("insert_here_table");
+		
+		divtableContainer.innerHTML = "";
+
+var tthtml = '<table id="myId8table1" class="display filter-table-style" style="width:100%"><thead><tr><th style="padding-right:12px">Lvl</th><th>Model</th><th>ID</th><th>Type</th><th>Size</th><th style="padding-right:12px">Dura</th><th>Insurance</th><th style="padding-right:12px">Speed</th><th style="padding-right:12px">B/Pt</th><th style="padding-right:12px">Cargo</th><th style="padding-right:12px">Crew</th><th style="padding-right:12px">Guns*</th><th style="padding-right:12px">Broadside</th><th>Class</th></tr></thead><tbody id="tbody1"></tbody></table>'
+
+$('#insert_here_table').html(tthtml);
+
+
+        // CREATE DYNAMIC TABLE.
+        var table = document.getElementById("myId8table1");
+		table.setAttribute("id", "myId8table1");
+		var tbody = document.getElementById("tbody1");
+
+        
+
+        // ADD JSON DATA TO THE TABLE AS ROWS.
+		var datanum = [];
+		var datanum = document.getElementById("dataset-select").value;
+		var showamount = 999;
+		var spec = [ "level", "model", "ID", "type", "size", "base_durability", "insurance_value", "os_max_speed", "os_best_sailing_point", "cargo_capacity", "crew", "broadside_total_guns", "broadside_weight", "classes" ]
+        for (var i = 0; i < selectdata.length; i++) {
+			if (i == showamount) {
+			break;
+			}
+            tr = tbody.insertRow(0);
+
+            for (var j = 0; j < col.length; j++) {
+                var tabCell = tr.insertCell(-1);
+				var url = "compare.html";
+                tabCell.innerHTML = '<a href="'+url+"#dataset="+datanum+"&ship="+selectdata[i][spec[2]]+'" target="_blank">'+selectdata[i][spec[j]]+'</a>';
+            }
+        }
+
+// Hide ID column
+            
+			col = 3;
+            col = parseInt(col, 10);
+            col = col - 1;
+			var tbl = document.getElementsByClassName("filter-table-style");
+            if (tbl != null) {
+                if (col < 0 || col >= tbl[0].rows.length - 1) {
+                    
+                    return;
+                }
+                for (var i = 0; i < tbl[0].rows.length; i++) {
+                   for (var j = 0; j < tbl[0].rows[i].cells.length; j++) {
+                        tbl[0].rows[i].cells[j].style.display = "";
+                        if (j == col)
+                            tbl[0].rows[i].cells[j].style.display = "none";
+                    }
+               }
+            }
+
+
+   var table = "$('#myId8table1').dataTable();";
+
+$('#myId8table1').DataTable(
+{
+  "autoWidth": false,
+  "pageLength": 20,
+  "order": [[ 1, "asc" ]],
+  "responsive": true,
+  "lengthMenu": [ [10, 20, 50, -1], [10, 20, 50, "All"] ]
+}
+);
+			  
+});
+
+   };
+</script>
+
+* Total Guns & Broadside weights are excluding swivel cannons<br/>&dagger; Damage readouts are per broadside, and also exclude swivel cannons<br/><br/><a style="font-size: 8pt;" href="shipindex.html">Click here for complete Ship Index</a></div>
+	  </div>
+	  
+	  <style>
+
+</style>
+	 <div id="footer" style="color: #999999;line-height: 15px;">
+		<div style="width: 40%; float: left; text-align: left; margin-left:5px;">
+		Disclaimer: This website is not affiliated with FLS / PortalusGames / Vision.
+		</div>
+		<div style="width: 15%; float: left; text-align: center; color: #999999;">
+		By: PotBS Community
+		</div>
+		<div style="width: 40%; float: right; text-align: right; margin-right: 5px;" class="footerLink">
+			Based on the frontend of the original Captains Companion by <a href="http://www.codecraft.co.uk/" target="new">Codecraft</a>
+		</div>
+		
+		<div style="width: 47%; float: left; text-align: left; margin-left:5px;">
+		Google Translate<sup>TM</sup> is a trademark of Google LLC.
+		</div>
+		
+		<div style="width: 47%; float: right; text-align: right; margin-right: 5px;" class="footerLink">
+			Table build with <a href="http://www.datatables.net" target="new">Datatables</a>
+			
+		</div>		
+	  </div>
+   
+</body>
+
+<script src="js/datatables.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/datatables.css"/>
+
+</html>
